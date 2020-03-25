@@ -1,0 +1,99 @@
+                                                          LE PYTHON 
+
+I) Généralités et Syntaxe
+
+A) Généralités
+
+    Python est un langage de programmation à part entiereavec  une syntaxe bien personel, dont la première version 
+fut developpé par Guido van Rossum, et lancé en 1991. C'est un langage puissant (d'un point de vue fonctionnel) facile apprendre et utilisé et riche
+de possibilité. Ce dernier prend en compte une partie orinenté objet (POO) que nous expliquerons plus tard. 
+Ainsi des le moment ou l'installe sur une machine on peut bénéficier de toute les bibliothhèques déjà existante intégré a Python,
+il faudra simplement les installer.
+
+    En outre grâce a python on peut :
+- creer de petit programmes appelés "scripts" (que l'on expliquera en détails plus tard) ayant une mission définit
+- des programmes "complet" comme des jeux aléatoire ou des applications, des sites internets, des clienteles de messagerie etc... 
+- des programmes plus complexes comme des logiciels (WordStream par exemple)
+- des interfaces graphiques ou même des graphes (avec la bibliothéque Networkx) 
+ et encore pleins d'autre fonctionalités sur lesquelles nous n'allons pas nous attarder.
+
+    A la difference d'autre langages, Python est un langage "interprété" (et non "compilé" comme le C par exemple) c'est a dire que toutes les instructions
+sont directement traduitent/transcriptent en langage dit "machine" et ne necessite donc d'etape de compilation. En C apres chaque instruction envoyé il faut
+pensé à compiler code (à l'aide d'un compilateur GCC < "GNU Compiler Cllection" > par exemple).
+Le principale avantage du langage interprété resulte du fait de sa simplicité d'execution (pas de compilation à l'execution) mais aussi 
+de la portabilité du systeme c'est à dire que le langage régit et s'execute de la même manières qu'importe l'environnement dans lequel il 
+est utilisé (Windows / Mac OS / Linux). 
+
+    La mise en place est assez simple il suffit d'allez sur le site officiel de Python et de télécharger la version en question
+(de python 2.0.1 a python 3.8.2) puis de l'installer en fonction de la machine en question (Mac OS / Linux / Windows). Une fois cela fait il
+suffit simplement de lancer l'application Python pour que la console s'ouvre. Tout se passe sur la console, sauf si l'on écrit un script à executer
+(au quel cas l'ecrire sur un editeur de texte en précisant l'extension python ".py"). Ensuite a l'aide de la console on peut lancer le programme 
+a l'aide de la synatxe suivante : " python script.py". 
+
+    Comme les principaux langage de programmation on peut utiliser les types de bases "Integer / Float / String" mais aussi des Objets "Class", 
+mais le plus de Python sont les types sophistiqués "Listes / Dictionnaires / Tuples / Sets". 
+
+    Les "Listes" sont des collections, des séquences ordonancées d'objets (type de bases ou sophistiqués) homogènes ou hétérogènes et indicées
+en commençant à l'index "0". La syntaxe est : L1 = [type1 , type2, type3]
+    Les "Dictionnaires" sont des collections non ordonnés de paire " clés : valeurs ", la clé doit etre unique et se rapporte à une valeur 
+correspondante, les valeurs peuvent être un objet de tout type.  La syntaxe est : D1 = {clé1 : valeur1 ,clé2 : valeur2, clé3 : valeur3}
+    Les "Tuples" sont semblables aux "Listes" saud que la syntaxe differe, les élèments ne sont pas modifiables après leur création, et leur
+accés est plus rapides qu'a une liste. La syntaxe est T1 = (type1 , type2, type3)
+
+B) Syntaxe 
+
+    La syntaxe est assez simmilaire aux autre langage puisque python utulise les mêmes types de variables, sauf les types sophistiqués. 
+ A la différence des autres langages de programmation (C,,C++,Java,php) la fin d'une instruction se termine par un caractère vide
+et non " ; ", avec python c'est l'indentation qui fait office d'instruction et donc de "bloc de code". 
+Nous avons déjà vu plus haut la syntae des types dit "sophistiqués" donc je ne m'attarderai pas plus dessus, et nous allons donc voir 
+la synatxe des structures conditionnels ("If / Else / Elif") et celle des boucles ("For / While").
+
+1) Structure Conditionelle "If"  
+La condition est suivi par " : " puis vient ensuite l'instruction à effectuer, si le test est vérifié, qu'il faudra indenter (d'un cran) 
+if < condition > :
+    < instruction >
+
+2) Structure Conditionelle "Else"  
+La condition est suivi par " : " puis vient ensuite l'instruction à effectuer, si le premier test n'est pas vérifié, 
+qu'il faudra indenter (d'un cran) au meme niveau que le test "If".
+if < condition1 > :
+    < instruction1 >
+else :
+    < instruction2 >
+
+3) Structure Conditionelle "Elif"  
+La condition est suivi par " : " puis vient ensuite l'instruction à effectuer, si le premier test n'est pas vérifié, 
+qu'il faudra indenter (d'un cran) au meme niveau que le test "If".
+if < condition1 > :
+    < instruction1 >
+elif < condition2 > :
+    < instruction2 >
+else :
+    < instruction3 >
+
+4) Boucle "For"
+La structure est composé de "for" puis de deux valeurs "element" et "sequence" qui permette de suivre l'itération à effectuer. Le bloc 
+est executé autant de fois de qu'il y d' "element" dans la "sequence" et se termine par " : ".
+for element in sequence :
+    < instruction >
+
+5) Boucle "While"
+La structure est composé de "while" puis de la "condition" qui permet d'effectuer un test. Le bloc est executé tant que la condition
+est vérifié et se termine oar " : ".
+while < condition> : 
+    < instruction >
+
+Quant au fonction la definition se fait de manière tres simple il suffit d'utiliser le mot clé "def" et cela est terminer, en python on ne 
+prend pas en compte le type de retour d'une fonction comme en C, C++ ou en Java ("int, void, double, float etc ...").
+
+def fonction (param1, param2) :
+    instruction1
+    instruction2
+        if test1 :
+            instruction3
+        else : 
+            instruction4
+    return instruction5  (ou autre chose)
+
+
+II) L'orienté objet en python 

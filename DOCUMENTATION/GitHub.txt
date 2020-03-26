@@ -8,7 +8,7 @@ Ce dernier est codé principalement en "Ruby" et "Erlang" par different programm
 Aujourd'hui cette plateforme compte plus de 15 millions d'utilisateur et enregistre environ 40 millions de dépôts de fichiers,
 se placant donc en tete du plus grand hebergeur "source code"mondial.
 
-Le fonctionnement de Git est assez simple, on creer un repertoire (un referentiel / requisitory) dans lequel on va stocker tout les fichiers
+Le fonctionnement de Git est assez simple, on créer un repertoire (un referentiel / requisitory) dans lequel on va stocker tout les fichiers
 que l'on désire et on peut soit rendre l'acces publique (au quel cas tout le monde peut rejoindre et consulter ces fichiers) ou alors le 
 restreindre en accés privé (au quel cas c'est le créateur qui décide quels seront les collaborateurs ayant droit de consultation des fichiers).
 Ensuite cela s'agit comme une "sorte de réseau" constitué de branches (branch) où chaque braches represente un collaborateur aisni que la 
@@ -23,10 +23,10 @@ Evidemment toutes les etapes (initialisation, dépôts, fusion et clonage) se fo
 que j'expliquerai un peu plus loin ainsi que les commandes principales pour chaques étapes.
 
 a) Initialisation
-    Pour creer un projet il suffit d'aller sur le site  https://github.com/ puis Repositories --> New et remplir les informations données avant
+    Pour créer un projet il suffit d'aller sur le site  https://github.com/ puis Repositories --> New et remplir les informations données avant
 de valider. Ensuite pour initialiser le Git (et que la branch master existe; elle sera crée automatiquement a l'instanciantion du projet) il 
 faut se placer dans le dossier (en ligne de commande "cd") et tappez : " git init "
-Ensuite  il faudra tapper : " git remote add origin < lien donnée par git hub > " puis " git push –u origin master " qui respectivement creerons
+Ensuite  il faudra tapper : " git remote add origin < lien donnée par git hub > " puis " git push –u origin master " qui respectivement créerons
 le repertoire du projet et ensuite la zone de dépôt.
 
 b) Branches

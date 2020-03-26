@@ -10,8 +10,8 @@ de possibilité. Ce dernier prend en compte une partie orinenté objet (POO) que
 Ainsi des le moment ou l'installe sur une machine on peut bénéficier de toute les bibliothhèques déjà existante intégré a Python,
 il faudra simplement les installer.
 
-    En outre grâce a python on peut :
-- creer de petit programmes appelés "scripts" (que l'on expliquera en détails plus tard) ayant une mission définit
+    En outre grâce à python on peut :
+- créer de petit programmes appelés "scripts" (que l'on expliquera en détails plus tard) ayant une mission définit
 - des programmes "complet" comme des jeux aléatoire ou des applications, des sites internets, des clienteles de messagerie etc... 
 - des programmes plus complexes comme des logiciels (WordStream par exemple)
 - des interfaces graphiques ou même des graphes (avec la bibliothéque Networkx) 
@@ -96,4 +96,108 @@ def fonction (param1, param2) :
     return instruction5  (ou autre chose)
 
 
-II) L'orienté objet en python 
+II) L'orienté objet 
+
+A) Généralités
+
+    Comme nous l'avons expliqué un peu plus haut les langages de programmation peuvent avoir deux "voies" statiques comme le C et Python 
+par exemple  ou alors "orienté objet" comme le Java, C++ ainsi que le Python. Les objectifs principaux de la programmation orientée objet 
+sont de nous permettre de créer des scripts plus clairs, mieux structurés, plus modulables et plus faciles à maintenir.
+    
+    L'orienté objet (comme dans tout langage) repose sur quatres grandes notions :
+- le concept d'objet
+- le principe d'encapsulation 
+- le polymorphisme  
+- l'héritage
+
+a) Concept Objet :
+    En POO (programmation orienté objet) nous allons concevoir notre programme (scrypt) non pas comme plusieurs fonction ayant un but 
+complémentaire mais plutôt comme un ensemble d'objet (définit via des classes) interagissant les uns avec les autres. Un objet est un concept
+qui représente un ensemble de données et qui en contrôle l'accès où chaque objet a un comportement propre. Au sein d'un objets on y retrouve 
+les membres qui le compose : ses "attributs" (structures de données définies dans l'objet) et ses "méthodes" (procédures et fonctions définies dans l'objet). 
+    Ainsi pour répondre au besoin d'abstraction d'objet apparait une nouvelle notion celle des "classes", c'est une structure (un model)
+dans laquelle on déclare l'ensemble des membres (attributs et méthodes) de l'objet en question. La deuxiéme notion qui apparait alors est donc
+la "création" / "construction" de cet objet; nous utilisons donc un "constructeur" (et respectivement un "destrcuteur"). Ainsi le constructeur
+permet de créer des instances dont les "caractéristiques" (les membres) sont décris par la classe.
+
+b) L'encapsulation : 
+    Ce concept designe le fait de dissimuler certaines informations contenue dans un objet et de proposer (à l'utilisateur) la modification
+que de certains membres. Il faudra spécifier des membres publiques (visibile de l'objet) et privés (non visibile de l'objet).
+
+c) Le polymorphisme : 
+    Ce concept permet de redefinir (le nom et corps) une méthode au sein d'une classe et donc de la spécifier. Mais aussi la possibilité de 
+définir des comportements différents pour la même méthode selons les arguments donnés en paramètres. Pour résumer, le polymorphisme est un concept qui fait 
+référence à la capacité d’une variable, d’une fonction ou d’un objet à prendre plusieurs formes, c’est-à-dire à sa capacité de posséder
+plusieurs définitions différentes.
+
+d) L'héritage : 
+    Ce concept permet à une classe d'hériter (des mebres donc des attributs et des méthodes) d'une autre. On parlera alors de la classe mère 
+(celle dont on hérite) et des classes filles (celles qui héritent). Ce n'est pas un principe unitaire il peut s'appliquer plusieur fois et suivre un schéma 
+on parlera alors d'héritage multiple. 
+
+B) Python orienté objet
+
+    Maintenant que nous avons une idée plus détaillé du concept de la programmation orienté objet (POO) nous allons nous interresser au 
+fonctionnement de cette dernière en Python (fonctionnement et synatxe).
+
+    Python est un langage résolument orienté objet, ce qui signifie que le langage tout entier est construit autour de la notion d’objets.
+Quasiment tous les types du langage "String / Integer / Listes / Dictionnaires " sont avant tout des objets tout comme les fonctions
+qui elles aussi sont des objets.
+
+    Pour créer une classe , donc un "Objet" il suffit d'utilise le mot clé class suivit de " : " et ne pas oublier l'indentation.
+class < NomClasse> : 
+    attribut1
+    attribut2 
+
+    Ensuite il faudra definir un constructeur qui permettra d'instancier les objets dont nous auront besoins, il faut donc utiliser la 
+méthode " __init__" au sein de la classe sans oublier le parametre obligatoire (mot clé de python) "self". 
+
+class < NomClasse> : 
+    attribut1
+    attribut2 
+
+    def __init__ (self):
+        self.attribut1 = "..." (str)
+        self.attribut2 =  ...  (int)
+
+    Expliquons un peu le mot clé "self" qui est toujours présent soir dans une fonction soit dans une définition de classe. Ainsi les fonctions
+d’une classe ne font pas exception : ce sont également objets. C'est donc pour cela que la fonction possedera toujours un paramètre de plusieur
+le fameux "self".  Si l'on défini une classe "vide" c'est a dire ou pour le moment il n'y aucune action à effectuer il faut rajouter le mot 
+clé "pass"
+
+class < NomClasse > : 
+    pass 
+
+
+    Comme nous l'avons également vu ont une classe mère peut hérité d'une autre et donc de ses attributs et de ses méthodes. la syntaxe est simple,
+il suffit de mettre en paranthése la classe mère au moment de la declarationd de la classe fille. Voici un exmeple avec < NomClasse > et 
+< NomClasse2>
+
+class < NomClasse> :                         #classe mère
+    attribut1
+    attribut2 
+
+
+class < NomClasse2> (< NomClasse >) :        #classe fille
+    attribut1                                #hérité 
+    attribut2                                #hérité 
+    attribut3   
+    attribut4
+
+    A ce niveau on peut se demander comment Python gére ces héritages. Lorsqu’on tente d’afficher le contenu d’un attribut de données
+ou d’appeler une méthode depuis un objet, Python va commencer par chercher si la variable ou la fonction correspondantes se trouvent dans la
+classe qui a créé l’objet. Si c’est le cas, il va les utiliser. Si ce n’est pas le cas, il va chercher dans la classe mère de la classe de 
+l’objet si cette classe possède une classe mère. Si il trouve ce qu’il cherche, il utilisera cette variable ou fonction. Si il ne trouve pas,
+il cherchera dans la classe mère de la classe mère si elle existe et ainsi de suite. Deux fonctions existent pour savoir si l'objet est seulemnent 
+une instance d'une classe et pour savoir si la classe en question a eu recourt à de l'hériatge : "isinstance()" et "issubclass()". 
+
+    Propre au POO de Python nous retrouvons deux autres types les "itérateurs" et les "générateurs". 
+
+    Les itérateurs sont implicitement utilisés chaque fois que nous manipulons des collections de données comme les listes, tuples ou string.
+En régles général nous utilisons la méthode "for" pour parcourir les collelctions sauf qu'avec Python on peut utiliser la méthode "iter()" qui
+est défini dans la clase "Iterateur" , objet déjà conçu par le langage. Aisni il existe la methode "next()" pour avancé d'un élément dans la
+collection. 
+    Les générateurs sont des outils qui permettent de créer des itérateurs, la synatxe est quasi identique a celle d'une fonction sauf qu'au lieu
+d'utiliser le mot clé "return" on tulise le mot clé "yield". L’instruction "yield" va mettre le générateur en pause mais le contexte d’exécution
+de celui-ci va être conservé, ce qui va nous permettre d’itérer. A chaque fois qu’on appelle un générateur avec "next()", le générateur va
+reprendre son travail jusqu’au prochain "yield".

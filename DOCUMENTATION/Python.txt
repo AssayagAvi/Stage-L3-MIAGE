@@ -168,7 +168,6 @@ clé "pass"
 class < NomClasse > : 
     pass 
 
-
     Comme nous l'avons également vu ont une classe mère peut hérité d'une autre et donc de ses attributs et de ses méthodes. la syntaxe est simple,
 il suffit de mettre en paranthése la classe mère au moment de la declarationd de la classe fille. Voici un exmeple avec < NomClasse > et 
 < NomClasse2>
@@ -201,3 +200,10 @@ collection.
 d'utiliser le mot clé "return" on tulise le mot clé "yield". L’instruction "yield" va mettre le générateur en pause mais le contexte d’exécution
 de celui-ci va être conservé, ce qui va nous permettre d’itérer. A chaque fois qu’on appelle un générateur avec "next()", le générateur va
 reprendre son travail jusqu’au prochain "yield".
+
+
+
+
+installation python 3 facons (package / pip / annaconda) 
+avi polachek --> REGARDER 
+gurobi installation (3 facon)

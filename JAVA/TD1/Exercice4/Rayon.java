@@ -24,9 +24,9 @@ public class Rayon {
    // public String toString() {
    //    StringBuilder sb = new StringBuilder();
    //    for (Pullover a : this.rayon) {
-   //       if(a != null) sb.append(a).append("\t");
+   //       if(a != null) sb.append(a).append(\t);
    //    }
-   //    sb.append("\n");
+   //    sb.append(\n);
    //    return sb.toString();
    // }
    @Override

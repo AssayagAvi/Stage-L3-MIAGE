@@ -30,4 +30,10 @@ public class Pullover {
         .append(this.couleurs).append(ligne);
         return sb.toString();  
     }
+
+    public int compareTo(Pullover p){
+        int tmp = this.couleurs.compareTo(p.couleurs);
+        return tmp;
+    }
+
 }

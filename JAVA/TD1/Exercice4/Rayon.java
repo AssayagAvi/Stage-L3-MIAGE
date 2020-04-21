@@ -43,6 +43,38 @@ public class Rayon {
       System.out.println(this);
    }
 
+   public void triABulle() {
+      int taille = this.rayon.length;
+      Pullover tmp;
+      int i, j;
+      for (i = 0; i < taille; i++) {
+          for (j = 0; j < taille - 1; j++) {
+              if (rayon[j].compareTo(rayon[j + 1]) > 0) {
+                  tmp = rayon[j + 1];
+                  rayon[j + 1] = rayon[j];
+                  rayon[j] = tmp;
+              }
+          }
+      }
+  }
+
+
+  public void triSelect() {
+      Pullover tmp;
+      int i,j;
+      int taille = this.rayon.length-1;
+      for (i = 1; i <= taille-1; i++) {
+          int x=i;
+          for (j = i + 1; j <= taille; j++)
+              if (rayon[j].compareTo(rayon[x]) > 0) {
+                  x = j;
+                  tmp = rayon[x];
+                  rayon[x] = rayon[i];
+                  rayon[i] = tmp;
+              }
+      }
+  }
+
    
 
 }

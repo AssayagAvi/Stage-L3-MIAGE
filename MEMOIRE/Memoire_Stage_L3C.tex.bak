@@ -12,6 +12,9 @@
 \usepackage{array} 
 \usepackage{hyperref}
 \usepackage{upquote}
+\usepackage{amsmath}
+\newtheorem{definition}{Définition}
+
 
 \input{pagedegarde}
 
@@ -38,7 +41,7 @@
 \paragraph{Cette opportunité n'a été seulement possible que par la collaboration de Monsieur Emmanuel Hyon, mon tuteur ainsi que Monsieur François Delbot, responsable de la Licence 3, et les remercie de leur patience , de leur encouragement et de le encadrement tout au long de ce stage. }
 \newpage 
 \section{Introduction}
-\paragraph{Pendant ces semaines de stage, nous allons essayez d'implémenter des algorithmes pour résoudre des modèles de jeux stochastiques, plus précisément des jeux bimatricel à gain de somme nul.} 
+\paragraph{Pendant ces semaines de stage, nous allons essayez d'implémenter des algorithmes pour résoudre des modèles de jeux stochastiques, plus précisément des jeux  de gain à somme nul (que nous représenterons sous forme bimatricel).} 
 \paragraph{L'objectif est dans un premier temps de concevoir une modélisation informatique de ces jeux puis dans un second temps implémenter un ou des algorithmes permettant de résoudre ces jeux.}
 \paragraph{Pour parfaire à ces attentes, nous allons utilisé le langage \textit{Python}, non utilisé durant le cursus scolaire actuel, le solveur \textit{Gurobi}, que nous utiliserons afin de résoudre des programmes linéaires et pour l'orienté objet \textit{Python} et la plateforme \textit{GitHub}, l'hébergeur de code, pour avoir accès a tout les codes sources, document qui m'ont aidé a réaliser ce stage.}
 \paragraph{L'utilisation de GitHub n'était pas obligatoire, mais elle plus que judicieuse pour que mon tuteur \underline{\textit{Mr Emmanuel Hyon}} puisse avoir accès en temps réel à mon code afin de m'orienter si je m'écarte du sujet. C'est donc à son initiative que nous avons utilisé \textit{Github} tout au long de ce stage.}
@@ -124,18 +127,18 @@ def tri_a_bulle(tab) :
                      tab[j] , tab[j+1] = tab[j+1] , tab[j]
     return tab
 \end{verbatim}
-\paragraph{Pour plus de renseignement sur la syntaxe  veuillez vous référer aux annexes du document. }
-\subsection{Python et les objets}
-\paragraph{Python permet aussi l'utilisation de l'orienté objet, c'est donc un des autres plus de ce langage puissant et aux vagues possibilité. Dans cette partie nous allons vous montrer comment coder un objet en Python et aussi le construire. Nous allons donc voir la syntaxe générale d'une  \textit{Class} et celle d'un \textit{constructeur}.}
 
-\subsubsection{Création d'une Class "Lambda" }
+\subsection{Python et les objets}
+\paragraph{Python permet aussi l'utilisation de l'orienté objet, c'est donc un des autres plus de ce langage puissant et aux vagues possibilité. Dans cette partie nous allons vous montrer comment coder un objet en Python et aussi le construire. Nous allons donc voir la syntaxe générale d'une  \textit{Classe} et celle d'un \textit{Constructeur}. Enfin pour terminer cela nous implémenterons un objet "Pullover" avec différents attributs et son propre constructeur.}
+
+\subsubsection{Création d'une Classe "Lambda" }
 \paragraph{Pour déclarer un objet il suffit simplement d'utiliser le mot Class suivit de ":" et ensuite déclarer des variables ou autres instructions.}
 \begin{verbatim}
 Class Personne : 
      name
      age
 \end{verbatim}
-\subsubsection{Constructeur de la Class "Lambda"}
+\subsubsection{Constructeur de la Classe "Lambda"}
 \paragraph{Pour déclarer le constructeur d'un objet il faut utiliser la méthode \textit{init()} au sein de la classe en passant en paramètre ceux de l'objet en question. La petite différence par rapport à d'autres langages de programmation orienté objet (C++ ou Java) est l'utilisation du paramètre (mais aussi mot clé) \textit{self} au seins du constructeur. En réalité \textit{self} n'est autre que la première référence de l'instance de l'objet que l'on va créer. } 
 \begin{verbatim}
 def __init__(self, name, age) :
@@ -220,16 +223,42 @@ model.write("model.ilp")
 print("IIS written to file 'model.ilp'")
 \end{verbatim}
 
+\section{La théorie des jeux}
+\paragraph{Comme nous l'avons expliqué un peu plus haut, l'un des objectifs de ce stage est la modélisation d'algorithmes afin de résoudre des jeux stochastiques. Mais tout d'abord détaillons un peu le concept des \textit{jeux}.}
+\begin{definition}
+Un jeu est une analyse des interactions stratégiques, intégrant des contraintes (si elles existent), sur les actions des différents acteurs (joueurs) au cour du jeu.
+\end{definition}
+\paragraph{Pour intégrer et comprendre ce concept, il y a d'autres notions à connaitre telles que \textit{jeux statiques} , \textit{jeux dynamiques} , \textit{stratégie } ou encore \textit{jeux bimatricel} et enfin \textit{gains à somme nulle}.}
+	
+\subsection{Jeux statiques et dynamiques}
+\paragraph{Comme vous l'avez compris,un jeu nécessite la présence d'acteurs ; dans la suite de nos explications lorsque nous parlerons de \textit{joueurs} nous ferons donc référence aux acteurs du jeu.}
+\subsubsection{Statiques}
+\paragraph{Lorsque l'on parle de jeu statique il s'agit en réalité d'un jeu ou chaque joueur effectue une seule action en simultané de l'autre mais sans avoir accès aux informations de l'action de l'autre joueurs.}
+\subsubsection{Dynamiques}
+\paragraph{A l'inverse, un jeu dynamique est un jeu qui se déroule en plusieurs étapes et non en simultané ; c'est-à-dire que chacun des joueurs a connaissance de l'action de l'autre et donc peut établir une stratégie avant chaque futures actions.  }
 
-\newpage	
+\subsection{Jeu bimatriciel}
+\paragraph{Un jeu bimatriciel se caractérise comme son nom l'indique par deux matrices. Ces dernières ne sont autres que les gains des joueurs. Autrement dit les joueurs jouent de manière simultané et on inscrit dans une matrice leurs gains (une matrice pour chaque joueur). Voici un exemple de deux matrices de gains pour deux joueurs A et B qui joue respectivement les lignes et les colonnes.}
+
+\[
+Joueur\hspace{0,1cm} A\hspace{1cm}
+\begin{pmatrix}3&3\\
+2&5\\
+0&6\\
+\end{pmatrix}\                      \hspace{2,5cm}  
+Joueur\hspace{0,1cm} B \hspace{1cm}  
+\begin{pmatrix}3&2\\
+2&6\\
+3&1\\
+\end{pmatrix} 
+\]
+\subsection{Jeu à sommes nulles}
+\paragraph{Comme annoncé dans notre introduction nous essayerons de résoudre des jeux a sommes nulles via des algorithmes que nous allons implémenter par la suite. Mais qu'est ce qu'un jeu à somme nul ?  }
 
 
 
 
-
-
-
-
+\newpage
 \section{Webographie}
 \begin{thebibliography}{2}
    \bibitem[Python]{Python} \url{https://docs.python.org/fr}\newline
@@ -245,7 +274,6 @@ print("IIS written to file 'model.ilp'")
 \subsection{Syntaxe Python}
 \paragraph{La syntaxe est assez similaire aux autre langage puisque python utilise les mêmes types de variables, sauf les types sophistiqués. A la différence des autres langages de programmation (C,,C++,Java,php) la fin d'une instruction se termine par un caractère vide
 et non  ; , avec python c'est l'indentation qui fait office d'instruction et donc de bloc de code.}
-\paragraph{Nous avons déjà vu plus haut la syntaxe des types dit sophistiqués donc je ne m'attarderai pas plus dessus, et nous allons donc voir la syntaxe des structures conditionnels (If / Else / Elif) et celle des boucles (For / While).}
 \subsubsection{ Structure Conditionelle If }
 \paragraph{La condition est suivi par  :  puis vient ensuite l'instruction à effectuer, si le test est vérifié, qu'il faudra indenter (d'un cran).}
 \begin{verbatim}
@@ -318,7 +346,7 @@ class < NomClasse> :
         self.attribut1 = ... (str)
         self.attribut2 =  ...  (int)
 \end{verbatim}
-\paragraph{Expliquons un peu le mot clé self qui est toujours présent soir dans une fonction soit dans une définition de classe. Ainsi les fonctions d’une classe ne font pas exception : ce sont également objets. C'est donc pour cela que la fonction possédera toujours un paramètre de plus,le fameux self.  Si l'on défini une classe vide c'est a dire ou pour le moment il n'y aucune action à effectuer il faut rajouter le mot clé pass}
+\paragraph{ Si l'on défini une classe vide c'est a dire ou pour le moment il n'y aucune action à effectuer il faut rajouter le mot clé pass}
 \begin{verbatim}
 class < NomClasse > : 
     pass 

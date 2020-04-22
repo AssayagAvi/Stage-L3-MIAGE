@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2019.10.29)  21 APR 2020 19:38
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2019.10.29)  22 APR 2020 11:34
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -493,6 +493,66 @@ Package textcomp Info: Setting pplj sub-encoding to TS1/3 on input line 407.
 Package textcomp Info: Setting ptmx sub-encoding to TS1/4 on input line 408.
 Package textcomp Info: Setting ptmj sub-encoding to TS1/4 on input line 409.
 ))
+(/usr/local/texlive/2019/texmf-dist/tex/latex/amsmath/amsmath.sty
+Package: amsmath 2018/12/01 v2.17b AMS math features
+\@mathmargin=\skip46
+
+For additional information on amsmath, use the `?' option.
+(/usr/local/texlive/2019/texmf-dist/tex/latex/amsmath/amstext.sty
+Package: amstext 2000/06/29 v2.01 AMS text
+
+(/usr/local/texlive/2019/texmf-dist/tex/latex/amsmath/amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0 generic functions
+\@emptytoks=\toks20
+\ex@=\dimen128
+))
+(/usr/local/texlive/2019/texmf-dist/tex/latex/amsmath/amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d Bold Symbols
+\pmbraise@=\dimen129
+)
+(/usr/local/texlive/2019/texmf-dist/tex/latex/amsmath/amsopn.sty
+Package: amsopn 2016/03/08 v2.02 operator names
+)
+\inf@bad=\count111
+LaTeX Info: Redefining \frac on input line 223.
+\uproot@=\count112
+\leftroot@=\count113
+LaTeX Info: Redefining \overline on input line 385.
+\classnum@=\count114
+\DOTSCASE@=\count115
+LaTeX Info: Redefining \ldots on input line 482.
+LaTeX Info: Redefining \dots on input line 485.
+LaTeX Info: Redefining \cdots on input line 606.
+\Mathstrutbox@=\box29
+\strutbox@=\box30
+\big@size=\dimen130
+LaTeX Font Info:    Redeclaring font encoding OML on input line 729.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 730.
+\macc@depth=\count116
+\c@MaxMatrixCols=\count117
+\dotsspace@=\muskip11
+\c@parentequation=\count118
+\dspbrk@lvl=\count119
+\tag@help=\toks21
+\row@=\count120
+\column@=\count121
+\maxfields@=\count122
+\andhelp@=\toks22
+\eqnshift@=\dimen131
+\alignsep@=\dimen132
+\tagshift@=\dimen133
+\tagwidth@=\dimen134
+\totwidth@=\dimen135
+\lineht@=\dimen136
+\@envbody=\toks23
+\multlinegap=\skip47
+\multlinetaggap=\skip48
+\mathdisplay@stack=\toks24
+LaTeX Info: Redefining \[ on input line 2844.
+LaTeX Info: Redefining \] on input line 2845.
+)
+\c@definition=\count123
+
 (./pagedegarde.tex) (./Memoire_Stage_L3C.aux
 
 LaTeX Warning: Label `RO' multiply defined.
@@ -503,29 +563,29 @@ LaTeX Warning: Label `RO' multiply defined.
 )
 \openout1 = `Memoire_Stage_L3C.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 28.
-LaTeX Font Info:    ... okay on input line 28.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 28.
-LaTeX Font Info:    ... okay on input line 28.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 28.
-LaTeX Font Info:    ... okay on input line 28.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 28.
-LaTeX Font Info:    ... okay on input line 28.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 28.
-LaTeX Font Info:    ... okay on input line 28.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 28.
-LaTeX Font Info:    ... okay on input line 28.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 28.
-LaTeX Font Info:    ... okay on input line 28.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 28.
-LaTeX Font Info:    Try loading font information for TS1+cmr on input line 28.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 31.
+LaTeX Font Info:    ... okay on input line 31.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 31.
+LaTeX Font Info:    ... okay on input line 31.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 31.
+LaTeX Font Info:    ... okay on input line 31.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 31.
+LaTeX Font Info:    ... okay on input line 31.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 31.
+LaTeX Font Info:    ... okay on input line 31.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 31.
+LaTeX Font Info:    ... okay on input line 31.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 31.
+LaTeX Font Info:    ... okay on input line 31.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 31.
+LaTeX Font Info:    Try loading font information for TS1+cmr on input line 31.
  (/usr/local/texlive/2019/texmf-dist/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 28.
-LaTeX Info: Redefining \degres on input line 28.
-LaTeX Info: Redefining \dots on input line 28.
-LaTeX Info: Redefining \up on input line 28.
+LaTeX Font Info:    ... okay on input line 31.
+LaTeX Info: Redefining \degres on input line 31.
+LaTeX Info: Redefining \dots on input line 31.
+LaTeX Info: Redefining \up on input line 31.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -563,17 +623,17 @@ LaTeX Info: Redefining \up on input line 28.
 
 (/usr/local/texlive/2019/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count111
-\scratchdimen=\dimen128
-\scratchbox=\box29
-\nofMPsegments=\count112
-\nofMParguments=\count113
-\everyMPshowfont=\toks20
-\MPscratchCnt=\count114
-\MPscratchDim=\dimen129
-\MPnumerator=\count115
-\makeMPintoPDFobject=\count116
-\everyMPtoPDFconversion=\toks21
+\scratchcounter=\count124
+\scratchdimen=\dimen137
+\scratchbox=\box31
+\nofMPsegments=\count125
+\nofMParguments=\count126
+\everyMPshowfont=\toks25
+\MPscratchCnt=\count127
+\MPscratchDim=\dimen138
+\MPnumerator=\count128
+\makeMPintoPDFobject=\count129
+\everyMPtoPDFconversion=\toks26
 ) (/usr/local/texlive/2019/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
 Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
 
@@ -591,8 +651,8 @@ G,.JBIG2,.JB2,.eps]
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
-\AtBeginShipoutBox=\box30
-Package hyperref Info: Link coloring OFF on input line 28.
+\AtBeginShipoutBox=\box32
+Package hyperref Info: Link coloring OFF on input line 31.
 
 (/usr/local/texlive/2019/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
@@ -600,11 +660,11 @@ Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
 (/usr/local/texlive/2019/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
 Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
-\c@section@level=\count117
+\c@section@level=\count130
 )
-LaTeX Info: Redefining \ref on input line 28.
-LaTeX Info: Redefining \pageref on input line 28.
-LaTeX Info: Redefining \nameref on input line 28.
+LaTeX Info: Redefining \ref on input line 31.
+LaTeX Info: Redefining \pageref on input line 31.
+LaTeX Info: Redefining \nameref on input line 31.
 
 (./Memoire_Stage_L3C.out) (./Memoire_Stage_L3C.out)
 \@outlinefile=\write3
@@ -642,44 +702,44 @@ LaTeX Info: Redefining \nameref on input line 28.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-<logo_Paris_Nanterre_couleur_RVB.png, id=136, 619.31375pt x 132.495pt>
+<logo_Paris_Nanterre_couleur_RVB.png, id=160, 619.31375pt x 132.495pt>
 File: logo_Paris_Nanterre_couleur_RVB.png Graphic file (type png)
 <use logo_Paris_Nanterre_couleur_RVB.png>
 Package pdftex.def Info: logo_Paris_Nanterre_couleur_RVB.png  used on input lin
-e 29.
+e 32.
 (pdftex.def)             Requested size: 307.2929pt x 65.74391pt.
-LaTeX Font Info:    Try loading font information for OT1+lmr on input line 29.
+LaTeX Font Info:    Try loading font information for OT1+lmr on input line 32.
 
 (/usr/local/texlive/2019/texmf-dist/tex/latex/lm/ot1lmr.fd
 File: ot1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Try loading font information for OML+lmm on input line 29.
+LaTeX Font Info:    Try loading font information for OML+lmm on input line 32.
 
 (/usr/local/texlive/2019/texmf-dist/tex/latex/lm/omllmm.fd
 File: omllmm.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Try loading font information for OMS+lmsy on input line 29.
+LaTeX Font Info:    Try loading font information for OMS+lmsy on input line 32.
 
 
 (/usr/local/texlive/2019/texmf-dist/tex/latex/lm/omslmsy.fd
 File: omslmsy.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Try loading font information for OMX+lmex on input line 29.
+LaTeX Font Info:    Try loading font information for OMX+lmex on input line 32.
 
 
 (/usr/local/texlive/2019/texmf-dist/tex/latex/lm/omxlmex.fd
 File: omxlmex.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <12> on input line 29.
+(Font)              <12> on input line 32.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <8> on input line 29.
+(Font)              <8> on input line 32.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 29.
-<bordure.png, id=138, 63.23625pt x 522.95375pt>
+(Font)              <6> on input line 32.
+<bordure.png, id=162, 63.23625pt x 522.95375pt>
 File: bordure.png Graphic file (type png)
 <use bordure.png>
-Package pdftex.def Info: bordure.png  used on input line 29.
+Package pdftex.def Info: bordure.png  used on input line 32.
 (pdftex.def)             Requested size: 45.98355pt x 380.2685pt.
  [1
 
@@ -692,122 +752,128 @@ re.png> <./logo_Paris_Nanterre_couleur_RVB.png>] (./Memoire_Stage_L3C.toc)
  [2
 
 ] [3]
-Overfull \hbox (1.88557pt too wide) in paragraph at lines 58--58
+Overfull \hbox (1.88557pt too wide) in paragraph at lines 61--61
  []\T1/aer/bx/n/12 Ensuite cela s'agit comme une sorte de ré-seau consti-tué de
  branches (branch)
  []
 
 [4] [5] [6]
-LaTeX Font Info:    Try loading font information for T1+aett on input line 101.
+LaTeX Font Info:    Try loading font information for T1+aett on input line 104.
 
  (/usr/local/texlive/2019/texmf-dist/tex/latex/ae/t1aett.fd
 File: t1aett.fd 1997/11/16 Font definitions for T1/aett.
 )
 [7]
-Overfull \hbox (40.08264pt too wide) in paragraph at lines 165--165
+Overfull \hbox (40.08264pt too wide) in paragraph at lines 168--168
 []     \T1/aett/m/n/12 def __init (brand, size, model_,name, color, price) :   
     #constructeur[] 
  []
 
 
-Overfull \hbox (40.08264pt too wide) in paragraph at lines 165--165
+Overfull \hbox (40.08264pt too wide) in paragraph at lines 168--168
 []  \T1/aett/m/n/12 Pull1 = Pullover("ZARA", "XS", "AED934", "black", 19)      
    #instanciation[] 
  []
 
 [8]
-Overfull \hbox (3.19342pt too wide) in paragraph at lines 172--172
+Overfull \hbox (3.19342pt too wide) in paragraph at lines 175--175
  []\T1/aer/bx/n/12 Il y a deux mé-thodes d'ins-tal-la-tion soit di-rec-te-ment 
 avec une li-cence (payante
  []
 
-LaTeX Font Info:    Try loading font information for TS1+aett on input line 221
+LaTeX Font Info:    Try loading font information for TS1+aett on input line 224
 .
-LaTeX Font Info:    No file TS1aett.fd. on input line 221.
+LaTeX Font Info:    No file TS1aett.fd. on input line 224.
 
 LaTeX Font Warning: Font shape `TS1/aett/m/n' undefined
 (Font)              using `TS1/cmr/m/n' instead
-(Font)              for symbol `textquotesingle' on input line 221.
+(Font)              for symbol `textquotesingle' on input line 224.
 
 [9]
-Overfull \hbox (21.57878pt too wide) in paragraph at lines 221--221
+Overfull \hbox (21.57878pt too wide) in paragraph at lines 224--224
 []\T1/aett/m/n/12 # Model is infeasible - compute an Irreducible Inconsistent S
 ubsystem (IIS)[] 
  []
 
-[10]
-Underfull \hbox (badness 10000) in paragraph at lines 233--234
+
+Overfull \hbox (22.16188pt too wide) in paragraph at lines 229--230
+[]\T1/aer/m/it/12 Un jeu est une ana-lyse des in-ter-ac-tions stra-té-giques, i
+n-té-grant des contraintes
+ []
+
+[10] [11]
+Underfull \hbox (badness 10000) in paragraph at lines 265--266
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 234--235
+Underfull \hbox (badness 10000) in paragraph at lines 266--267
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 235--236
+Underfull \hbox (badness 10000) in paragraph at lines 267--268
 [][]$\T1/aett/m/n/12 https : / / www . gurobi . com / documentation / 9 . 0 / q
 uickstart _ mac / py _
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 235--236
+Underfull \hbox (badness 10000) in paragraph at lines 267--268
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 236--237
+Underfull \hbox (badness 10000) in paragraph at lines 268--269
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 237--238
+Underfull \hbox (badness 10000) in paragraph at lines 269--270
 [][]$\T1/aett/m/n/12 http : / / www . cril . univ-[]artois . fr / ~konieczny / 
 enseignement /
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 237--238
+Underfull \hbox (badness 10000) in paragraph at lines 269--270
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 238--239
+Underfull \hbox (badness 10000) in paragraph at lines 270--271
 [][]$\T1/aett/m/n/12 http : / / www . cril . univ-[]artois . fr / ~konieczny / 
 enseignement /
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 238--239
+Underfull \hbox (badness 10000) in paragraph at lines 270--271
 
  []
 
-[11pdfTeX warning (ext4): destination with the same identifier (name{cite.RO}) 
+[12pdfTeX warning (ext4): destination with the same identifier (name{cite.RO}) 
 has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.241 \newpage
+l.273 \newpage
               pdfTeX warning (ext4): destination with the same identifier (name
 {cite.RO}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.241 \newpage
-              ] [12] [13] [14] [15] (./Memoire_Stage_L3C.lof)
+l.273 \newpage
+              ] [13] [14] [15] [16] (./Memoire_Stage_L3C.lof)
 \tf@lof=\write5
 \openout5 = `Memoire_Stage_L3C.lof'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 359.
- [16]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 359.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 390.
+ [17]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 390.
 
 (./Memoire_Stage_L3C.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 359.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 359.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 390.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 390.
 Package rerunfilecheck Info: File `Memoire_Stage_L3C.out' has not changed.
-(rerunfilecheck)             Checksum: C953E7A5311A974735B7B47ABBF2F431;2302.
+(rerunfilecheck)             Checksum: C5F04DC0D6221D153A92AB1AF91111F2;2716.
 
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
@@ -815,30 +881,36 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
 LaTeX Warning: There were multiply-defined labels.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 359.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 390.
  ) 
 Here is how much of TeX's memory you used:
- 8418 strings out of 492616
- 123388 string characters out of 6129480
- 229420 words of memory out of 5000000
- 12044 multiletter control sequences out of 15000+600000
+ 9019 strings out of 492616
+ 130454 string characters out of 6129480
+ 241726 words of memory out of 5000000
+ 12615 multiletter control sequences out of 15000+600000
  43260 words of font info for 73 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 34i,13n,37p,747b,516s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/local/texlive/2019/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc
-}</usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb>
-</usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb
-></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb>
-</usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmmib10.pfb>
-</usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></
-usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></us
-r/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr
-/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb></usr/
-local/texlive/2019/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb>
-Output written on Memoire_Stage_L3C.pdf (16 pages, 202889 bytes).
+ 34i,13n,37p,747b,521s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/local/texlive/2019/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{/usr/local/
+texlive/2019/texmf-dist/fonts/enc/dvips/lm/lm-mathex.enc}{/usr/local/texlive/20
+19/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/local/texlive/2019/texmf-d
+ist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}</usr/local/texlive/2019/texmf-di
+st/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2019/texmf-dis
+t/fonts/type1/public/amsfonts/cm/cmbxti10.pfb></usr/local/texlive/2019/texmf-di
+st/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/texlive/2019/texmf-dis
+t/fonts/type1/public/amsfonts/cm/cmmib10.pfb></usr/local/texlive/2019/texmf-dis
+t/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2019/texmf-dist/
+fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local/texlive/2019/texmf-dist/fo
+nts/type1/public/amsfonts/cm/cmti12.pfb></usr/local/texlive/2019/texmf-dist/fon
+ts/type1/public/amsfonts/cm/cmtt12.pfb></usr/local/texlive/2019/texmf-dist/font
+s/type1/public/lm/lmex10.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/pu
+blic/lm/lmmi12.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/lm/lm
+r12.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/cm-super/sfrm120
+0.pfb>
+Output written on Memoire_Stage_L3C.pdf (17 pages, 238607 bytes).
 PDF statistics:
- 385 PDF objects out of 1000 (max. 8388607)
- 350 compressed objects within 4 object streams
- 115 named destinations out of 1000 (max. 500000)
- 275 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 444 PDF objects out of 1000 (max. 8388607)
+ 404 compressed objects within 5 object streams
+ 129 named destinations out of 1000 (max. 500000)
+ 323 words of extra memory for PDF output out of 10000 (max. 10000000)
 

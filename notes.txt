@@ -5,3 +5,7 @@ ou alors en tappant gurobi sur le terminal et ensuite decrire mon script.
 Pour l'exemple "Lp" j'ai compris qu'il s'agissait de resoudre un programme lineaire
 a partir d'un fichier mais est ce a moi de l'ecrire ?
 
+Theroie des jeux : 
+pour les explication des differents concept dois je rentrer dans les details 
+c'est a dire les formules et demonstrations mathémathiques ou seuelement rester
+en surface ?

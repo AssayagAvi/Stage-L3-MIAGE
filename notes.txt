@@ -1,5 +1,7 @@
-Exercice 4 JAVA : 
-Je n'ai pas compris les dernieres questions. 
+Gurobi : je pense avoir reussi a l'installer mais je ne comprend
+pas comment l'utiliser autrement que la ligne de commande "gurobi.sh"
+ou alors en tappant gurobi sur le terminal et ensuite decrire mon script. 
 
-Théorie des jeux :
-Le concept ne m'est pas encore familier j'ai besoin de quelque jours de plus 
+Pour l'exemple "Lp" j'ai compris qu'il s'agissait de resoudre un programme lineaire
+a partir d'un fichier mais est ce a moi de l'ecrire ?
+

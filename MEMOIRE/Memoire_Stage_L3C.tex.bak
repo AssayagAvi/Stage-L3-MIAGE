@@ -236,7 +236,8 @@ Un jeu est une analyse des interactions stratégiques, intégrant des contrainte
 \paragraph{Lorsque l'on parle de jeu statique il s'agit en réalité d'un jeu ou chaque joueur effectue une seule action en simultané de l'autre mais sans avoir accès aux informations de l'action de l'autre joueurs.}
 \subsubsection{Dynamiques}
 \paragraph{A l'inverse, un jeu dynamique est un jeu qui se déroule en plusieurs étapes et non en simultané ; c'est-à-dire que chacun des joueurs a connaissance de l'action de l'autre et donc peut établir une stratégie avant chaque futures actions.  }
-
+\subsection{Stratégies}
+\paragraph{a definir}
 \subsection{Jeu bimatriciel}
 \paragraph{Un jeu bimatriciel se caractérise comme son nom l'indique par deux matrices. Ces dernières ne sont autres que les gains des joueurs. Autrement dit les joueurs jouent de manière simultané et on inscrit dans une matrice leurs gains (une matrice pour chaque joueur). Voici un exemple de deux matrices de gains pour deux joueurs A et B qui joue respectivement les lignes et les colonnes.}
 
@@ -253,7 +254,8 @@ Joueur\hspace{0,1cm} B \hspace{1cm}
 \end{pmatrix} 
 \]
 \subsection{Jeu à sommes nulles}
-\paragraph{Comme annoncé dans notre introduction nous essayerons de résoudre des jeux a sommes nulles via des algorithmes que nous allons implémenter par la suite. Mais qu'est ce qu'un jeu à somme nul ?  }
+\paragraph{Comme annoncé dans notre introduction nous essayerons de résoudre des jeux a sommes nulles via des algorithmes que nous allons implémenter par la suite. Mais qu'est ce qu'un jeu à somme nul ? }
+\paragraph{eifheien}
 
 
 

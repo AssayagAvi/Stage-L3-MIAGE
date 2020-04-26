@@ -2,7 +2,8 @@
 %    Page de garde (Pagedegarde.tex)   %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Dorian Depriester, 2014
-
+\usepackage{fancyhdr}
+\usepackage{nomencl}
 \makeatletter
 \def\@ecole{école}
 \newcommand{\ecole}[1]{
@@ -52,15 +53,51 @@
   \def\@directeur{#1}
 }
 
+\def\@fonction{Développeur }
+\newcommand{\fonction}[1]{
+  \def\@fonction{#1}
+}
+
 \def\@encadrant{encadrant}
 \newcommand{\encadrant}[1]{
   \def\@encadrant{#1}
 }
-\def\@membrea{Membre}
-\newcommand{\membrea}[1]{
-  \def\@membrea{#1\\}
+\def\@jurya{}{}{}
+\newcommand{\jurya}[3]{
+  \def\@jurya{#1,	& #2	& #3\\}
 }
-
+\def\@juryb{}{}{}
+\newcommand{\juryb}[3]{
+  \def\@juryb{#1,	& #2	& #3\\}
+}
+\def\@juryc{}{}{}
+\newcommand{\juryc}[3]{
+  \def\@juryc{#1,	& #2	& #3\\}
+}
+\def\@juryd{}{}{}
+\newcommand{\juryd}[3]{
+  \def\@juryd{#1,	& #2	& #3\\}
+}
+\def\@jurye{}{}{}
+\newcommand{\jurye}[3]{
+  \def\@jurye{#1,	& #2	& #3\\}
+}
+\def\@juryf{}{}{}
+\newcommand{\juryf}[3]{
+  \def\@juryf{#1,	& #2	& #3\\}
+}
+\def\@juryg{}{}{}
+\newcommand{\juryg}[3]{
+  \def\@juryg{#1,	& #2	& #3\\}
+}
+\def\@juryh{}{}{}
+\newcommand{\juryh}[3]{
+  \def\@juryh{#1,	& #2	& #3\\}
+}
+\def\@juryi{}{}{}
+\newcommand{\juryi}[3]{
+  \def\@juryi{#1,	& #2	& #3\\}
+}
 \makeatother
 
 \newcommand\BackgroundPic{%
@@ -95,29 +132,28 @@
   \centering
       \includegraphics[width=0.6\textwidth]{logo_Paris_Nanterre_couleur_RVB.png}
       \hfill
-      $\ $\\
-      %\includegraphics[width=0.20\textwidth]{logo_entreprise.png}\\
+      \includegraphics[width=0.20\textwidth]{logo_entreprise.png}\\
     \vspace{1cm}
-      {\Large Licence MIAGE}\\
+      {\Large Licence MIASHS parcours MIAGE}\\
     \vspace{1cm}
       {\huge 
-      	{\bfseries Mémoire Stage Licence 3 MIAGE CLASSIQUE}\\
+      	{\bfseries Rapport de stage}\\
     \vspace{0.5cm}}
-      	$\ $\\
+      	L3 MIAGE, parcours classique\\
     \vspace{1cm}
    		
     \vspace{1cm}
     	{\huge\color[rgb]{0,0,1} \bfseries{\@title}}\\
     \vspace{0.5cm}
-    %{\bfseries Entreprise d'accueil : \@entreprise}\\
+    {\bfseries Entreprise d'accueil : \@entreprise}\\
     {\bfseries Stage réalisé du \@datedebut\ au \@datefin}\\
     %	{\Large{\bfseries Spécialité doctorale ``\@specialite''}}\\
     \vspace{2cm}
-    $\ $\\
+    	\textit{présenté et soutenu par}\\
     \vspace{0.5cm}
-    $\ $\\
+    	{\Large {\bfseries \@author}} \\
     \vspace{0.5cm}
-    %	le \@date \\
+    	le \@date \\
     \vfill
      %  {\LARGE \color[rgb]{0,0,1} \bfseries{\@title}} \\
     %\vfill
@@ -125,9 +161,12 @@
        % Co-encadrant de thèse : {\bfseries \@encadrant}\\
     %\vfill
 	\begin{tabular}{>{\bfseries}lll}
-		\large Avi ASSAYAG\\
+		\large Jury de la soutenance\\
 		\vspace{0.15cm}\\
-		%\@membrea
+		\@jurya
+		\@juryb
+		\@juryc
+		\@juryd
 		%\@jurye
 		%\@juryf
 		%\@juryg
@@ -144,4 +183,22 @@
 
 
 \restoregeometry  
+\makenomenclature
+
+\pagestyle{fancy}
+
+\renewcommand\headrulewidth{1pt}
+
+\fancyhead[L]{\@fonction}
+
+\fancyhead[R]{\@entreprise}
+
+
+\renewcommand\footrulewidth{1pt}
+
+\fancyfoot[L]{\@author}
+
+\fancyfoot[C]{}
+
+\fancyfoot[R]{ Page \thepage/\pageref{LastPage}}
 }

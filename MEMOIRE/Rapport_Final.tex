@@ -10,42 +10,61 @@
 \usepackage{graphicx}
 \usepackage{eso-pic}	% Nécessaire pour mettre des images en arrière plan
 \usepackage{array} 
-\usepackage{hyperref}
-\usepackage{upquote}
 \usepackage{amsmath}
+\usepackage{hyperref}
+\usepackage{lastpage}
+\definecolor{bleuleger}{RGB}{0,0,200}
 \newtheorem{definition}{Définition}
 
 
+\usepackage{listings}
+
 \input{pagedegarde}
 
-\title{Implémentation d'algorithmes pour les modèles de jeu stochastiques}
 
-\datedebut{23 Mars 2020}
-\datefin{1 Juin 2020}
+\author{Avi ASSAYAG}
+\title{Implémentation d'algorithmes pour modèles de jeu stochastiques }
+\entreprise{Université Paris Nanterre}
+\fonction{Développeur Python Jr}
+\datedebut{23 mars 2020}
+\datefin{25 mai 2020}
 
-\membrea{Avi ASSAYAG}
+\date{1 juin 2020}
+\jurya{M. François Delbot}{Maître de conférences}{Responsable du L3 MIAGE}
 
+\juryb{M. Emmanuel Hyon }{Maître de conférences}{Tuteur enseignant}
+%Le titre de votre enseignant référent est soit Maître de conférences, soit Professeur des universités. Si vous aves un doute, demandez moi. 
 
+\juryc{M. Emmanuel Hyon }{Maître de conférences}{Maître de stage}
+%Demandez à votre maître de stage quel est son poste. Par exemple, directeur du système d'information, chef de projet, responsable d'équipe etc...
 
+%\juryd{M. Prénom Nom}{poste de votre maître de stage}{Maître de stage}
+%Ajouter le juryd si votre maître de stage viens accompagné d'un collègue.
 
 \begin{document}
 \pagedegarde
 
-\newpage
 
-\tableofcontents
-\newpage
+%placer vos remerciements ici
 \section*{Remerciements}
 \paragraph{Merci à Monsieur Hyon, maitre de conférence à l'Université de Nanterre et chercheur dans l'equipe SYSDEF du Lip6 , d'avoir accepter le poste de tuteur pour mon stage de Licence 3 MIAGE. Grâce a son accompagnement personnel j'ai pu solidifier mes compétences algorithmiques (Java et Python) mais aussi découvert d'autre aspect de la programmation linéaire. }
 
 \paragraph{Cette opportunité n'a été seulement possible que par la collaboration de Monsieur Emmanuel Hyon, mon tuteur ainsi que Monsieur François Delbot, responsable de la Licence 3, et les remercie de leur patience , de leur encouragement et de le encadrement tout au long de ce stage. }
-\newpage 
+\newpage
+
+%La table des matières
+\tableofcontents
+\newpage
+
 \section{Introduction}
 \paragraph{Pendant ces semaines de stage, nous allons essayez d'implémenter des algorithmes pour résoudre des modèles de jeux stochastiques, plus précisément des jeux  de gain à somme nul (que nous représenterons sous forme bimatricel).} 
 \paragraph{L'objectif est dans un premier temps de concevoir une modélisation informatique de ces jeux puis dans un second temps implémenter un ou des algorithmes permettant de résoudre ces jeux.}
 \paragraph{Pour parfaire à ces attentes, nous allons utilisé le langage \textit{Python}, non utilisé durant le cursus scolaire actuel, le solveur \textit{Gurobi}, que nous utiliserons afin de résoudre des programmes linéaires et pour l'orienté objet \textit{Python} et la plateforme \textit{GitHub}, l'hébergeur de code, pour avoir accès a tout les codes sources, document qui m'ont aidé a réaliser ce stage.}
 \paragraph{L'utilisation de GitHub n'était pas obligatoire, mais elle plus que judicieuse pour que mon tuteur \underline{\textit{Mr Emmanuel Hyon}} puisse avoir accès en temps réel à mon code afin de m'orienter si je m'écarte du sujet. C'est donc à son initiative que nous avons utilisé \textit{Github} tout au long de ce stage.}
 \paragraph{Dans les sections qui vont suivre nous allons expliciter différents concepts propre aux modèles stochastiques (notamment le principe même de la théorie des jeux) mais aussi les outils utilisés ; comment les installer et les utiliser. }
+
+
+\section{Présentation de l'entreprise}
 
 
 \section{GitHub}
@@ -271,18 +290,25 @@ Joueur\hspace{0,1cm} B \hspace{1cm}
    \bibitem[Théorie des Jeux]{RO}\url{http://www.cril.univ-artois.fr/~konieczny/enseignement/TheorieDesJeux.pdf}\newline
 \end{thebibliography}
 
+
+
 \newpage
 \section{Annexes}
-\subsection{Syntaxe Python}
+\appendix
+\makeatletter
+\def\@seccntformat#1{Annexe~\csname the#1\endcsname:\quad}
+\makeatother
+\newpage
+\section{Python en général}
 \paragraph{La syntaxe est assez similaire aux autre langage puisque python utilise les mêmes types de variables, sauf les types sophistiqués. A la différence des autres langages de programmation (C,,C++,Java,php) la fin d'une instruction se termine par un caractère vide
 et non  ; , avec python c'est l'indentation qui fait office d'instruction et donc de bloc de code.}
-\subsubsection{ Structure Conditionelle If }
+\subsection{ Structure Conditionelle If }
 \paragraph{La condition est suivi par  :  puis vient ensuite l'instruction à effectuer, si le test est vérifié, qu'il faudra indenter (d'un cran).}
 \begin{verbatim}
 if <condition> :
       <instruction>
 \end{verbatim}
-\subsubsection{ Structure Conditionelle Else}
+\subsection{ Structure Conditionelle Else}
 \paragraph{La condition est suivi par  :  puis vient ensuite l'instruction à effectuer, si le premier test n'est pas vérifié, qu'il faudra indenter (d'un cran) au même niveau que le test If.}
 \begin{verbatim}
 if <condition1> :
@@ -290,7 +316,7 @@ if <condition1> :
 else :
       <instruction2>
 \end{verbatim}
-\subsubsection{ Structure Conditionelle Elif }
+\subsection{ Structure Conditionelle Elif }
 \paragraph{La condition est suivi par  :  puis vient ensuite l'instruction à effectuer, si le premier test n'est pas vérifié, qu'il faudra indenter (d'un cran) au même niveau que le test If.}
 \begin{verbatim}
 if <condition1> :
@@ -300,20 +326,20 @@ elif <condition2> :
 else : 
       <instruction3>
 \end{verbatim}
-\subsubsection{ Boucle For}
+\subsection{ Boucle For}
 \paragraph{La structure est composé de for puis de deux valeurs élément et sequence qui permette de suivre l'itération à effectuer. Le bloc 
 est exécuté autant de fois de qu'il y a d' éléments dans la sequence et se termine par  : .}
 \begin{verbatim}
 for element in sequence :
      <instruction>
 \end{verbatim}
-\subsubsection{ Boucle While }
+\subsection{ Boucle While }
 \paragraph{La structure est composé de while puis de la condition qui permet d'effectuer un test. Le bloc est exécuté tant que la condition est vérifié et se termine par  : }
 \begin{verbatim}
 while <condition> :
      <instruction>
 \end{verbatim}
-\subsubsection{ Les fonctions}
+\subsection{ Les fonctions}
 \paragraph{Quant au fonction la définition se fait de manière très simple il suffit d'utiliser le mot clé def et cela est terminer, en python on ne prend pas en compte le type de retour d'une fonction comme en C, C++ ou en Java (int, void, double, float etc ...).}
 \begin{verbatim}
 def onction (param1 , param2) :
@@ -326,7 +352,7 @@ def onction (param1 , param2) :
     return  <instruction5>
 \end{verbatim}
 
-\subsection{L'orienté objet en Python}
+\section{L'orienté objet en Python}
 \paragraph{ Python est un langage résolument orienté objet, ce qui signifie que le langage tout entier est construit autour de la notion d’objets. Quasiment tous les types du langage String / Integer / Listes / Dictionnaires  sont avant tout des objets tout comme les fonctions
 qui elles aussi sont des objets.}
 
@@ -371,7 +397,7 @@ class < NomClasse2> (< NomClasse >) :        #classe fille
 ou d’appeler une méthode depuis un objet, Python va commencer par chercher si la variable ou la fonction correspondantes se trouvent dans la classe qui a créé l’objet.}
 \paragraph{ Si c’est le cas, il va les utiliser. Si ce n’est pas le cas, il va chercher dans la classe mère de la classe de l’objet si cette classe possède une classe mère. Si il trouve ce qu’il cherche, il utilisera cette variable ou fonction.}
 \paragraph{Si il ne trouve pas, il cherchera dans la classe mère de la classe mère si elle existe et ainsi de suite. Deux fonctions existent pour savoir si l'objet est seulemnent  une instance d'une classe et pour savoir si la classe en question a eu recourt à de l'hériatge : isinstance() et issubclass(). }
-\subsection{GitHub}
+\section{GitHub}
 En résumé les commandes principales de Github sont : 
 \begin{itemize}
 \item  git init 
@@ -385,7 +411,16 @@ En résumé les commandes principales de Github sont :
 \item  git pull origin master   ou bien git pull origin < master > 
 \item  git merge 
 \end{itemize}
-\subsection{Gurobi}
+\section{Gurobi}
 \newpage
-\listoffigures
+\section{ CV}
+	\begin{figure}[h!]
+	\centering
+	\includegraphics [scale=0.83]{CV.pdf}
+	\caption{Curriculum Vitae Avi ASSAYAG L3 MIAGE}
+	\end{figure}
+	
+\end{document}\
+\newpage
+\listoffigures\
 \end{document}

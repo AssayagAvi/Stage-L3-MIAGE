@@ -1,4 +1,4 @@
-package JAVA.TD1.Exercice1;
+package JAVA.TD1.Exercice_1;
 
 /*
  Exercice 1 : Premier programme java : Lecture et affichage 

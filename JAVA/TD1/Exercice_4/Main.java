@@ -1,4 +1,4 @@
-package JAVA.TD1.Exercice4;
+package JAVA.TD1.Exercice_4;
 
 public class Main {
     final static String tab = "\t";

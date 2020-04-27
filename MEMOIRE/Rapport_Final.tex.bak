@@ -23,16 +23,16 @@
 
 
 \author{Avi ASSAYAG}
-\title{Implémentation d'algorithmes pour modèles de jeu stochastiques }
+\title{Implémentation d'algorithmes pour modèles de jeu stochastiques}
 \entreprise{Université Paris Nanterre}
-\fonction{Développeur Python Jr}
+\fonction{Développeur Junior Python }
 \datedebut{23 mars 2020}
 \datefin{25 mai 2020}
 
 \date{1 juin 2020}
 \jurya{M. François Delbot}{Maître de conférences}{Responsable du L3 MIAGE}
 
-\juryb{M. Emmanuel Hyon }{Maître de conférences}{Tuteur enseignant}
+\juryb{M. François Delbot}{Maître de conférences}{Tuteur enseignant}
 %Le titre de votre enseignant référent est soit Maître de conférences, soit Professeur des universités. Si vous aves un doute, demandez moi. 
 
 \juryc{M. Emmanuel Hyon }{Maître de conférences}{Maître de stage}
@@ -190,24 +190,50 @@ Class Pullover :
 \paragraph{La plateforme Gurobi est un solveur mathématique autrement dit c'est une optimisation mathématique. Il traduit un problème commercial en un énoncé mathématique. Gurobi à été ecrit pour prendre en considération différentes interfaces sous différents langage : \textit{C ,C++, Java, Python et R}.}
 
 \paragraph{Il y a deux méthodes d'installation soit directement avec une licence (payante ou gratuite) ou alors avec un la distribution \textit{Anaconda} que nous allons tenter d'expliquer.}
+\paragraph{Travaillant sur MacOs, j'ai opter pour l'installation de \textit{Gurobi} en privé sur ma machine et donc en gérant l'installation sur mon environnement Python, et utiliserait donc le module \emph{gurobipy}. De plus il m'a fallu créer un compte chez \textit{Gurobi} pour utiliser une licence académique gratuite bien évidemment.}
 
 \subsection{Installation de Gurobi}
 \subsubsection{Méthode classique }
-\paragraph{Il est aussi possible d'installer \textit{Gurobi} directement sur la machine en gardant notre environnement configuré par nos propre soins puisque l'environnement Python a pensé cela lors de sa conception.}
-\paragraph{Pour cela il suffira d'installer \textit{gurobipy} via le terminal Python en tappant la commande suivante :}
+\paragraph{Il est aussi possible d'installer \textit{Gurobi} directement sur la machine en gardant notre environnement configuré par nos propre soins puisque l'environnement Python a pensé cela lors de sa conception. }
+\paragraph{Pour cela il faudra au préalable télécharger le solveur sur le site web de \textit{Gurobi} (le lien est en annexe) et attendre le téléchargement. Une fois terminé il suffit d'exécuter le fichier télécharger (en double cliquant dessus) pour démarrer l'installation. Durant cette dernière le systeme d'explloitation nous demandera dans quel dossier stocker les packages nécessaire a \textit{Gurobi}. Ensuite il faudra se rendre à cette emplacement, via un terminal et exécuter la commande suivante : }
 \begin{verbatim}
 python setup.py install
 \end{verbatim}
+\paragraph{Après avoir créer son compte afin d'obtenir un licence il faudra l'enregistrer sur la machine afin de pourvoir utiliser le solveur sans souci, pour cela il faudra ouvrir le terminal et exécuter la commande suivante :}
+\begin{verbatim}
+grbgetkey 4fd46a16-7d9c-11ea-809f-020d093b5256
+\end{verbatim}
+\paragraph{Une fois tout ceci effectué et donc paramétré il faudra, pour utiliser le solveur, faire un \textit{import} du module et donc de la bibliothèque \textit{Gurobi} au début du script python que l'on élabore.}
+\begin{verbatim}
+import gurobipy as gp
+from gurobipy import *
+\end{verbatim}
 
 \subsubsection{Méthode via Anaconda }
-\paragraph{Via cette méthode, l'environnement est déjà préinstaller pour l'utilisateur et comporte une interface graphique \textit{Spyder} ainsi qu'un éditeur de texte \textit{Jupiter}}.Pour cela il suffira simplement de télécharger les fichiers nécessaires sur https://www.gurobi.com/get-anaconda/ puis lancer  \textit{Anaconda} via le terminal et enfin installer le package de \textit{Gurobi}.
+\paragraph{Pour essayer de faire simple, Anaconda est une solution libre office, c'est a dire à téléchargement gratuit, qui permet une installation rapide et simple de \textit{Python} avec un interpréteur (IDE) ainsi que de nombreuses bibliothèques (les plus utilisées et les plus utiles),gurobi par exemple. Par la suite si ont veux ajouter des modules ou bibliothèques supplémentaires  on le fait comme avec python sauf qu'au lieu d'ecrire \textit{pip} on écrit \textit{conda}.}
+\begin{verbatim}
+via Python :       pip install <module>
+via Anaconda :     conda install <module>
+\end{verbatim}
 
+\paragraph{Via cette méthode, l'environnement est déjà préinstaller pour l'utilisateur et comporte une interface graphique \textit{Spyder} ainsi qu'un éditeur de texte \textit{Jupiter}}.Pour cela il suffira simplement de télécharger les fichiers nécessaires sur https://www.gurobi.com/get-anaconda/ puis lancer \textit{Anaconda} via le terminal et enfin installer le package de \textit{Gurobi}.
 \begin{verbatim}
 python | Anaconda
 conda install gurobi 
 \end{verbatim}
-\subsection{Test d'installation}
-\subsection{Exemple Gurobi programmation linéaire (lp)}
+
+
+\subsection{Shell interactive }
+\paragraph{Lorsque que \textit{Gurobi} mentionne son "shell intercative" il s'agit en fait d'un script (fichier ".sh") qui est fournit avec le téléchargement du solveur. En en le lançant, c'est a dire en le tapant a la console le terminal lancera une console \textit{gurobi} ou il faudra directement écrire le code a exécuter. Ainsi un interpréteur \textit{Gurobi} sera ouvert et attendra des instructions, au même titre qu'un interpréteur \textit{Python} .}
+\begin{center}
+\begin{figure}[h!]
+\centering
+\includegraphics[scale=0.8]{console.png}
+\caption{Shell interactive Gurobi }
+\end{figure}
+\end{center}
+
+\subsection{Exemple Gurobi programmation linéaire (mip)}
 \begin{verbatim}
 import sys
 import gurobipy as gp
@@ -283,11 +309,12 @@ Joueur\hspace{0,1cm} B \hspace{1cm}
 \section{Webographie}
 \begin{thebibliography}{2}
    \bibitem[Python]{Python} \url{https://docs.python.org/fr}\newline
-      \bibitem[GitHub]{GitHub}\url{https://help.github.com/en}\newline
-         \bibitem[Gurobi]{Gurobi}\url{https://www.gurobi.com/documentation/9.0/quickstart_mac/py_python_interface.html}\newline
+   \bibitem[GitHub]{GitHub}\url{https://help.github.com/en}\newline
+   \bibitem[Gurobi]{Gurobi}\url{ https://www.gurobi.com/downloads/gurobi-software/}\newline
    \bibitem[Théorie des Jeux]{RO}\url{https://fr.wikipedia.org/wiki/Th\%C3\%A9orie_des_jeux}\newline
    \bibitem[Théorie des Jeux]{RO}\url{http://www.cril.univ-artois.fr/~konieczny/enseignement/TheorieDesJeux.pdf}\newline
    \bibitem[Théorie des Jeux]{RO}\url{http://www.cril.univ-artois.fr/~konieczny/enseignement/TheorieDesJeux.pdf}\newline
+  
 \end{thebibliography}
 
 
@@ -298,7 +325,6 @@ Joueur\hspace{0,1cm} B \hspace{1cm}
 \makeatletter
 \def\@seccntformat#1{Annexe~\csname the#1\endcsname:\quad}
 \makeatother
-\newpage
 \section{Python en général}
 \paragraph{La syntaxe est assez similaire aux autre langage puisque python utilise les mêmes types de variables, sauf les types sophistiqués. A la différence des autres langages de programmation (C,,C++,Java,php) la fin d'une instruction se termine par un caractère vide
 et non  ; , avec python c'est l'indentation qui fait office d'instruction et donc de bloc de code.}
@@ -412,15 +438,30 @@ En résumé les commandes principales de Github sont :
 \item  git merge 
 \end{itemize}
 \section{Gurobi}
+\paragraph{ Voici les deux méthodes (via gurobi.sh ou alors via le module gurobipy) que l'on peut utiliser pour résoudre un programme MIP nommé "mip.py" (voir exmeple [5.3]) :}
+\begin{center}
+\begin{figure}[h]
+\centering
+\includegraphics[scale=0.45]{gurobish.png}
+\caption{Résolution via shell gurobi (gurobi.sh)}
+\end{figure}
+\begin{figure}[h]
+\centering
+\includegraphics[scale=0.45]{gurobipython.png}
+\caption{Résolution via module gurobi (gurobipy)}
+\end{figure}
+\end{center}
+\paragraph{Il est logique que le résultat produit est le même sauf la commande utilisé n'est pas la même. L'avantage de la deuxième méthode est que l'on peut importer le module \textit{gurobipy} dans n'importe quelle future création Python}
 \newpage
 \section{ CV}
-	\begin{figure}[h]
-	\centering
-	\includegraphics [width=25cm]{CV.pdf}
-	\caption{Curriculum Vitae Avi ASSAYAG L3 MIAGE}
-	\end{figure}
-	
-\end{document}\
+\begin{center}
+\begin{figure}[h!]
+\centering
+\includegraphics [scale=0.83]{CV.pdf}
+\caption{Curriculum Vitae Avi ASSAYAG L3 MIAGE}
+\end{figure}
+\end{center}
 \newpage
 \listoffigures\
 \end{document}
+

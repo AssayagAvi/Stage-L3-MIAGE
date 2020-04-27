@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2019.10.29)  26 APR 2020 17:31
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2019.10.29)  27 APR 2020 17:31
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -703,140 +703,156 @@ Overfull \hbox (40.08264pt too wide) in paragraph at lines 187--187
  []
 
 [9]
-Overfull \hbox (3.19342pt too wide) in paragraph at lines 194--194
+Overfull \hbox (3.19342pt too wide) in paragraph at lines 193--193
  []\T1/aer/bx/n/12 Il y a deux mé-thodes d'ins-tal-la-tion soit di-rec-te-ment 
 avec une li-cence (payante
  []
 
 [10]
-Overfull \hbox (21.57878pt too wide) in paragraph at lines 243--243
+<console.png, id=326, 501.875pt x 237.88875pt>
+File: console.png Graphic file (type png)
+<use console.png>
+Package pdftex.def Info: console.png  used on input line 231.
+(pdftex.def)             Requested size: 401.50053pt x 190.31123pt.
+ [11 <./console.png>]
+Overfull \hbox (21.57878pt too wide) in paragraph at lines 269--269
 []\T1/aett/m/n/12 # Model is infeasible - compute an Irreducible Inconsistent S
 ubsystem (IIS)[] 
  []
 
 
-Overfull \hbox (22.16188pt too wide) in paragraph at lines 248--249
+Overfull \hbox (22.16188pt too wide) in paragraph at lines 274--275
 []\T1/aer/m/it/12 Un jeu est une ana-lyse des in-ter-ac-tions stra-té-giques, i
 n-té-grant des contraintes
  []
 
-[11] [12]
-Underfull \hbox (badness 10000) in paragraph at lines 285--286
+
+Underfull \vbox (badness 1331) has occurred while \output is active []
+
+ [12]
+[13]
+Underfull \hbox (badness 10000) in paragraph at lines 311--312
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 286--287
+Underfull \hbox (badness 10000) in paragraph at lines 312--313
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 287--288
-[][]$\T1/aett/m/n/12 https : / / www . gurobi . com / documentation / 9 . 0 / q
-uickstart _ mac / py _
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 287--288
+Underfull \hbox (badness 10000) in paragraph at lines 313--314
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 288--289
+Underfull \hbox (badness 10000) in paragraph at lines 314--315
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 289--290
+Underfull \hbox (badness 10000) in paragraph at lines 315--316
 [][]$\T1/aett/m/n/12 http : / / www . cril . univ-[]artois . fr / ~konieczny / 
 enseignement /
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 289--290
+Underfull \hbox (badness 10000) in paragraph at lines 315--316
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 290--291
+Underfull \hbox (badness 10000) in paragraph at lines 316--317
 [][]$\T1/aett/m/n/12 http : / / www . cril . univ-[]artois . fr / ~konieczny / 
 enseignement /
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 290--291
+Underfull \hbox (badness 10000) in paragraph at lines 316--317
 
  []
 
-[13pdfTeX warning (ext4): destination with the same identifier (name{cite.RO}) 
+[14pdfTeX warning (ext4): destination with the same identifier (name{cite.RO}) 
 has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.295 \newpage
+l.322 \newpage
               pdfTeX warning (ext4): destination with the same identifier (name
 {cite.RO}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.295 \newpage
-              ] [14] [15] [16] [17] [18]
-<CV.pdf, id=409, 542.025pt x 782.925pt>
+l.322 \newpage
+              ] [15] [16] [17]
+<gurobish.png, id=412, 578.16pt x 478.78876pt>
+File: gurobish.png Graphic file (type png)
+<use gurobish.png>
+Package pdftex.def Info: gurobish.png  used on input line 445.
+(pdftex.def)             Requested size: 260.16959pt x 215.45294pt.
+<gurobipython.png, id=413, 576.1525pt x 480.79625pt>
+File: gurobipython.png Graphic file (type png)
+<use gurobipython.png>
+Package pdftex.def Info: gurobipython.png  used on input line 450.
+(pdftex.def)             Requested size: 259.26622pt x 216.35631pt.
+ [18 <./gurobish.png> <./gurobipython.png>]
+<CV.pdf, id=425, 542.025pt x 782.925pt>
 File: CV.pdf Graphic file (type pdf)
 <use CV.pdf>
-Package pdftex.def Info: CV.pdf  used on input line 419.
+Package pdftex.def Info: CV.pdf  used on input line 460.
 (pdftex.def)             Requested size: 449.88063pt x 649.82759pt.
 
-Overfull \hbox (8.8629pt too wide) in paragraph at lines 419--420
+Overfull \hbox (8.8629pt too wide) in paragraph at lines 460--461
  [][] 
  []
 
+[19 <./CV.pdf>] [20] (./Rapport_Final.lof)
+\tf@lof=\write6
+\openout6 = `Rapport_Final.lof'.
 
+ 
 AED: lastpage setting LastPage
-[19 <./CV.pdf>]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 423.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 423.
+[21]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 466.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 466.
  (./Rapport_Final.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 423.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 423.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 466.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 466.
 Package rerunfilecheck Info: File `Rapport_Final.out' has not changed.
-(rerunfilecheck)             Checksum: 308E02DA2E6FD8B39FD2A91A434F5F6B;2789.
+(rerunfilecheck)             Checksum: 000929173BEEA9A5CB871B66ACC75EE4;2789.
 
 
 LaTeX Warning: There were multiply-defined labels.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 423.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 466.
  ) 
 Here is how much of TeX's memory you used:
- 10961 strings out of 492616
- 160734 string characters out of 6129480
- 312814 words of memory out of 5000000
- 14517 multiletter control sequences out of 15000+600000
+ 10992 strings out of 492616
+ 161151 string characters out of 6129480
+ 312820 words of memory out of 5000000
+ 14530 multiletter control sequences out of 15000+600000
  45602 words of font info for 76 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 38i,13n,48p,744b,587s stack positions out of 5000i,500n,10000p,200000b,80000s
-pdfTeX warning (dest): name{page.20} has been referenced but does not exist, 
-replaced by a fixed one
-
-{/usr/local/texlive/2019/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{/usr/local/te
-xlive/2019/texmf-dist/fonts/enc/dvips/lm/lm-mathex.enc}{/usr/local/texlive/2019
-/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}</usr/local/texlive/2019/texmf-dis
-t/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2019/texmf-dist
-/fonts/type1/public/amsfonts/cm/cmbxti10.pfb></usr/local/texlive/2019/texmf-dis
-t/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/local/texlive/2019/texmf-dis
-t/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/texlive/2019/texmf-dist
-/fonts/type1/public/amsfonts/cm/cmmib10.pfb></usr/local/texlive/2019/texmf-dist
-/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2019/texmf-dist/f
-onts/type1/public/amsfonts/cm/cmr17.pfb></usr/local/texlive/2019/texmf-dist/fon
-ts/type1/public/amsfonts/cm/cmti12.pfb></usr/local/texlive/2019/texmf-dist/font
-s/type1/public/amsfonts/cm/cmtt12.pfb></usr/local/texlive/2019/texmf-dist/fonts
-/type1/public/lm/lmex10.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/pub
-lic/lm/lmmi12.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/lm/lmr
-12.pfb>
-Output written on Rapport_Final.pdf (19 pages, 1281891 bytes).
+ 38i,13n,48p,756b,587s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/local/texlive/2019/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{/usr/local/
+texlive/2019/texmf-dist/fonts/enc/dvips/lm/lm-mathex.enc}{/usr/local/texlive/20
+19/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}</usr/local/texlive/2019/texmf-d
+ist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2019/texmf-di
+st/fonts/type1/public/amsfonts/cm/cmbxti10.pfb></usr/local/texlive/2019/texmf-d
+ist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/local/texlive/2019/texmf-d
+ist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/texlive/2019/texmf-di
+st/fonts/type1/public/amsfonts/cm/cmmib10.pfb></usr/local/texlive/2019/texmf-di
+st/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2019/texmf-dist
+/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local/texlive/2019/texmf-dist/f
+onts/type1/public/amsfonts/cm/cmti12.pfb></usr/local/texlive/2019/texmf-dist/fo
+nts/type1/public/amsfonts/cm/cmtt12.pfb></usr/local/texlive/2019/texmf-dist/fon
+ts/type1/public/lm/lmex10.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/p
+ublic/lm/lmmi12.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/lm/l
+mr12.pfb>
+Output written on Rapport_Final.pdf (21 pages, 2039172 bytes).
 PDF statistics:
- 922 PDF objects out of 1000 (max. 8388607)
- 691 compressed objects within 7 object streams
- 136 named destinations out of 1000 (max. 500000)
- 357 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 955 PDF objects out of 1000 (max. 8388607)
+ 715 compressed objects within 8 object streams
+ 148 named destinations out of 1000 (max. 500000)
+ 372 words of extra memory for PDF output out of 10000 (max. 10000000)
 

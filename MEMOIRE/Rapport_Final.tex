@@ -62,6 +62,8 @@
 \paragraph{Pour parfaire à ces attentes, nous allons utilisé le langage \textit{Python}, non utilisé durant le cursus scolaire actuel, le solveur \textit{Gurobi}, que nous utiliserons afin de résoudre des programmes linéaires et pour l'orienté objet \textit{Python} et la plateforme \textit{GitHub}, l'hébergeur de code, pour avoir accès a tout les codes sources, document qui m'ont aidé a réaliser ce stage.}
 \paragraph{L'utilisation de GitHub n'était pas obligatoire, mais elle plus que judicieuse pour que mon tuteur \underline{\textit{Mr Emmanuel Hyon}} puisse avoir accès en temps réel à mon code afin de m'orienter si je m'écarte du sujet. C'est donc à son initiative que nous avons utilisé \textit{Github} tout au long de ce stage.}
 \paragraph{Dans les sections qui vont suivre nous allons expliciter différents concepts propre aux modèles stochastiques (notamment le principe même de la théorie des jeux) mais aussi les outils utilisés ; comment les installer et les utiliser. }
+\paragraph{Enfin nous tenterons de résoudre }
+
 
 
 \section{Présentation de l'entreprise}
@@ -234,39 +236,6 @@ conda install gurobi
 \end{center}
 
 \subsection{Exemple Gurobi programmation linéaire (mip)}
-\begin{verbatim}
-import sys
-import gurobipy as gp
-from gurobipy import GRB
-
-if len(sys.argv) < 2:
-    print('Usage: lp.py filename')
-    quit()
-
-# Read and solve model
-model = gp.read(sys.argv[1])
-model.optimize()
-
-if model.status == GRB.INF_OR_UNBD:
-    # Turn presolve off to determine whether model is infeasible
-    # or unbounded
-    model.setParam(GRB.Param.Presolve, 0)
-    model.optimize()
-
-if model.status == GRB.OPTIMAL:
-    print('Optimal objective: %g' % model.objVal)
-    model.write('model.sol')
-    sys.exit(0)
-elif model.status != GRB.INFEASIBLE:
-    print('Optimization was stopped with status %d' % model.status)
-    sys.exit(0)
-
-# Model is infeasible - compute an Irreducible Inconsistent Subsystem (IIS)
-print('Model is infeasible')
-model.computeIIS()
-model.write("model.ilp")
-print("IIS written to file 'model.ilp'")
-\end{verbatim}
 
 \section{La théorie des jeux}
 \paragraph{Comme nous l'avons expliqué un peu plus haut, l'un des objectifs de ce stage est la modélisation d'algorithmes afin de résoudre des jeux stochastiques. Mais tout d'abord détaillons un peu le concept des \textit{jeux}.}
@@ -311,6 +280,8 @@ Joueur\hspace{0,1cm} B \hspace{1cm}
    \bibitem[Python]{Python} \url{https://docs.python.org/fr}\newline
    \bibitem[GitHub]{GitHub}\url{https://help.github.com/en}\newline
    \bibitem[Gurobi]{Gurobi}\url{ https://www.gurobi.com/downloads/gurobi-software/}\newline
+   \bibitem[Gurobi]{Gurobi}\url{ https://www.gurobi.com/documentation/9.0/refman/py_model.html}\newline
+  
    \bibitem[Théorie des Jeux]{RO}\url{https://fr.wikipedia.org/wiki/Th\%C3\%A9orie_des_jeux}\newline
    \bibitem[Théorie des Jeux]{RO}\url{http://www.cril.univ-artois.fr/~konieczny/enseignement/TheorieDesJeux.pdf}\newline
    \bibitem[Théorie des Jeux]{RO}\url{http://www.cril.univ-artois.fr/~konieczny/enseignement/TheorieDesJeux.pdf}\newline
@@ -438,20 +409,20 @@ En résumé les commandes principales de Github sont :
 \item  git merge 
 \end{itemize}
 \section{Gurobi}
-\paragraph{ Voici les deux méthodes (via gurobi.sh ou alors via le module gurobipy) que l'on peut utiliser pour résoudre un programme MIP nommé "mip.py" (voir exmeple [5.3]) :}
+\paragraph{ Voici les deux méthodes (via gurobi.sh ou alors via le module gurobipy) que l'on peut utiliser pour résoudre un programme MIP nommé "biere.py" (voir exmeple [5.3]) :}
 \begin{center}
 \begin{figure}[h]
 \centering
-\includegraphics[scale=0.45]{gurobish.png}
+\includegraphics[scale=0.4]{gurobish.png}
 \caption{Résolution via shell gurobi (gurobi.sh)}
 \end{figure}
 \begin{figure}[h]
 \centering
-\includegraphics[scale=0.45]{gurobipython.png}
+\includegraphics[scale=0.4]{gurobipython.png}
 \caption{Résolution via module gurobi (gurobipy)}
 \end{figure}
 \end{center}
-\paragraph{Il est logique que le résultat produit est le même sauf la commande utilisé n'est pas la même. L'avantage de la deuxième méthode est que l'on peut importer le module \textit{gurobipy} dans n'importe quelle future création Python}
+\paragraph{Il est logique que le résultat produit est le même sauf la commande utilisé n'est pas la même. L'avantage de la deuxième méthode est que l'on peut importer le module \textit{gurobipy} dans n'importe quelle future création Python.}
 \newpage
 \section{ CV}
 \begin{center}

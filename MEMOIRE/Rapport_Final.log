@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2019.10.29)  27 APR 2020 17:31
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2019.10.29)  28 APR 2020 11:33
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -679,130 +679,131 @@ Package nomencl Info: Writing nomenclature file Rapport_Final.nlo on input line
 \openout5 = `Rapport_Final.toc'.
 
  [4]
-Overfull \hbox (1.88557pt too wide) in paragraph at lines 80--80
+Overfull \hbox (1.88557pt too wide) in paragraph at lines 82--82
  []\T1/aer/bx/n/12 Ensuite cela s'agit comme une sorte de ré-seau consti-tué de
  branches (branch)
  []
 
 [5] [6] [7]
-LaTeX Font Info:    Try loading font information for T1+aett on input line 123.
+LaTeX Font Info:    Try loading font information for T1+aett on input line 125.
 
  (/usr/local/texlive/2019/texmf-dist/tex/latex/ae/t1aett.fd
 File: t1aett.fd 1997/11/16 Font definitions for T1/aett.
 )
 [8]
-Overfull \hbox (40.08264pt too wide) in paragraph at lines 187--187
+Overfull \hbox (40.08264pt too wide) in paragraph at lines 189--189
 []     \T1/aett/m/n/12 def __init (brand, size, model_,name, color, price) :   
     #constructeur[] 
  []
 
 
-Overfull \hbox (40.08264pt too wide) in paragraph at lines 187--187
+Overfull \hbox (40.08264pt too wide) in paragraph at lines 189--189
 []  \T1/aett/m/n/12 Pull1 = Pullover("ZARA", "XS", "AED934", "black", 19)      
    #instanciation[] 
  []
 
 [9]
-Overfull \hbox (3.19342pt too wide) in paragraph at lines 193--193
+Overfull \hbox (3.19342pt too wide) in paragraph at lines 195--195
  []\T1/aer/bx/n/12 Il y a deux mé-thodes d'ins-tal-la-tion soit di-rec-te-ment 
 avec une li-cence (payante
  []
 
 [10]
-<console.png, id=326, 501.875pt x 237.88875pt>
+<console.png, id=327, 501.875pt x 237.88875pt>
 File: console.png Graphic file (type png)
 <use console.png>
-Package pdftex.def Info: console.png  used on input line 231.
+Package pdftex.def Info: console.png  used on input line 233.
 (pdftex.def)             Requested size: 401.50053pt x 190.31123pt.
  [11 <./console.png>]
-Overfull \hbox (21.57878pt too wide) in paragraph at lines 269--269
-[]\T1/aett/m/n/12 # Model is infeasible - compute an Irreducible Inconsistent S
-ubsystem (IIS)[] 
- []
-
-
-Overfull \hbox (22.16188pt too wide) in paragraph at lines 274--275
+Overfull \hbox (22.16188pt too wide) in paragraph at lines 243--244
 []\T1/aer/m/it/12 Un jeu est une ana-lyse des in-ter-ac-tions stra-té-giques, i
 n-té-grant des contraintes
  []
 
-
-Underfull \vbox (badness 1331) has occurred while \output is active []
-
- [12]
-[13]
-Underfull \hbox (badness 10000) in paragraph at lines 311--312
+[12] [13]
+Underfull \hbox (badness 10000) in paragraph at lines 280--281
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 312--313
+Underfull \hbox (badness 10000) in paragraph at lines 281--282
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 313--314
+Underfull \hbox (badness 10000) in paragraph at lines 282--283
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 314--315
+Underfull \hbox (badness 10000) in paragraph at lines 283--284
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 315--316
+Underfull \hbox (badness 10000) in paragraph at lines 285--286
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 286--287
 [][]$\T1/aett/m/n/12 http : / / www . cril . univ-[]artois . fr / ~konieczny / 
 enseignement /
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 315--316
+Underfull \hbox (badness 10000) in paragraph at lines 286--287
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 316--317
+Underfull \hbox (badness 10000) in paragraph at lines 287--288
 [][]$\T1/aett/m/n/12 http : / / www . cril . univ-[]artois . fr / ~konieczny / 
 enseignement /
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 316--317
+Underfull \hbox (badness 10000) in paragraph at lines 287--288
 
  []
 
-[14pdfTeX warning (ext4): destination with the same identifier (name{cite.RO}) 
-has been already used, duplicate ignored
+[14pdfTeX warning (ext4): destination with the same identifier (name{cite.Gurob
+i}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.322 \newpage
+l.293 \newpage
               pdfTeX warning (ext4): destination with the same identifier (name
 {cite.RO}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.322 \newpage
+l.293 \newpage
+              pdfTeX warning (ext4): destination with the same identifier (name
+{cite.RO}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.293 \newpage
               ] [15] [16] [17]
-<gurobish.png, id=412, 578.16pt x 478.78876pt>
+<gurobish.png, id=414, 575.14874pt x 556.0775pt>
 File: gurobish.png Graphic file (type png)
 <use gurobish.png>
-Package pdftex.def Info: gurobish.png  used on input line 445.
-(pdftex.def)             Requested size: 260.16959pt x 215.45294pt.
-<gurobipython.png, id=413, 576.1525pt x 480.79625pt>
+Package pdftex.def Info: gurobish.png  used on input line 416.
+(pdftex.def)             Requested size: 230.05542pt x 222.42705pt.
+<gurobipython.png, id=415, 577.15625pt x 570.13pt>
 File: gurobipython.png Graphic file (type png)
 <use gurobipython.png>
-Package pdftex.def Info: gurobipython.png  used on input line 450.
-(pdftex.def)             Requested size: 259.26622pt x 216.35631pt.
+Package pdftex.def Info: gurobipython.png  used on input line 421.
+(pdftex.def)             Requested size: 230.8584pt x 228.04796pt.
  [18 <./gurobish.png> <./gurobipython.png>]
-<CV.pdf, id=425, 542.025pt x 782.925pt>
+<CV.pdf, id=427, 542.025pt x 782.925pt>
 File: CV.pdf Graphic file (type pdf)
 <use CV.pdf>
-Package pdftex.def Info: CV.pdf  used on input line 460.
+Package pdftex.def Info: CV.pdf  used on input line 431.
 (pdftex.def)             Requested size: 449.88063pt x 649.82759pt.
 
-Overfull \hbox (8.8629pt too wide) in paragraph at lines 460--461
+Overfull \hbox (8.8629pt too wide) in paragraph at lines 431--432
  [][] 
  []
 
@@ -813,22 +814,22 @@ Overfull \hbox (8.8629pt too wide) in paragraph at lines 460--461
  
 AED: lastpage setting LastPage
 [21]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 466.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 466.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 437.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 437.
  (./Rapport_Final.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 466.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 466.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 437.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 437.
 Package rerunfilecheck Info: File `Rapport_Final.out' has not changed.
 (rerunfilecheck)             Checksum: 000929173BEEA9A5CB871B66ACC75EE4;2789.
 
 
 LaTeX Warning: There were multiply-defined labels.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 466.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 437.
  ) 
 Here is how much of TeX's memory you used:
- 10992 strings out of 492616
- 161151 string characters out of 6129480
+ 10993 strings out of 492616
+ 161162 string characters out of 6129480
  312820 words of memory out of 5000000
  14530 multiletter control sequences out of 15000+600000
  45602 words of font info for 76 fonts, out of 8000000 for 9000
@@ -849,10 +850,10 @@ nts/type1/public/amsfonts/cm/cmtt12.pfb></usr/local/texlive/2019/texmf-dist/fon
 ts/type1/public/lm/lmex10.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/p
 ublic/lm/lmmi12.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/lm/l
 mr12.pfb>
-Output written on Rapport_Final.pdf (21 pages, 2039172 bytes).
+Output written on Rapport_Final.pdf (21 pages, 2135238 bytes).
 PDF statistics:
- 955 PDF objects out of 1000 (max. 8388607)
- 715 compressed objects within 8 object streams
- 148 named destinations out of 1000 (max. 500000)
+ 957 PDF objects out of 1000 (max. 8388607)
+ 717 compressed objects within 8 object streams
+ 149 named destinations out of 1000 (max. 500000)
  372 words of extra memory for PDF output out of 10000 (max. 10000000)
 

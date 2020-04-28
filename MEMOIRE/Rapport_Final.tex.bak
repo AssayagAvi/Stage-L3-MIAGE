@@ -438,7 +438,7 @@ En résumé les commandes principales de Github sont :
 \item  git merge 
 \end{itemize}
 \section{Gurobi}
-\paragraph{ Voici les deux méthodes (via gurobi.sh ou alors via le module gurobipy) que l'on peut utiliser pour résoudre un programme MIP nommé "mip.py" (voir exmeple [5.3]) :}
+\paragraph{ Voici les deux méthodes (via gurobi.sh ou alors via le module gurobipy) que l'on peut utiliser pour résoudre un programme MIP nommé "biere.py" (voir exmeple [5.3]) :}
 \begin{center}
 \begin{figure}[h]
 \centering
@@ -457,7 +457,7 @@ En résumé les commandes principales de Github sont :
 \begin{center}
 \begin{figure}[h!]
 \centering
-\includegraphics [scale=0.83]{CV.pdf}
+\includegraphics [scale=0.1]{CV.pdf}
 \caption{Curriculum Vitae Avi ASSAYAG L3 MIAGE}
 \end{figure}
 \end{center}

@@ -6,8 +6,9 @@ C1 = 2.5 X1  + 7.5 X2 <= 240 (Mais)          C2 = 0.125 X1 + 0.125 X2 <= 5 (Houb
 
 C3 = 17.5 X1 + 10 X2 <= 595                  Positivité : X1 > 0 et X2 > 0 
 """
+import sys
 import gurobipy as gp
-from gurobipy import *
+from gurobipy import GRB
 
 try : 
     #Création du model

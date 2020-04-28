@@ -15,8 +15,6 @@
 \usepackage{lastpage}
 \definecolor{bleuleger}{RGB}{0,0,200}
 \newtheorem{definition}{Définition}
-
-
 \usepackage{listings}
 
 \input{pagedegarde}
@@ -61,8 +59,13 @@
 \paragraph{L'objectif est dans un premier temps de concevoir une modélisation informatique de ces jeux puis dans un second temps implémenter un ou des algorithmes permettant de résoudre ces jeux.}
 \paragraph{Pour parfaire à ces attentes, nous allons utilisé le langage \textit{Python}, non utilisé durant le cursus scolaire actuel, le solveur \textit{Gurobi}, que nous utiliserons afin de résoudre des programmes linéaires et pour l'orienté objet \textit{Python} et la plateforme \textit{GitHub}, l'hébergeur de code, pour avoir accès a tout les codes sources, document qui m'ont aidé a réaliser ce stage.}
 \paragraph{L'utilisation de GitHub n'était pas obligatoire, mais elle plus que judicieuse pour que mon tuteur \underline{\textit{Mr Emmanuel Hyon}} puisse avoir accès en temps réel à mon code afin de m'orienter si je m'écarte du sujet. C'est donc à son initiative que nous avons utilisé \textit{Github} tout au long de ce stage.}
-\paragraph{Dans les sections qui vont suivre nous allons expliciter différents concepts propre aux modèles stochastiques (notamment le principe même de la théorie des jeux) mais aussi les outils utilisés ; comment les installer et les utiliser. }
-
+\paragraph{Dans les chapitres qui suivront nous allons expliciter différents concepts relatifs aux modèles stochastiques (notamment le principe même de la théorie des jeux) mais aussi les outils utilisés ; comment les installer et les utiliser. }
+\paragraph{Enfin nous tenterons de rédiger et de résoudre trois modèles de jeu à sommes nulles , c'est a dire un jeu ou le gain d'un des acteurs représente la perte exacte des autres acteurs de ce jeu, mais nous l'expliquerons en détails dans une prochaine section [6.4]. Nous modéliserons alors :\vspace{0.3cm}}
+\begin{itemize}
+\item Le jeu \textit{pierre feuille-papier-ciseau}
+\item Le jeu \textit{pile ou face}
+\item Le jeu \textit{tir au but}
+\end{itemize}
 
 \section{Présentation de l'entreprise}
 
@@ -233,48 +236,61 @@ conda install gurobi
 \end{figure}
 \end{center}
 
-\subsection{Exemple Gurobi programmation linéaire (mip)}
+\subsection{Exemple Gurobi programmation linéaire (biere.py)}
+\paragraph{Soit x1 et x2 les quantités (en volume) respectives produite pour les bières b1 et b2. Les quantités sont soumises à des contraintes (3) pour chaque ingrédients utilisé : \newline \textit{Contraintes : }}
+\begin{itemize} 
+\item   Contrainte C1 : 2,5 x1 + 7,5 x2  $\leq$ 240 (pour le maïs)
+\item   Contrainte C2 : 0,125 x1 + 0,125 x2 $\leq$ 5 (pour le houblon)
+\item   Contrainte C3 : 17,5 x1 + 10 x2  $\leq$ 595 (pour le malt)
+\item  Contrainte  de positivité : x1 , x2 > 0
+\end{itemize}
+\textit{Objectif : }
+\begin{itemize} 
+\item Maximiser : max 15 x1 + 25 x2
+\end{itemize}
+
 \begin{verbatim}
-import sys
 import gurobipy as gp
-from gurobipy import GRB
+from gurobipy import *
 
-if len(sys.argv) < 2:
-    print('Usage: lp.py filename')
-    quit()
+try : 
+    # Création du model
+    m = gp.Model("Biere")
 
-# Read and solve model
-model = gp.read(sys.argv[1])
-model.optimize()
+    # Déclaration des Variables
+    x1 = m.addVar(vtype=GRB.INTEGER, name="x1")
+    x2 = m.addVar(vtype=GRB.INTEGER, name="x2")
+   
+   # Maximisation
+    m.setObjective(15*x1 + 25*x2, GRB.MAXIMIZE)
 
-if model.status == GRB.INF_OR_UNBD:
-    # Turn presolve off to determine whether model is infeasible
-    # or unbounded
-    model.setParam(GRB.Param.Presolve, 0)
-    model.optimize()
+    # Contraintes des Variables
+    m.addConstr(2.5 * x1 + 7.5 * x2 <= 240, "c1")
+    m.addConstr(0.125 * x1 + 0.125 * x2 <= 5, "c2")
+    m.addConstr(17.5 * x1 + 10 * x2 <= 595, "c3")
+   
+    # Résoud la solution objective 
+    m.optimize()
 
-if model.status == GRB.OPTIMAL:
-    print('Optimal objective: %g' % model.objVal)
-    model.write('model.sol')
-    sys.exit(0)
-elif model.status != GRB.INFEASIBLE:
-    print('Optimization was stopped with status %d' % model.status)
-    sys.exit(0)
+    for v in m.getVars():
+        print('%s %d' % (v.varName, v.x))
 
-# Model is infeasible - compute an Irreducible Inconsistent Subsystem (IIS)
-print('Model is infeasible')
-model.computeIIS()
-model.write("model.ilp")
-print("IIS written to file 'model.ilp'")
+    print('Obj: %s' % m.objVal)
+
+except gp.GurobiError as e:
+    print('Error code ' + str(e.errno) + ': ' + str(e))
+
+except AttributeError:
+    print('Encountered an attribute error')    
 \end{verbatim}
-
+\paragraph{Ci dessus le code python utilisé pour permettre a \textit{Gurobi} de trouver la solution de maximisation, soit  : \underline{x1= 12 et x2 = 28}}
 \section{La théorie des jeux}
 \paragraph{Comme nous l'avons expliqué un peu plus haut, l'un des objectifs de ce stage est la modélisation d'algorithmes afin de résoudre des jeux stochastiques. Mais tout d'abord détaillons un peu le concept des \textit{jeux}.}
 \begin{definition}
 Un jeu est une analyse des interactions stratégiques, intégrant des contraintes (si elles existent), sur les actions des différents acteurs (joueurs) au cour du jeu.
 \end{definition}
 \paragraph{Pour intégrer et comprendre ce concept, il y a d'autres notions à connaitre telles que \textit{jeux statiques} , \textit{jeux dynamiques} , \textit{stratégie } ou encore \textit{jeux bimatricel} et enfin \textit{gains à somme nulle}.}
-	
+
 \subsection{Jeux statiques et dynamiques}
 \paragraph{Comme vous l'avez compris,un jeu nécessite la présence d'acteurs ; dans la suite de nos explications lorsque nous parlerons de \textit{joueurs} nous ferons donc référence aux acteurs du jeu.}
 \subsubsection{Statiques}
@@ -299,8 +315,14 @@ Joueur\hspace{0,1cm} B \hspace{1cm}
 \end{pmatrix} 
 \]
 \subsection{Jeu à sommes nulles}
-\paragraph{Comme annoncé dans notre introduction nous essayerons de résoudre des jeux a sommes nulles via des algorithmes que nous allons implémenter par la suite. Mais qu'est ce qu'un jeu à somme nul ? }
-\paragraph{eifheien}
+\paragraph{Comme annoncé dans notre introduction nous essayerons de résoudre des jeux à sommes nulles via des algorithmes que nous allons implémenter par la suite. Mais qu'est ce qu'un jeu à somme nul ? }
+\paragraph{Un jeu a somme nul est un jeu ou le gain d'un des acteurs (J1, par exemple) représente la perte équivalente réciproque des autres acteurs ((J2, par exemple). Pour faciliter la compréhension et la résolution de ces modèles, le nombre d'acteurs autrement dit de joueurs sera fixé à 2.}
+\paragraph{Le jeu est défini par : }
+\begin{itemize}
+\item Un nombre fini \textit{I} d'action pour le joueur 1 (J1)
+\item Un nombre fini \textit{J} d'action pour le joueur 2 (J2)
+\item Une matrice de gain [I 
+\end{itemize}
 
 
 
@@ -311,6 +333,8 @@ Joueur\hspace{0,1cm} B \hspace{1cm}
    \bibitem[Python]{Python} \url{https://docs.python.org/fr}\newline
    \bibitem[GitHub]{GitHub}\url{https://help.github.com/en}\newline
    \bibitem[Gurobi]{Gurobi}\url{ https://www.gurobi.com/downloads/gurobi-software/}\newline
+   \bibitem[Gurobi]{Gurobi}\url{ https://www.gurobi.com/documentation/9.0/refman/py_model.html}\newline
+  
    \bibitem[Théorie des Jeux]{RO}\url{https://fr.wikipedia.org/wiki/Th\%C3\%A9orie_des_jeux}\newline
    \bibitem[Théorie des Jeux]{RO}\url{http://www.cril.univ-artois.fr/~konieczny/enseignement/TheorieDesJeux.pdf}\newline
    \bibitem[Théorie des Jeux]{RO}\url{http://www.cril.univ-artois.fr/~konieczny/enseignement/TheorieDesJeux.pdf}\newline
@@ -442,26 +466,25 @@ En résumé les commandes principales de Github sont :
 \begin{center}
 \begin{figure}[h]
 \centering
-\includegraphics[scale=0.45]{gurobish.png}
+\includegraphics[scale=0.4]{gurobish.png}
 \caption{Résolution via shell gurobi (gurobi.sh)}
 \end{figure}
 \begin{figure}[h]
 \centering
-\includegraphics[scale=0.45]{gurobipython.png}
+\includegraphics[scale=0.4]{gurobipython.png}
 \caption{Résolution via module gurobi (gurobipy)}
 \end{figure}
 \end{center}
-\paragraph{Il est logique que le résultat produit est le même sauf la commande utilisé n'est pas la même. L'avantage de la deuxième méthode est que l'on peut importer le module \textit{gurobipy} dans n'importe quelle future création Python}
+\paragraph{Il est logique que le résultat produit est le même sauf la commande utilisé n'est pas la même. L'avantage de la deuxième méthode est que l'on peut importer le module \textit{gurobipy} dans n'importe quelle future création Python.}
 \newpage
 \section{ CV}
 \begin{center}
 \begin{figure}[h!]
 \centering
-\includegraphics [scale=0.1]{CV.pdf}
+\includegraphics [scale=0.83]{CV.pdf}
 \caption{Curriculum Vitae Avi ASSAYAG L3 MIAGE}
 \end{figure}
 \end{center}
-\newpage
 \listoffigures\
 \end{document}
 

@@ -45,7 +45,7 @@
 
 %placer vos remerciements ici
 \section*{Remerciements}
-\paragraph{Merci à Monsieur Hyon, maitre de conférence à l'Université de Nanterre et chercheur dans l'equipe SYSDEF du Lip6 , d'avoir accepter le poste de tuteur pour mon stage de Licence 3 MIAGE. Grâce a son accompagnement personnel j'ai pu solidifier mes compétences algorithmiques (Java et Python) mais aussi découvert d'autre aspect de la programmation linéaire. }
+\paragraph{1}{Merci à Monsieur Hyon, maitre de conférence à l'Université de Nanterre et chercheur dans l'equipe SYSDEF du Lip6 , d'avoir accepter le poste de tuteur pour mon stage de Licence 3 MIAGE. Grâce a son accompagnement personnel j'ai pu solidifier mes compétences algorithmiques (Java et Python) mais aussi découvert d'autre aspect de la programmation linéaire. }
 
 \paragraph{Cette opportunité n'a été seulement possible que par la collaboration de Monsieur Emmanuel Hyon, mon tuteur ainsi que Monsieur François Delbot, responsable de la Licence 3, et les remercie de leur patience , de leur encouragement et de le encadrement tout au long de ce stage. }
 \newpage
@@ -150,10 +150,10 @@ def tri_a_bulle(tab) :
     return tab
 \end{verbatim}
 
-\subsection{Python et les objets}
+\subsection{La programmation objet en Python}
 \paragraph{Python permet aussi l'utilisation de l'orienté objet, c'est donc un des autres plus de ce langage puissant et aux vagues possibilité. Dans cette partie nous allons vous montrer comment coder un objet en Python et aussi le construire. Nous allons donc voir la syntaxe générale d'une  \textit{Classe} et celle d'un \textit{Constructeur}. Enfin pour terminer cela nous implémenterons un objet "Pullover" avec différents attributs et son propre constructeur.}
 
-\subsubsection{Création d'une Classe "Lambda" }
+\subsubsection{Code générique Classe "Lambda" }
 \paragraph{Pour déclarer un objet il suffit simplement d'utiliser le mot Class suivit de ":" et ensuite déclarer des variables ou autres instructions.}
 \begin{verbatim}
 Class Personne : 
@@ -167,7 +167,7 @@ def __init__(self, name, age) :
      self.name = name
      self.age = age
 \end{verbatim}
-\subsubsection{Exemple d'objet : Pullover}
+\subsubsection{Exemple de class : Pullover}
 \paragraph{Maintenant que nous avons une première approche de la syntaxe objet essayons de mettre cela en application avec quelque chose de plus concret. Nous allons créer un "Pullover" avec comme attribut : une marque, une taille, un nom de modèle, une couleur et un prix }
 \begin{verbatim}
 Class Pullover : 
@@ -198,7 +198,7 @@ Class Pullover :
 \subsection{Installation de Gurobi}
 \subsubsection{Méthode classique }
 \paragraph{Il est aussi possible d'installer \textit{Gurobi} directement sur la machine en gardant notre environnement configuré par nos propre soins puisque l'environnement Python a pensé cela lors de sa conception. }
-\paragraph{Pour cela il faudra au préalable télécharger le solveur sur le site web de \textit{Gurobi} (le lien est en annexe) et attendre le téléchargement. Une fois terminé il suffit d'exécuter le fichier télécharger (en double cliquant dessus) pour démarrer l'installation. Durant cette dernière le systeme d'explloitation nous demandera dans quel dossier stocker les packages nécessaire a \textit{Gurobi}. Ensuite il faudra se rendre à cette emplacement, via un terminal et exécuter la commande suivante : }
+\paragraph{Pour cela il faudra au préalable télécharger le solveur sur le site web de \textit{Gurobi} (le lien est en annexe) et attendre le téléchargement. Une fois terminé il suffit d'exécuter le fichier télécharger (en double cliquant dessus) pour démarrer l'installation. Durant cette dernière le système d'exploitation nous demandera dans quel dossier stocker les packages nécessaire a \textit{Gurobi}. Ensuite il faudra se rendre à cette emplacement, via un terminal et exécuter la commande suivante : }
 \begin{verbatim}
 python setup.py install
 \end{verbatim}
@@ -321,7 +321,7 @@ Joueur\hspace{0,1cm} B \hspace{1cm}
 \begin{itemize}
 \item Un nombre fini \textit{I} d'action pour le joueur 1 (J1)
 \item Un nombre fini \textit{J} d'action pour le joueur 2 (J2)
-\item Une matrice de gain [I 
+\item Une matrice de gain [I X J]
 \end{itemize}
 
 

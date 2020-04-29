@@ -5,6 +5,8 @@ public class Livres {
     final private String tab = "\t";
     final private String ligne = "\n";
 
+    private double facteur = 5;
+
     public String titre;
     public String auteur;
     public int nb_pages;
@@ -24,6 +26,7 @@ public class Livres {
         this.nb_pages=nb_pages;
         this.editeur="Presses Universitaire de la Miage Nanterre";
     }
+
     public Livres(String titre, String editeur)
     {
         this.titre=titre;
@@ -42,12 +45,19 @@ public class Livres {
         sb.append(titre).append(tab).append(auteur).append(tab).append(nb_pages).append(tab).append(editeur).append(ligne);
         return sb.toString();
     }
-    public void passion() 
+
+    public static void passion() 
     {
      System.out.println("La lecture c'est mon dada \n ----------------------------------\n");   
 
     }
     
+    public void lecture() {
+       double  tmp_lecture;
+       tmp_lecture = facteur * this.nb_pages;
+       System.out.println("Le temps de lecture est de : " + tmp_lecture + " secondes\n"); 
+    }
+
     public void message() 
     {
         System.out.println("Oh un livre !\n");    

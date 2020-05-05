@@ -1,3 +1,4 @@
+
 \documentclass[a4paper, 12pt, twoside]{article}
 \usepackage[utf8]{inputenc}		% LaTeX, comprend les accents !
 \usepackage[T1]{fontenc}		
@@ -12,10 +13,17 @@
 \usepackage{array} 
 \usepackage{amsmath}
 \usepackage{hyperref}
+ \usepackage{array}
 \usepackage{lastpage}
 \definecolor{bleuleger}{RGB}{0,0,200}
 \newtheorem{definition}{Définition}
 \usepackage{listings}
+\usepackage{titlesec}
+\setcounter{secnumdepth}{4}
+\titleformat{\paragraph}
+{\normalfont\normalsize\bfseries}{\theparagraph}{1em}{}
+\titlespacing*{\paragraph}
+{0pt}{3.25ex plus 1ex minus .2ex}{1.5ex plus .2ex}
 
 \input{pagedegarde}
 
@@ -45,9 +53,14 @@
 
 %placer vos remerciements ici
 \section*{Remerciements}
-\paragraph{1}{Merci à Monsieur Hyon, maitre de conférence à l'Université de Nanterre et chercheur dans l'equipe SYSDEF du Lip6 , d'avoir accepter le poste de tuteur pour mon stage de Licence 3 MIAGE. Grâce a son accompagnement personnel j'ai pu solidifier mes compétences algorithmiques (Java et Python) mais aussi découvert d'autre aspect de la programmation linéaire. }
+Merci à Monsieur Hyon, maitre de conférence à l'Université de Nanterre et chercheur dans l'equipe SYSDEF du Lip6 , d'avoir accepter le poste de tuteur pour mon stage de Licence 3 MIAGE. Grâce a son accompagnement personnel j'ai pu solidifier mes compétences algorithmiques (Java et Python) mais aussi découvert d'autre aspect de la programmation linéaire.
+\newline 
 
-\paragraph{Cette opportunité n'a été seulement possible que par la collaboration de Monsieur Emmanuel Hyon, mon tuteur ainsi que Monsieur François Delbot, responsable de la Licence 3, et les remercie de leur patience , de leur encouragement et de le encadrement tout au long de ce stage. }
+Cette opportunité n'a été seulement possible que par la collaboration de Monsieur Emmanuel Hyon, mon tuteur ainsi que Monsieur François Delbot, responsable de la Licence 3, et les remercie de leur patience , de leur encouragement et de le encadrement tout au long de ce stage.
+\newline
+
+Merci aussi aux autres professeurs qui ont contribué tout a long de l'année à parfaire toutes nos compétences autant sur le plan théorique que techniques. 
+
 \newpage
 
 %La table des matières
@@ -55,89 +68,93 @@
 \newpage
 
 \section{Introduction}
-\paragraph{Pendant ces semaines de stage, nous allons essayez d'implémenter des algorithmes pour résoudre des modèles de jeux stochastiques, plus précisément des jeux  de gain à somme nul (que nous représenterons sous forme bimatricel).} 
-\paragraph{L'objectif est dans un premier temps de concevoir une modélisation informatique de ces jeux puis dans un second temps implémenter un ou des algorithmes permettant de résoudre ces jeux.}
-\paragraph{Pour parfaire à ces attentes, nous allons utilisé le langage \textit{Python}, non utilisé durant le cursus scolaire actuel, le solveur \textit{Gurobi}, que nous utiliserons afin de résoudre des programmes linéaires et pour l'orienté objet \textit{Python} et la plateforme \textit{GitHub}, l'hébergeur de code, pour avoir accès a tout les codes sources, document qui m'ont aidé a réaliser ce stage.}
-\paragraph{L'utilisation de GitHub n'était pas obligatoire, mais elle plus que judicieuse pour que mon tuteur \underline{\textit{Mr Emmanuel Hyon}} puisse avoir accès en temps réel à mon code afin de m'orienter si je m'écarte du sujet. C'est donc à son initiative que nous avons utilisé \textit{Github} tout au long de ce stage.}
-\paragraph{Dans les chapitres qui suivront nous allons expliciter différents concepts relatifs aux modèles stochastiques (notamment le principe même de la théorie des jeux) mais aussi les outils utilisés ; comment les installer et les utiliser. }
-\paragraph{Enfin nous tenterons de rédiger et de résoudre trois modèles de jeu à sommes nulles , c'est a dire un jeu ou le gain d'un des acteurs représente la perte exacte des autres acteurs de ce jeu, mais nous l'expliquerons en détails dans une prochaine section [6.4]. Nous modéliserons alors :\vspace{0.3cm}}
-\begin{itemize}
-\item Le jeu \textit{pierre feuille-papier-ciseau}
-\item Le jeu \textit{pile ou face}
-\item Le jeu \textit{tir au but}
-\end{itemize}
+Pendant ces semaines de stage, nous allons essayez d'implémenter des algorithmes pour résoudre des modèles de jeux stochastiques, plus précisément des jeux  de gain à somme nul (que nous représenterons sous forme bimatricel). \newline
 
-\section{Présentation de l'entreprise}
+L'objectif est dans un premier temps de concevoir une modélisation informatique de ces jeux puis dans un second temps implémenter un ou des algorithmes permettant de résoudre ces jeux.  \newline
 
+Pour parfaire à ces attentes, nous allons utilisé le langage \textsf{Python}, non utilisé durant le cursus scolaire actuel, le solveur \textsf{Gurobi}, que nous utiliserons afin de résoudre des programmes linéaires et pour l'orienté objet \textsf{Python} et la plateforme \textsf{GitHub}, l'hébergeur de code, pour avoir accès a tout les codes sources, document qui m'ont aidé a réaliser ce stage. \newline
 
-\section{GitHub}
-\paragraph{Github est un service d'hébergement web (un peu comme une sorte de Drive) et de gestion de développement de logiciel lancé en 2008.
-Ce dernier est codé principalement en Ruby et Erlang par différents programmeurs : Chris Wanstrath, PJ Hyett et Tom Preston-Werner.}
+L'utilisation de \textsf{GitHub} n'était pas obligatoire, mais elle plus que judicieuse pour que mon tuteur \underline{\textsf{Mr Emmanuel Hyon}} puisse avoir accès en temps réel à mon code afin de m'orienter si je m'écarte du sujet. C'est donc à son initiative que nous avons utilisé \textsf{Github} tout au long de ce stage. \newline
 
-\paragraph{Aujourd'hui cette plateforme compte plus de 15 millions d'utilisateurs et enregistre environ 40 millions de dépôts de fichiers,
-se plaçant donc en tête du plus grand hébergeur source code mondial.}
+Dans les chapitres qui suivront nous allons expliciter différents concepts relatifs aux \textsf{ modèles stochastiques} (notamment le principe même de la théorie des jeux) mais aussi les outils utilisés ; comment les installer et les utiliser. \newline
 
-\paragraph{Le fonctionnement de Git est assez simple, on créer un répertoire (un référentiel / requisitory) dans lequel on va stocker tout les fichiers que l'on désire et on peut soit rendre l'accès publique (au quel cas tout le monde peut rejoindre et consulter ces fichiers) ou alors le  restreindre en accès privé (au quel cas c'est le créateur qui décide quels seront les collaborateurs ayant droit de consultation des fichiers).}
-\paragraph{Ensuite cela s'agit comme une sorte de réseau constitué de branches (branch) où chaque branches représentent un collaborateur ainsi que la master qui correspond au créateur du référentiel.}
+Enfin nous tenterons de rédiger et de résoudre différents modèles de \textsf{jeu à sommes nulles} , c'est a dire un jeu ou le gain d'un des acteurs représente la perte exacte des autres acteurs de ce jeu, mais nous l'expliquerons en détails dans une prochaine section [4.3.1].  \newline
 
-\paragraph{Une des caractéristiques de Git repose sur le fait que c'est un outil de verisonning (gestion de version) est donc permet de si le fichier
-à été modifié; si oui par qui et quand a eu lieu la modification et quel fichiers ont été affectés. Cela permet notamment de pouvoir faire
-des travails de groupe sur le même sujet (un site ou une application par exemple) où chacun doit travaillé sa partie mais nécessite les parties 
-des autres membres du groupes (mis à jours régulièrement). }
+Les \textsf{jeux à sommes nulles} sont nombreux vous connaissez surement le jeux \textsf{pierre-feuille-ciseau}, mais aussi le \textsf{dilemme du prisonnier}, ou encore le \textsf{dilemme du voyageur} et tant d'autres. \newline
 
-\paragraph{Évidemment toutes les étapes (initialisation, dépôts, fusion et clonage) se font a l'aide de lignes de commandes sur le terminal (en bash) que j'expliquerai un peu plus loin ainsi que les commandes principales pour chaque étapes.}
+Dans les semaines de ce stage nous avons décider d'implémenter un \textsf{jeu à somme nulle} moins connu que les précédents mais tout aussi interressant il s'agit : du jeu  \textsf{ "Matching Pennies"}
 
-\subsection{Initialisation}
-\paragraph{ Pour créer un projet il suffit d'aller sur le site  https://github.com/ puis Repositories --> New et remplir les informations données avant
-de valider. Ensuite pour initialiser le Git (et que la branch master existe; elle sera crée automatiquement a l'instantaciation du projet) il faut se placer dans le dossier (en ligne de commande cd) et tappez :  git init}
+\newpage
+\section{Contexte du Stage}
+\subsection{Présentation de l'entreprise}
+\subsection{Présentation de l'équipe}
+\subsection{Mission proposé}
+\subsection{Cahier des charges}
+\newpage
 
-\paragraph{Ensuite  il faudra taper :  git remote add origin < lien donnée par git hub >  puis  git push –u origin master  qui respectivement créerons le répertoire du projet et ensuite la zone de dépôt.}
+\section{Outils utilisés}
+\subsection{GitHub}
+\texttt{Github} est un service d'hébergement web (un peu comme une sorte de Drive) et de gestion de développement de logiciel lancé en 2008. Ce dernier est codé principalement en Ruby et Erlang par différents programmeurs : Chris Wanstrath, PJ Hyett et Tom Preston-Werner.\newline
 
-\subsection{Branches}
-\paragraph{Comme nous l'avons dit plus haut le projet est contenu dans la branche principale la master et grâce à des copies de branches le projet 
-acquiert une plus grande flexibilité qui permet d'incrémenter au fur et mesure le projet.}
-\paragraph{Pour ajouter une branche il suffira simplement de taper  git branch < nom de la branche >  et pour supprimer une branche il faut rajouter
-l'option -d a la commande soit :  git branch -d < nom de la branche >.}
-\paragraph{  Pour changer de branche (afin d'effectuer un dépôt ou autre) il faudra taper :  git checkout < nom de la branche >   et enfin pour visualiser
-l'ensemble des branches existantes on devra taper :  git branch .}
-\subsection{Dépôt et mises à jours}
-\paragraph{ Avant toute chose il faut savoir sur quelle branche déposer le fichier puis il faudra taper les commandes suivantes pour les ajouter 
-au fichier :  git add < nom des fichier >  (ou * pour tout ajouter) puis  git commit -m message  et enfin pour finir git push origin < nom de la branche>.}
-\paragraph{Pour récupérer des modifications faites sur le projet il suffit à l'inverse de taper : 
- git pull origin master.}
-\subsection{Clonage}
-\paragraph{Une fois les autres branches (celles des différents collaborateurs) crées il faut juste qu'il copie le lien du git pour pouvoir 
-travailler dessus et effectuer les futurs dépôts. En premier lieu il faudra taper :  git clone < lien du git >  puis effectuer la commande
- git pull origin master  pour récupérer les fichiers de la branche master et enfin faire les commandes relatives au dépôt (vu plus haut).}
+Aujourd'hui cette plateforme compte plus de 15 millions d'utilisateurs et enregistre environ 40 millions de dépôts de fichiers,
+se plaçant donc en tête du plus grand hébergeur source code mondial. \newline
 
+Le fonctionnement de Git est assez simple, on créer un répertoire (un référentiel / requisitory) dans lequel on va stocker tout les fichiers que l'on désire et on peut soit rendre l'accès publique (au quel cas tout le monde peut rejoindre et consulter ces fichiers) ou alors le  restreindre en accès privé (au quel cas c'est le créateur qui décide quels seront les collaborateurs ayant droit de consultation des fichiers). \newline
 
+Ensuite cela s'agit comme une sorte de réseau constitué de branches (branch) où chaque branches représentent un collaborateur ainsi que la master qui correspond au créateur du référentiel. \newline
 
-\section{Python}
-\paragraph{Python est un langage de programmation à part entière dont la première version fut développe par \textit{Guido van Rossum} et lancé en 1991. Ce langage est facile d'utilisation et ne possède pas forcément de syntaxe particulières seulement une indentation   permettant au compilateur intégré de suivre les blocs d'instructions.}
-\paragraph{Ce langage permet donc une multitude de possibilité de code mais aussi d'action puisqu'il existe des bibliothèques déjà implémentés et il suffira seulement des les utiliser comme bon nous le semble (par exemple Matplotlib ou encore Networkx etc...). Malheureusement Python n'est pas le langage le plus rapide d'exécution contrairement au C ou C++ et Java mais il permet tout de même d'accéder à des fonctionnalités que d'autres langages ne peuvent proposer.}
-\paragraph{Contrairement au C, Python admets des types sophistiqués supplémentaires tel que les \textit{Listes}, les \textit{Dictionnaires}, les \textit{Sets} et les \textit{Tuples}. Il en va de soit que les types primitifs sont aussi présent \textit{int,float,double,boolean etc..}. Mais le réel avantage du langage repose sur le fait que l'on ne se soucie pas du type de retour d'une fonction ni de la déclaration du type du paramètre ainsi que le langage admet la possibilité d'être orienté objet.}
-\paragraph{Python est un langage interprété et donc n'a pas besoin de passer pas un compilateur comme GCC (GNU Complier Collection), tout se fait directement sur la console une fois l'environnement installé.}
-\paragraph{Quant à l'installation de Python, cette dernière est assez simple; il suffit d'aller sur le site officiel et télécharger la version en question (aujourd'hui version 3.8.2) et ensuite de l'installer. Il existe différentes méthodes d'activation du langage, qui représente chacune l'environnement de la machine (Windows, Mac OS ou encore Linux).}
-\paragraph{A savoir que sur Mac Os et Linux, Python est déjà préinstallé et il faudra peut être seulement mettre à jours la version qui pourrai être obsolète ou dépassé.}
+Une des caractéristiques de Git repose sur le fait que c'est un outil de verisonning (gestion de version) est donc permet de si le fichier à été modifié; si oui par qui et quand a eu lieu la modification et quel fichiers ont été affectés. Cela permet notamment de pouvoir faire
+des travails de groupe sur le même sujet (un site ou une application par exemple) où chacun doit travaillé sa partie mais nécessite les parties des autres membres du groupes (mis à jours régulièrement). \newline
+Évidemment toutes les étapes (initialisation, dépôts, fusion et clonage) se font a l'aide de lignes de commandes sur le terminal (en bash) que j'expliquerai un peu plus loin ainsi que les commandes principales pour chaque étapes.\newline
 
-\subsection{Installation de Python} 
-\subsubsection{Méthode packages}
-\paragraph{Pour cela il faut allez télécharger les packages en question sur le site officiel de Python puis les interpréter c'est dire ouvrir la console (terminal python) et demander à python d'exécuter le fichier \textit{.py} en question via la commande :}
+\subsubsection{Initialisation}
+Pour créer un projet il suffit d'aller sur le site  https://github.com/ puis Repositories --> New et remplir les informations données avant de valider. Ensuite pour initialiser le Git (et que la branch master existe; elle sera crée automatiquement a l'instantaciation du projet) il faut se placer dans le dossier (en ligne de commande cd) et tappez :  git init \newline
+
+Ensuite  il faudra taper :  git remote add origin < lien donnée par git hub >  puis  git push –u origin master  qui respectivement créerons le répertoire du projet et ensuite la zone de dépôt.
+
+\subsubsection{Branches}
+Comme nous l'avons dit plus haut le projet est contenu dans la branche principale la master et grâce à des copies de branches le projet acquiert une plus grande flexibilité qui permet d'incrémenter au fur et mesure le projet. \newline
+
+Pour ajouter une branche il suffira simplement de taper  git branch < nom de la branche >  et pour supprimer une branche il faut rajouter l'option -d a la commande soit :  git branch -d < nom de la branche >.\newline
+
+Pour changer de branche (afin d'effectuer un dépôt ou autre) il faudra taper :  git checkout < nom de la branche >   et enfin pour visualiser l'ensemble des branches existantes on devra taper :  git branch .
+
+\subsubsection{Dépôt et mises à jours}
+Avant toute chose il faut savoir sur quelle branche déposer le fichier puis il faudra taper les commandes suivantes pour les ajouter  au fichier :  git add < nom des fichier >  (ou * pour tout ajouter) puis  git commit -m message  et enfin pour finir git push origin < nom de la branche>. \newline
+Pour récupérer des modifications faites sur le projet il suffit à l'inverse de taper : 
+ git pull origin master.
+ 
+\subsubsection{Clonage}
+Une fois les autres branches (celles des différents collaborateurs) crées il faut juste qu'il copie le lien du git pour pouvoir travailler dessus et effectuer les futurs dépôts. En premier lieu il faudra taper :  git clone < lien du git >  puis effectuer la commande git pull origin master  pour récupérer les fichiers de la branche master et enfin faire les commandes relatives au dépôt (vu plus haut).
+
+\subsection{Python}
+Python est un langage de programmation à part entière dont la première version fut développe par \textsf{Guido van Rossum} et lancé en 1991. Ce langage est facile d'utilisation et ne possède pas forcément de syntaxe particulières seulement une indentation permettant au compilateur intégré de suivre les blocs d'instructions. \newline
+
+Ce langage permet donc une multitude de possibilité de code mais aussi d'action puisqu'il existe des bibliothèques déjà implémentés et il suffira seulement des les utiliser comme bon nous le semble (par exemple Matplotlib ou encore Networkx etc...). Malheureusement Python n'est pas le langage le plus rapide d'exécution contrairement au C ou C++ et Java mais il permet tout de même d'accéder à des fonctionnalités que d'autres langages ne peuvent proposer. \newline
+
+Contrairement au C, Python admets des types sophistiqués supplémentaires tel que les \textsf{Listes}, les \textsf{Dictionnaires}, les \textsf{Sets} et les \textsf{Tuples}. Il en va de soit que les types primitifs sont aussi présent \textsf{int,float,double,boolean etc..}. Mais le réel avantage du langage repose sur le fait que l'on ne se soucie pas du type de retour d'une fonction ni de la déclaration du type du paramètre ainsi que le langage admet la possibilité d'être orienté objet. \newline
+
+Python est un langage interprété et donc n'a pas besoin de passer pas un compilateur comme GCC (GNU Complier Collection), tout se fait directement sur la console une fois l'environnement installé. \newline
+
+Quant à l'installation de Python, cette dernière est assez simple; il suffit d'aller sur le site officiel et télécharger la version en question (aujourd'hui version 3.8.2) et ensuite de l'installer. Il existe différentes méthodes d'activation du langage, qui représente chacune l'environnement de la machine (Windows, Mac OS ou encore Linux).\newline
+
+A savoir que sur Mac Os et Linux, Python est déjà préinstallé et il faudra peut être seulement mettre à jours la version qui pourrai être obsolète ou dépassé.
+
+\subsubsection{Installation de Python} 
+\paragraph{Méthode packages}{Pour cela il faut allez télécharger les packages en question sur le site officiel de Python puis les interpréter c'est dire ouvrir la console (terminal python) et demander à python d'exécuter le fichier \textsf{.py} en question via la commande :}
 \begin{verbatim}
 python setup.py install
 \end{verbatim} 
 
-\subsubsection{Méthode module Pip} 
-\paragraph{Il s'agit d'une des méthodes les plus simple, après avoir téléchargé les packages Python sur le site, on installe tout les modules externes (pip , Django etc ...)  que l'on pourrai avoir besoin d'utiliser par la suite via le terminal : }
+\paragraph{Méthode module Pip} {Il s'agit d'une des méthodes les plus simple, après avoir téléchargé les packages Python sur le site, on installe tout les modules externes (pip , Django etc ...)  que l'on pourrai avoir besoin d'utiliser par la suite via le terminal : }
 \begin{verbatim}
 pip install <nom_module>
 \end{verbatim}
 
-\subsection{Un petit code Python}
+\subsubsection{Un petit code Python}
+Pour déclarer une variable il suffit seulement de la nommé, Python n'attend pas forcement le type de la variable; tout comme pour une fonction il n'attend pas le type de retour de la fonction.Ensuite pour les boucles et les conditions il suffit d'utiliser le mot clé en question suivit de " : " et donnez les instructions de façon indenter \newline
 
-\paragraph{Pour déclarer une variable il suffit seulement de la nommé, Python n'attend pas forcement le type de la variable; tout comme pour une fonction il n'attend pas le type de retour de la fonction.Ensuite pour les boucles et les conditions il suffit d'utiliser le mot clé en question suivit de " : " et donnez les instructions de façon indenter}
-
-\paragraph{Rien de mieux qu'un petit code Python pour mieux comprendre la syntaxe et la facilité d'utilisation du langage. Ainsi je vais vous présenter un code source de la fonction \textit{Tri à bulles} :}
+Rien de mieux qu'un petit code Python pour mieux comprendre la syntaxe et la facilité d'utilisation du langage. Ainsi je vais vous présenter un code source de la fonction \textsf{Tri à bulles} :
 
 \begin{verbatim}
 
@@ -150,25 +167,22 @@ def tri_a_bulle(tab) :
     return tab
 \end{verbatim}
 
-\subsection{La programmation objet en Python}
-\paragraph{Python permet aussi l'utilisation de l'orienté objet, c'est donc un des autres plus de ce langage puissant et aux vagues possibilité. Dans cette partie nous allons vous montrer comment coder un objet en Python et aussi le construire. Nous allons donc voir la syntaxe générale d'une  \textit{Classe} et celle d'un \textit{Constructeur}. Enfin pour terminer cela nous implémenterons un objet "Pullover" avec différents attributs et son propre constructeur.}
-
-\subsubsection{Code générique Classe "Lambda" }
-\paragraph{Pour déclarer un objet il suffit simplement d'utiliser le mot Class suivit de ":" et ensuite déclarer des variables ou autres instructions.}
+\subsubsection{La programmation objet en Python}
+Python permet aussi l'utilisation de l'orienté objet, c'est donc un des autres plus de ce langage puissant et aux vagues possibilité. Dans cette partie nous allons vous montrer comment coder un objet en Python et aussi le construire. Nous allons donc voir la syntaxe générale d'une  \textsf{Classe} et celle d'un \textsf{Constructeur}. Enfin pour terminer cela nous implémenterons un objet "Pullover" avec différents attributs et son propre constructeur.
+\paragraph{Code générique Classe "Lambda"}
+Pour déclarer un objet il suffit simplement d'utiliser le mot Class suivit de ":" et ensuite déclarer des variables ou autres instructions.
 \begin{verbatim}
 Class Personne : 
      name
      age
 \end{verbatim}
-\subsubsection{Constructeur de la Classe "Lambda"}
-\paragraph{Pour déclarer le constructeur d'un objet il faut utiliser la méthode \textit{init()} au sein de la classe en passant en paramètre ceux de l'objet en question. La petite différence par rapport à d'autres langages de programmation orienté objet (C++ ou Java) est l'utilisation du paramètre (mais aussi mot clé) \textit{self} au seins du constructeur. En réalité \textit{self} n'est autre que la première référence de l'instance de l'objet que l'on va créer. } 
+\paragraph{Constructeur de la Classe "Lambda"}{Pour déclarer le constructeur d'un objet il faut utiliser la méthode \textsf{init()} au sein de la classe en passant en paramètre ceux de l'objet en question. La petite différence par rapport à d'autres langages de programmation orienté objet (C++ ou Java) est l'utilisation du paramètre (mais aussi mot clé) \textsf{self} au seins du constructeur. En réalité \textsf{self} n'est autre que la première référence de l'instance de l'objet que l'on va créer. } 
 \begin{verbatim}
 def __init__(self, name, age) :
      self.name = name
      self.age = age
 \end{verbatim}
-\subsubsection{Exemple de class : Pullover}
-\paragraph{Maintenant que nous avons une première approche de la syntaxe objet essayons de mettre cela en application avec quelque chose de plus concret. Nous allons créer un "Pullover" avec comme attribut : une marque, une taille, un nom de modèle, une couleur et un prix }
+\paragraph{Exemple de class : Pullover}{Maintenant que nous avons une première approche de la syntaxe objet essayons de mettre cela en application avec quelque chose de plus concret. Nous allons créer un "Pullover" avec comme attribut : une marque, une taille, un nom de modèle, une couleur et un prix }
 \begin{verbatim}
 Class Pullover : 
      brand
@@ -184,50 +198,47 @@ Class Pullover :
            self.color=color
            self.price=price
           
-  Pull1 = Pullover("ZARA", "XS", "AED934", "black", 19)         #instanciation
-  
-          
+  Pull1 = Pullover("ZARA", "XS", "AED934", "black", 19)         #instanciation  
 \end{verbatim}
 \newpage
-\section{Gurobi}
-\paragraph{La plateforme Gurobi est un solveur mathématique autrement dit c'est une optimisation mathématique. Il traduit un problème commercial en un énoncé mathématique. Gurobi à été ecrit pour prendre en considération différentes interfaces sous différents langage : \textit{C ,C++, Java, Python et R}.}
+\subsection{Gurobi}
+La plateforme Gurobi est un solveur mathématique autrement dit c'est une optimisation mathématique. Il traduit un problème commercial en un énoncé mathématique. Gurobi à été ecrit pour prendre en considération différentes interfaces sous différents langage : \textsf{C ,C++, Java, Python et R}. \newline
 
-\paragraph{Il y a deux méthodes d'installation soit directement avec une licence (payante ou gratuite) ou alors avec un la distribution \textit{Anaconda} que nous allons tenter d'expliquer.}
-\paragraph{Travaillant sur MacOs, j'ai opter pour l'installation de \textit{Gurobi} en privé sur ma machine et donc en gérant l'installation sur mon environnement Python, et utiliserait donc le module \emph{gurobipy}. De plus il m'a fallu créer un compte chez \textit{Gurobi} pour utiliser une licence académique gratuite bien évidemment.}
+Il y a deux méthodes d'installation soit directement avec une licence (payante ou gratuite) ou alors avec un la distribution \textsf{Anaconda} que nous allons tenter d'expliquer. \newline
 
-\subsection{Installation de Gurobi}
-\subsubsection{Méthode classique }
-\paragraph{Il est aussi possible d'installer \textit{Gurobi} directement sur la machine en gardant notre environnement configuré par nos propre soins puisque l'environnement Python a pensé cela lors de sa conception. }
-\paragraph{Pour cela il faudra au préalable télécharger le solveur sur le site web de \textit{Gurobi} (le lien est en annexe) et attendre le téléchargement. Une fois terminé il suffit d'exécuter le fichier télécharger (en double cliquant dessus) pour démarrer l'installation. Durant cette dernière le système d'exploitation nous demandera dans quel dossier stocker les packages nécessaire a \textit{Gurobi}. Ensuite il faudra se rendre à cette emplacement, via un terminal et exécuter la commande suivante : }
+Travaillant sur MacOs, j'ai opter pour l'installation de \textsf{Gurobi} en privé sur ma machine et donc en gérant l'installation sur mon environnement Python, et utiliserait donc le module \emph{gurobipy}. De plus il m'a fallu créer un compte chez \textsf{Gurobi} pour utiliser une licence académique gratuite bien évidemment. 
+
+\subsubsection{Installation de Gurobi}
+\paragraph{Méthode classique }Il est aussi possible d'installer \textsf{Gurobi} directement sur la machine en gardant notre environnement configuré par nos propre soins puisque l'environnement Python a pensé cela lors de sa conception.
+\subparagraph{}{Pour cela il faudra au préalable télécharger le solveur sur le site web de \textsf{Gurobi} (le lien est en annexe) et attendre le téléchargement. Une fois terminé il suffit d'exécuter le fichier télécharger (en double cliquant dessus) pour démarrer l'installation. Durant cette dernière le système d'exploitation nous demandera dans quel dossier stocker les packages nécessaire a \textsf{Gurobi}. Ensuite il faudra se rendre à cette emplacement, via un terminal et exécuter la commande suivante :}
 \begin{verbatim}
 python setup.py install
 \end{verbatim}
-\paragraph{Après avoir créer son compte afin d'obtenir un licence il faudra l'enregistrer sur la machine afin de pourvoir utiliser le solveur sans souci, pour cela il faudra ouvrir le terminal et exécuter la commande suivante :}
+\subparagraph{}{Après avoir créer son compte afin d'obtenir un licence il faudra l'enregistrer sur la machine afin de pourvoir utiliser le solveur sans souci, pour cela il faudra ouvrir le terminal et exécuter la commande suivante :}
 \begin{verbatim}
 grbgetkey 4fd46a16-7d9c-11ea-809f-020d093b5256
 \end{verbatim}
-\paragraph{Une fois tout ceci effectué et donc paramétré il faudra, pour utiliser le solveur, faire un \textit{import} du module et donc de la bibliothèque \textit{Gurobi} au début du script python que l'on élabore.}
+\subparagraph{}{Une fois tout ceci effectué et donc paramétré il faudra, pour utiliser le solveur, faire un \textsf{import} du module et donc de la bibliothèque \textsf{Gurobi} au début du script python que l'on élabore.}
 \begin{verbatim}
 import gurobipy as gp
 from gurobipy import *
 \end{verbatim}
 
-\subsubsection{Méthode via Anaconda }
-\paragraph{Pour essayer de faire simple, Anaconda est une solution libre office, c'est a dire à téléchargement gratuit, qui permet une installation rapide et simple de \textit{Python} avec un interpréteur (IDE) ainsi que de nombreuses bibliothèques (les plus utilisées et les plus utiles),gurobi par exemple. Par la suite si ont veux ajouter des modules ou bibliothèques supplémentaires  on le fait comme avec python sauf qu'au lieu d'ecrire \textit{pip} on écrit \textit{conda}.}
+\paragraph{Méthode via Anaconda}{Pour essayer de faire simple, Anaconda est une solution libre office, c'est a dire à téléchargement gratuit, qui permet une installation rapide et simple de \textsf{Python} avec un interpréteur (IDE) ainsi que de nombreuses bibliothèques (les plus utilisées et les plus utiles) ,gurobi par exemple. Par la suite si ont veux ajouter des modules ou bibliothèques supplémentaires  on le fait comme avec python sauf qu'au lieu d'ecrire \textsf{pip} on écrit \textsf{conda}}.
 \begin{verbatim}
 via Python :       pip install <module>
 via Anaconda :     conda install <module>
 \end{verbatim}
 
-\paragraph{Via cette méthode, l'environnement est déjà préinstaller pour l'utilisateur et comporte une interface graphique \textit{Spyder} ainsi qu'un éditeur de texte \textit{Jupiter}}.Pour cela il suffira simplement de télécharger les fichiers nécessaires sur https://www.gurobi.com/get-anaconda/ puis lancer \textit{Anaconda} via le terminal et enfin installer le package de \textit{Gurobi}.
+Via cette méthode, l'environnement est déjà préinstaller pour l'utilisateur et comporte une interface graphique \textsf{Spyder} ainsi qu'un éditeur de texte \textsf{Jupiter}.Pour cela il suffira simplement de télécharger les fichiers nécessaires sur https://www.gurobi.com/get-anaconda/ puis lancer \textsf{Anaconda} via le terminal et enfin installer le package de \textsf{Gurobi}.
 \begin{verbatim}
 python | Anaconda
 conda install gurobi 
 \end{verbatim}
 
 
-\subsection{Shell interactive }
-\paragraph{Lorsque que \textit{Gurobi} mentionne son "shell intercative" il s'agit en fait d'un script (fichier ".sh") qui est fournit avec le téléchargement du solveur. En en le lançant, c'est a dire en le tapant a la console le terminal lancera une console \textit{gurobi} ou il faudra directement écrire le code a exécuter. Ainsi un interpréteur \textit{Gurobi} sera ouvert et attendra des instructions, au même titre qu'un interpréteur \textit{Python} .}
+\subsubsection{Shell interactive }
+Lorsque que \textsf{Gurobi} mentionne son "shell intercative" il s'agit en fait d'un script (fichier ".sh") qui est fournit avec le téléchargement du solveur. En en le lançant, c'est a dire en le tapant a la console le terminal lancera une console \textsf{gurobi} ou il faudra directement écrire le code a exécuter. Ainsi un interpréteur \textsf{Gurobi} sera ouvert et attendra des instructions, au même titre qu'un interpréteur \textsf{Python} .
 \begin{center}
 \begin{figure}[h!]
 \centering
@@ -236,71 +247,125 @@ conda install gurobi
 \end{figure}
 \end{center}
 
-\subsection{Exemple Gurobi programmation linéaire (biere.py)}
-\paragraph{Soit x1 et x2 les quantités (en volume) respectives produite pour les bières b1 et b2. Les quantités sont soumises à des contraintes (3) pour chaque ingrédients utilisé : \newline \textit{Contraintes : }}
+\subsubsection{Exemple Gurobi programmation linéaire (biere.py)}
+Soit x1 et x2 les quantités (en volume) respectives produite pour les bières b1 et b2. Les quantités sont soumises à des contraintes (3) pour chaque ingrédients utilisé : \newline \textsf{Contraintes : }
 \begin{itemize} 
 \item   Contrainte C1 : 2,5 x1 + 7,5 x2  $\leq$ 240 (pour le maïs)
 \item   Contrainte C2 : 0,125 x1 + 0,125 x2 $\leq$ 5 (pour le houblon)
 \item   Contrainte C3 : 17,5 x1 + 10 x2  $\leq$ 595 (pour le malt)
 \item  Contrainte  de positivité : x1 , x2 > 0
 \end{itemize}
-\textit{Objectif : }
+\textsf{Objectif : }
 \begin{itemize} 
 \item Maximiser : max 15 x1 + 25 x2
 \end{itemize}
 
 \begin{verbatim}
+#Appel et utilisation de Gurobi et de ses modules
 import gurobipy as gp
 from gurobipy import *
+
 
 try : 
     # Création du model
     m = gp.Model("Biere")
 
+
     # Déclaration des Variables
     x1 = m.addVar(vtype=GRB.INTEGER, name="x1")
     x2 = m.addVar(vtype=GRB.INTEGER, name="x2")
    
+   
    # Maximisation
     m.setObjective(15*x1 + 25*x2, GRB.MAXIMIZE)
+    
 
     # Contraintes des Variables
     m.addConstr(2.5 * x1 + 7.5 * x2 <= 240, "c1")
     m.addConstr(0.125 * x1 + 0.125 * x2 <= 5, "c2")
     m.addConstr(17.5 * x1 + 10 * x2 <= 595, "c3")
+    
    
     # Résoud la solution objective 
     m.optimize()
 
+     #Affichage de la réponse
     for v in m.getVars():
         print('%s %d' % (v.varName, v.x))
 
     print('Obj: %s' % m.objVal)
 
+     #Vérification des exceptions
 except gp.GurobiError as e:
     print('Error code ' + str(e.errno) + ': ' + str(e))
 
 except AttributeError:
     print('Encountered an attribute error')    
 \end{verbatim}
-\paragraph{Ci dessus le code python utilisé pour permettre a \textit{Gurobi} de trouver la solution de maximisation, soit  : \underline{x1= 12 et x2 = 28}}
-\section{La théorie des jeux}
-\paragraph{Comme nous l'avons expliqué un peu plus haut, l'un des objectifs de ce stage est la modélisation d'algorithmes afin de résoudre des jeux stochastiques. Mais tout d'abord détaillons un peu le concept des \textit{jeux}.}
-\begin{definition}
-Un jeu est une analyse des interactions stratégiques, intégrant des contraintes (si elles existent), sur les actions des différents acteurs (joueurs) au cour du jeu.
-\end{definition}
-\paragraph{Pour intégrer et comprendre ce concept, il y a d'autres notions à connaitre telles que \textit{jeux statiques} , \textit{jeux dynamiques} , \textit{stratégie } ou encore \textit{jeux bimatricel} et enfin \textit{gains à somme nulle}.}
+\paragraph*{}{Ci dessus le code python utilisé pour permettre a \textsf{Gurobi} de trouver la solution de maximisation, soit  : \textbf{x1= 12 et x2 = 28}}
+\newpage
 
-\subsection{Jeux statiques et dynamiques}
-\paragraph{Comme vous l'avez compris,un jeu nécessite la présence d'acteurs ; dans la suite de nos explications lorsque nous parlerons de \textit{joueurs} nous ferons donc référence aux acteurs du jeu.}
-\subsubsection{Statiques}
-\paragraph{Lorsque l'on parle de jeu statique il s'agit en réalité d'un jeu ou chaque joueur effectue une seule action en simultané de l'autre mais sans avoir accès aux informations de l'action de l'autre joueurs.}
-\subsubsection{Dynamiques}
-\paragraph{A l'inverse, un jeu dynamique est un jeu qui se déroule en plusieurs étapes et non en simultané ; c'est-à-dire que chacun des joueurs a connaissance de l'action de l'autre et donc peut établir une stratégie avant chaque futures actions.  }
-\subsection{Stratégies}
-\paragraph{a definir}
-\subsection{Jeu bimatriciel}
-\paragraph{Un jeu bimatriciel se caractérise comme son nom l'indique par deux matrices. Ces dernières ne sont autres que les gains des joueurs. Autrement dit les joueurs jouent de manière simultané et on inscrit dans une matrice leurs gains (une matrice pour chaque joueur). Voici un exemple de deux matrices de gains pour deux joueurs A et B qui joue respectivement les lignes et les colonnes.}
+\section{La théorie des jeux}
+Comme nous l'avons expliqué un peu plus haut, l'un des objectifs de ce stage est la modélisation d'algorithmes afin de résoudre des jeux stochastiques. Mais tout d'abord détaillons un peu le concept des \textsf{jeux}. \newline
+
+Pour intégrer et comprendre ce concept, il y a d'autres notions à connaitre telles que \textsf{jeux statiques} , \textsf{jeux dynamiques} , \textsf{stratégie } ou encore \textsf{jeux bimatricel} et enfin \textsf{gains à somme nulle}.\newline
+
+Comme vous l'avez compris,un jeu nécessite la présence d'acteurs ; dans la suite de nos explications lorsque nous parlerons de \textsf{joueurs} nous ferons donc référence aux acteurs du jeu.
+
+\subsection{Jeux statiques}
+\begin{definition}
+Un jeu est dit statique lorsque le jeu se déroule en une seule étape et de manière simultanée sans avoir accès aux informations de l'actions de ou des autres joueurs.
+\end{definition} 
+Prenons pour hypothèse un jeu statique à deux joueurs J1 et J2, les deux joueurs vont effectuer une action en même temps sans avoir idée de ce que son adversaire aura choisi comme action. \newline
+
+Ainsi un \textsf{jeu statique} peut être défini par : 
+\begin{itemize}
+\item Un nombre fini J de joueurs : {1,2, ....., J}
+\item Un nombre unique d'action par joueur fixé a : 1 
+\end{itemize}
+\subsection{Jeux statiques et résolution de programmes linéaires}
+Nous avons donc une connaissance supplémentaire sur les jeux, en particulier les \textsf{jeux statiques} mais nous n'avons pas aborder le sujet de "victoire", de "réussite" ou même de "gain" vis à vis ces jeux. \newline
+
+C'est alors qu'intervient la notion de stratégie afin qu'un acteur décide de prendre une décision pour une futur action du jeu.\newline
+\begin{definition}
+La stratégie d’un acteur est l’une des options qu’il choisit dans un contexte où son choix dépend non seulement de ses propres actions, mais également de celles des autres.
+\end{definition}
+
+On peut donc distinguer deux grandes catégories de \textsf{stratégies} soit pures soit mixtes, nous rentrerons en détails dans les sections suivantes (respectivement [4.2.1] et [4.2.2]. \newline
+
+Maintenant que nous avons abordez la notion de stratégie, intéressons nous à la programmation linéaire. La "victoire" ou "réussite" d'un jeu se traduit mathématiquement par le \textsf{gain} le plus élevé. Ainsi le but est donc de d'utiliser la stratégie la plus optimale qui permettrait de maximiser les \textsf{gains} du jeu.
+
+\begin{definition}
+La programmation linéaire (PL) est un problème d'optimisation où la fonction objectif et les contraintes sont toutes linéaires. Le but de résoudre un PL est de trouvé les variables optimales qui maximisent la fonction objective.
+\end{definition}
+
+C'est donc grâce à la \textsf{programmation linéaire} (via une implémentation sur \textsf{Gurobi}) que nous arriverons a trouvé la solution optimal et dans le meilleur des cas \textsf{l'équilibre de Nash}[4.4]. \newline
+
+D'une approche plus mathématiques on peut résumer la résolution d'un \textsf{jeu statique} par \textsf{programmation linéaire} comme ceci : \newline
+\begin{center}
+max  min $ \Sigma_{i}$ $\pi_{i}^{1}$ a$ _{ij} $ = max min $ \Sigma _{i} $ $ \Sigma _{j} $ $\pi_{i}^{1}$ a$ _{ij} $ $ \pi_{j}^{2} $
+\end{center}
+\subsubsection{Stratégies pures}
+
+\subsubsection{Stratégies mixtes}
+
+\subsection{Jeux dynamiques}
+\begin{definition}
+Un jeu est dynamique lorsqu'il se déroule en plusieurs étapes non simultané, c'est a dire que les joueurs jouent plusieurs fois mais en ayant connaissance des actions des autres joueurs et donc peuvent établir des stratégies.
+\end{definition}
+
+Prenons pour hypothèse un jeu dynamique à deux  J1 et J2, les deux joueurs vont effectuer tours à tours des actions en différé en ayant accès aux informations des actions du joueur précédent. \newline
+
+Ainsi un \textsf{jeu dynamique} peut être défini par : 
+\begin{itemize}
+\item Un nombre fini J de joueurs : {1,2, ....., J}
+\item Un nombre identique d'actions K par joueurs : {1,2,....K}  
+\item Un ensemble infini E d'états du jeu qui sont indicé par les actions des joueurs 
+\item Une stratégie pure par joueurs composé des actions des joueurs respectifs
+\end{itemize}
+
+\subsubsection{Jeux bimatriciel}
+Un jeu bimatriciel se caractérise comme son nom l'indique par deux matrices. Ces dernières ne sont autres que les gains des joueurs. Autrement dit les joueurs jouent de manière simultané et on inscrit dans une matrice leurs gains (une matrice pour chaque joueur). Voici un exemple de deux matrices de gains pour deux joueurs A et B qui joue respectivement les lignes et les colonnes.
 
 \[
 Joueur\hspace{0,1cm} A\hspace{1cm}
@@ -314,19 +379,47 @@ Joueur\hspace{0,1cm} B \hspace{1cm}
 3&1\\
 \end{pmatrix} 
 \]
-\subsection{Jeu à sommes nulles}
-\paragraph{Comme annoncé dans notre introduction nous essayerons de résoudre des jeux à sommes nulles via des algorithmes que nous allons implémenter par la suite. Mais qu'est ce qu'un jeu à somme nul ? }
-\paragraph{Un jeu a somme nul est un jeu ou le gain d'un des acteurs (J1, par exemple) représente la perte équivalente réciproque des autres acteurs ((J2, par exemple). Pour faciliter la compréhension et la résolution de ces modèles, le nombre d'acteurs autrement dit de joueurs sera fixé à 2.}
-\paragraph{Le jeu est défini par : }
+\subsubsection{Jeux à somme nulle}
+Comme annoncé dans notre introduction nous essayerons de résoudre des jeux à sommes nulles via des algorithmes que nous allons implémenter par la suite. Mais qu'est ce qu'un jeu à somme nul ? \newline
+
+Un jeu à somme nul est un jeu où le gain d'un des acteurs (J1, par exemple) représente la perte équivalente réciproque des autres acteurs ((J2, par exemple). Pour faciliter la compréhension et la résolution de ces modèles, le nombre d'acteurs autrement dit de joueurs sera fixé à 2.\newline
+
+Ainsi un \textsf{jeu bimatriciel} est défini par :
 \begin{itemize}
-\item Un nombre fini \textit{I} d'action pour le joueur 1 (J1)
-\item Un nombre fini \textit{J} d'action pour le joueur 2 (J2)
-\item Une matrice de gain [I X J]
+\item Un nombre fini J de joueurs : {1,2, ....., J}
+\item Un nombre fini M d'actions pour le joueur 1 (J1) : {1,2, ....., M}
+\item Un nombre fini N d'actions pour le joueur 2 (J2) : {1,2, ....., N}
+\item Une matrice de gain (pay-off) G1 pour le joueur J1  [M X N]
+\item Une matrice de gain (pay-off) G2 pour le joueur J2  [N X M]
+\item Une stratégie pure par joueurs composé des actions des joueurs respectifs
 \end{itemize}
+\subparagraph*{}{Il existe plusieurs jeux ou situations "connus" que l'on pourrait assimiler à un \textsf{jeu à somme nulle} comme le jeu de \textsf{pile ou face} ou encore \textsf{le dilemme du prisonnier} mais nous allons nous plonger sur un autre jeu un peu moins connu \textsf{Matching pennies} et nous allons essayer de mieux comprendre qu'est ce qu'un \textsf{jeu a somme nulle} et surtout comment le gagner ou du moins trouver la meilleur solution.}
+
+\paragraph{Le jeu "Matching pennies"}{izfahzd}
+
+
+\subsection{L'équilibre de Nash}
+Maintenant que l'on en connait un peu plus sur le concept fondamental de la \textsf{théorie des jeux} nous avons bien compris que résoudre un jeu (dynamique bien évidement) revient non pas à "gagner" la partie mais trouver la meilleur stratégie permettant de maximiser ses gains et donc a fortiori minimiser ses pertes (puisqu'elles correspondent à gain réciproque des autres acteurs). \newline
+
+
+\begin{definition}
+Une action conjointe a* est un équilibre de Nash si et seulement si : $ \forall $j, $ \forall a_{j}$ R$ _{j} $(a*) $ \geq $ R$ _{j} $(a$ _{j} $,a*$ _{-j} $).
+\end{definition}
+Autrement dit, trouver \textsf{un équilibre de Nash} dans un jeu revient a trouvé la solution optimal de stratégies mixtes (x,y) qui sont meilleurs réponses l'une fonction de l'autre, c'est à dire :
+\begin{itemize}
+\item x est la meilleur réponse dans la stratégie de y (J2) qui maximise la matrice de gain du J1 donc x.
+\item y est la meilleur réponse dans la stratégie de x (J1) qui maximise la matrice de gain du J1  donc x
+\end{itemize}  
 
 
 
 
+
+
+\newpage
+\section{Conclusions}
+\subsection{Difficultés rencontrées}
+\subsection{Axes d'amélioration}
 \newpage
 \section{Webographie}
 \begin{thebibliography}{2}
@@ -337,37 +430,30 @@ Joueur\hspace{0,1cm} B \hspace{1cm}
   
    \bibitem[Théorie des Jeux]{RO}\url{https://fr.wikipedia.org/wiki/Th\%C3\%A9orie_des_jeux}\newline
    \bibitem[Théorie des Jeux]{RO}\url{http://www.cril.univ-artois.fr/~konieczny/enseignement/TheorieDesJeux.pdf}\newline
-   \bibitem[Théorie des Jeux]{RO}\url{http://www.cril.univ-artois.fr/~konieczny/enseignement/TheorieDesJeux.pdf}\newline
-  
+   \bibitem[Théorie des Jeux]{RO}\url{http://www.cril.univ-artois.fr/~konieczny/enseignement/TheorieDesJeux.pdf}\newline 
 \end{thebibliography}
-
-
 
 \newpage
 \section{Annexes}
-\appendix
-\makeatletter
-\def\@seccntformat#1{Annexe~\csname the#1\endcsname:\quad}
-\makeatother
-\section{Python en général}
-\paragraph{La syntaxe est assez similaire aux autre langage puisque python utilise les mêmes types de variables, sauf les types sophistiqués. A la différence des autres langages de programmation (C,,C++,Java,php) la fin d'une instruction se termine par un caractère vide
-et non  ; , avec python c'est l'indentation qui fait office d'instruction et donc de bloc de code.}
-\subsection{ Structure Conditionelle If }
-\paragraph{La condition est suivi par  :  puis vient ensuite l'instruction à effectuer, si le test est vérifié, qu'il faudra indenter (d'un cran).}
+\subsection{Python en général}
+La syntaxe est assez similaire aux autre langage puisque python utilise les mêmes types de variables, sauf les types sophistiqués. A la différence des autres langages de programmation (C,,C++,Java,php) la fin d'une instruction se termine par un caractère vide
+et non  ; , avec python c'est l'indentation qui fait office d'instruction et donc de bloc de code.
+\subsubsection{ Structure Conditionelle If }
+La condition est suivi par  :  puis vient ensuite l'instruction à effectuer, si le test est vérifié, qu'il faudra indenter (d'un cran).
 \begin{verbatim}
 if <condition> :
       <instruction>
 \end{verbatim}
-\subsection{ Structure Conditionelle Else}
-\paragraph{La condition est suivi par  :  puis vient ensuite l'instruction à effectuer, si le premier test n'est pas vérifié, qu'il faudra indenter (d'un cran) au même niveau que le test If.}
+\subsubsection{ Structure Conditionelle Else}
+La condition est suivi par  :  puis vient ensuite l'instruction à effectuer, si le premier test n'est pas vérifié, qu'il faudra indenter (d'un cran) au même niveau que le test If.
 \begin{verbatim}
 if <condition1> :
       <instruction1>
 else :
       <instruction2>
 \end{verbatim}
-\subsection{ Structure Conditionelle Elif }
-\paragraph{La condition est suivi par  :  puis vient ensuite l'instruction à effectuer, si le premier test n'est pas vérifié, qu'il faudra indenter (d'un cran) au même niveau que le test If.}
+\subsubsection{ Structure Conditionelle Elif }
+La condition est suivi par  :  puis vient ensuite l'instruction à effectuer, si le premier test n'est pas vérifié, qu'il faudra indenter (d'un cran) au même niveau que le test If.
 \begin{verbatim}
 if <condition1> :
       <instruction1>
@@ -376,21 +462,20 @@ elif <condition2> :
 else : 
       <instruction3>
 \end{verbatim}
-\subsection{ Boucle For}
-\paragraph{La structure est composé de for puis de deux valeurs élément et sequence qui permette de suivre l'itération à effectuer. Le bloc 
-est exécuté autant de fois de qu'il y a d' éléments dans la sequence et se termine par  : .}
+\subsubsection{ Boucle For}
+La structure est composé de for puis de deux valeurs élément et sequence qui permette de suivre l'itération à effectuer. Le bloc est exécuté autant de fois de qu'il y a d' éléments dans la sequence et se termine par  : .
 \begin{verbatim}
 for element in sequence :
      <instruction>
 \end{verbatim}
-\subsection{ Boucle While }
-\paragraph{La structure est composé de while puis de la condition qui permet d'effectuer un test. Le bloc est exécuté tant que la condition est vérifié et se termine par  : }
+\subsubsection{ Boucle While }
+La structure est composé de while puis de la condition qui permet d'effectuer un test. Le bloc est exécuté tant que la condition est vérifié et se termine par  : .
 \begin{verbatim}
 while <condition> :
      <instruction>
 \end{verbatim}
-\subsection{ Les fonctions}
-\paragraph{Quant au fonction la définition se fait de manière très simple il suffit d'utiliser le mot clé def et cela est terminer, en python on ne prend pas en compte le type de retour d'une fonction comme en C, C++ ou en Java (int, void, double, float etc ...).}
+\subsubsection{ Les fonctions}
+Quant au fonction la définition se fait de manière très simple il suffit d'utiliser le mot clé def et cela est terminer, en python on ne prend pas en compte le type de retour d'une fonction comme en C, C++ ou en Java (int, void, double, float etc ...).
 \begin{verbatim}
 def onction (param1 , param2) :
     <instruction1>
@@ -402,18 +487,17 @@ def onction (param1 , param2) :
     return  <instruction5>
 \end{verbatim}
 
-\section{L'orienté objet en Python}
-\paragraph{ Python est un langage résolument orienté objet, ce qui signifie que le langage tout entier est construit autour de la notion d’objets. Quasiment tous les types du langage String / Integer / Listes / Dictionnaires  sont avant tout des objets tout comme les fonctions
-qui elles aussi sont des objets.}
+\subsection{L'orienté objet en Python}
+Python est un langage résolument orienté objet, ce qui signifie que le langage tout entier est construit autour de la notion d’objets. Quasiment tous les types du langage String / Integer / Listes / Dictionnaires  sont avant tout des objets tout comme les fonctions qui elles aussi sont des objets.
 
-\paragraph{ Pour créer une classe , donc un Objet il suffit d'utilise le mot clé class suivit de  :  et ne pas oublier l'indentation.}
+\subsubsection{Création de class}{Pour créer une classe , donc un Objet il suffit d'utilise le mot clé class suivit de  :  et ne pas oublier l'indentation.}
 \begin{verbatim}
 class < NomClasse> : 
      attribut1
      attribut2 
 \end{verbatim}
 
-\paragraph{Ensuite il faudra définir un constructeur qui permettra d'instancier les objets dont nous auront besoins, il faut donc utiliser la méthode  \textit{init} au sein de la classe sans oublier le paramètre obligatoire (mot clé de python) self. }
+\subsubsection{Création du constructeur}{Ensuite il faudra définir un constructeur qui permettra d'instancier les objets dont nous auront besoins, il faut donc utiliser la méthode  \textsf{init} au sein de la classe sans oublier le paramètre obligatoire (mot clé de python) \textsf{self}. }
 
 \begin{verbatim}
 class < NomClasse> : 
@@ -424,18 +508,17 @@ class < NomClasse> :
         self.attribut1 = ... (str)
         self.attribut2 =  ...  (int)
 \end{verbatim}
-\paragraph{ Si l'on défini une classe vide c'est a dire ou pour le moment il n'y aucune action à effectuer il faut rajouter le mot clé pass}
+
+\subsubsection{Le mot clé pass}{Si l'on défini une classe vide c'est a dire ou pour le moment il n'y aucune action à effectuer il faut rajouter le mot clé \textsf{pass}.}
 \begin{verbatim}
 class < NomClasse > : 
     pass 
 \end{verbatim}
-
-\paragraph{Comme nous l'avons également vu ont une classe mère peut hérité d'une autre et donc de ses attributs et de ses méthodes. la syntaxe est simple, il suffit de mettre en paranthése la classe mère au moment de la déclaration de la classe fille. Voici un exemple avec < NomClasse > et < NomClasse2>}
+\subsubsection{L'héritage en python}{Comme nous l'avons également vu ont une classe mère peut hérité d'une autre et donc de ses attributs et de ses méthodes. la syntaxe est simple, il suffit de mettre en paranthése la classe mère au moment de la déclaration de la classe fille. Voici un exemple avec <NomClasse > et < NomClasse2>.}
 \begin{verbatim}
 class < NomClasse> :                         #classe mère
     attribut1
     attribut2 
-
 
 class < NomClasse2> (< NomClasse >) :        #classe fille
     attribut1                                #hérité 
@@ -443,26 +526,27 @@ class < NomClasse2> (< NomClasse >) :        #classe fille
     attribut3   
     attribut4
 \end{verbatim}
-\paragraph{ A ce niveau on peut se demander comment Python gére ces héritages. Lorsqu’on tente d’afficher le contenu d’un attribut de données
-ou d’appeler une méthode depuis un objet, Python va commencer par chercher si la variable ou la fonction correspondantes se trouvent dans la classe qui a créé l’objet.}
-\paragraph{ Si c’est le cas, il va les utiliser. Si ce n’est pas le cas, il va chercher dans la classe mère de la classe de l’objet si cette classe possède une classe mère. Si il trouve ce qu’il cherche, il utilisera cette variable ou fonction.}
-\paragraph{Si il ne trouve pas, il cherchera dans la classe mère de la classe mère si elle existe et ainsi de suite. Deux fonctions existent pour savoir si l'objet est seulemnent  une instance d'une classe et pour savoir si la classe en question a eu recourt à de l'hériatge : isinstance() et issubclass(). }
-\section{GitHub}
-En résumé les commandes principales de Github sont : 
-\begin{itemize}
-\item  git init 
-\item git remote add 
-\item  git clone 
-\item  git checkout 
-\item git branch < branche > à l'inverse  git branch -d < branche > 
-\item git add < fichier > ou alors  git add * (pour tous les fichiers) 
-\item  git commit -m ... 
-\item  git push origin master ou bien  git push origin < branche > 
-\item  git pull origin master   ou bien git pull origin < master > 
-\item  git merge 
-\end{itemize}
-\section{Gurobi}
-\paragraph{ Voici les deux méthodes (via gurobi.sh ou alors via le module gurobipy) que l'on peut utiliser pour résoudre un programme MIP nommé "biere.py" (voir exmeple [5.3]) :}
+\subparagraph{}{A ce niveau on peut se demander comment Python gére ces héritages. Lorsqu’on tente d’afficher le contenu d’un attribut de données ou d’appeler une méthode depuis un objet, Python va commencer par chercher si la variable ou la fonction correspondantes se trouvent dans la classe qui a créé l’objet.}
+
+\subparagraph{}{Si c’est le cas, il va les utiliser. Si ce n’est pas le cas, il va chercher dans la classe mère de la classe de l’objet si cette classe possède une classe mère. Si il trouve ce qu’il cherche, il utilisera cette variable ou fonction.}
+
+\subparagraph{}{Si il ne trouve pas, il cherchera dans la classe mère de la classe mère si elle existe et ainsi de suite. Deux fonctions existent pour savoir si l'objet est seulemnent  une instance d'une classe et pour savoir si la classe en question a eu recourt à de l'hériatge : isinstance() et issubclass(). }
+
+\subsection{GitHub}
+En résumé les commandes principales de \textsf{Github}.
+\begin{center}
+\begin{tabular}{|l|l|}
+\hline
+git init & git remote add \\ \hline
+git clone & git checkout \\ \hline
+git branch < branche > &  git branch -d < branche > \\ \hline
+git add < fichier > &  git add * (pour tous les fichiers) \\ \hline
+git commit -m ".." &  git merge \\ \hline
+git push origin < branche > & git pull origin < master >  \\ \hline
+\end{tabular}
+\end{center}
+\subsection{Gurobi}
+Voici les deux méthodes (via gurobi.sh ou alors via le module gurobipy) que l'on peut utiliser pour résoudre un programme MIP nommé "biere.py" (voir exmeple [5.3]) :
 \begin{center}
 \begin{figure}[h]
 \centering
@@ -475,9 +559,9 @@ En résumé les commandes principales de Github sont :
 \caption{Résolution via module gurobi (gurobipy)}
 \end{figure}
 \end{center}
-\paragraph{Il est logique que le résultat produit est le même sauf la commande utilisé n'est pas la même. L'avantage de la deuxième méthode est que l'on peut importer le module \textit{gurobipy} dans n'importe quelle future création Python.}
+Il est logique que le résultat produit est le même sauf la commande utilisé n'est pas la même. L'avantage de la deuxième méthode est que l'on peut importer le module \textsf{gurobipy} dans n'importe quelle future création Python.
 \newpage
-\section{ CV}
+\subsection{ CV}
 \begin{center}
 \begin{figure}[h!]
 \centering

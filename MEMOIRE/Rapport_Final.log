@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2019.10.29)  28 APR 2020 14:13
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2019.10.29)  5 MAY 2020 17:16
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -420,19 +420,31 @@ File: listings.cfg 2019/02/27 1.8b listings configuration
 ))
 Package: listings 2019/02/27 1.8b (Carsten Heinz)
 
+(/usr/local/texlive/2019/texmf-dist/tex/latex/titlesec/titlesec.sty
+Package: titlesec 2016/03/21 v2.10.2 Sectioning titles
+\ttl@box=\box33
+\beforetitleunit=\skip49
+\aftertitleunit=\skip50
+\ttl@plus=\dimen141
+\ttl@minus=\dimen142
+\ttl@toksa=\toks26
+\titlewidth=\dimen143
+\titlewidthlast=\dimen144
+\titlewidthfirst=\dimen145
+)
 (./pagedegarde.tex
 (/usr/local/texlive/2019/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty
 Package: fancyhdr 2019/01/31 v3.10 Extensive control of page headers and footer
 s
-\f@nch@headwidth=\skip49
-\f@nch@O@elh=\skip50
-\f@nch@O@erh=\skip51
-\f@nch@O@olh=\skip52
-\f@nch@O@orh=\skip53
-\f@nch@O@elf=\skip54
-\f@nch@O@erf=\skip55
-\f@nch@O@olf=\skip56
-\f@nch@O@orf=\skip57
+\f@nch@headwidth=\skip51
+\f@nch@O@elh=\skip52
+\f@nch@O@erh=\skip53
+\f@nch@O@olh=\skip54
+\f@nch@O@orh=\skip55
+\f@nch@O@elf=\skip56
+\f@nch@O@erf=\skip57
+\f@nch@O@olf=\skip58
+\f@nch@O@orf=\skip59
 )
 (/usr/local/texlive/2019/texmf-dist/tex/latex/nomencl/nomencl.sty
 Package: nomencl 2019/05/05 v5.2 Nomenclature package
@@ -442,8 +454,8 @@ Package: xkeyval 2014/12/03 v2.7a package option processing (HA)
 
 (/usr/local/texlive/2019/texmf-dist/tex/generic/xkeyval/xkeyval.tex
 (/usr/local/texlive/2019/texmf-dist/tex/generic/xkeyval/xkvutils.tex
-\XKV@toks=\toks26
-\XKV@tempa@toks=\toks27
+\XKV@toks=\toks27
+\XKV@tempa@toks=\toks28
 )
 \XKV@depth=\count132
 File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
@@ -461,14 +473,14 @@ Package: scrbase 2019/02/01 v3.26b KOMA-Script package (KOMA-Script-independent
 (/usr/local/texlive/2019/texmf-dist/tex/latex/koma-script/scrlfile.sty
 Package: scrlfile 2019/02/01 v3.26b KOMA-Script package (loading files)
 ))
-\scr@dte@tocline@numberwidth=\skip58
-\scr@dte@tocline@numbox=\box33
+\scr@dte@tocline@numberwidth=\skip60
+\scr@dte@tocline@numbox=\box34
 )
 Package tocbasic Info: setting babel extension for `nlo' on input line 155.
 Package tocbasic Info: setting babel extension for `nls' on input line 156.
-\nomlabelwidth=\dimen141
-\nom@tempdim=\dimen142
-\nomitemsep=\skip59
+\nomlabelwidth=\dimen146
+\nom@tempdim=\dimen147
+\nomitemsep=\skip61
 ))
 (./Rapport_Final.aux
 
@@ -483,23 +495,23 @@ LaTeX Warning: Label `RO' multiply defined.
 )
 \openout1 = `Rapport_Final.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 42.
-LaTeX Font Info:    ... okay on input line 42.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 42.
-LaTeX Font Info:    ... okay on input line 42.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 42.
-LaTeX Font Info:    ... okay on input line 42.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 42.
-LaTeX Font Info:    ... okay on input line 42.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 42.
-LaTeX Font Info:    ... okay on input line 42.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 42.
-LaTeX Font Info:    ... okay on input line 42.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 42.
-LaTeX Font Info:    ... okay on input line 42.
-LaTeX Info: Redefining \degres on input line 42.
-LaTeX Info: Redefining \dots on input line 42.
-LaTeX Info: Redefining \up on input line 42.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 50.
+LaTeX Font Info:    ... okay on input line 50.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 50.
+LaTeX Font Info:    ... okay on input line 50.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 50.
+LaTeX Font Info:    ... okay on input line 50.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 50.
+LaTeX Font Info:    ... okay on input line 50.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 50.
+LaTeX Font Info:    ... okay on input line 50.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 50.
+LaTeX Font Info:    ... okay on input line 50.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 50.
+LaTeX Font Info:    ... okay on input line 50.
+LaTeX Info: Redefining \degres on input line 50.
+LaTeX Info: Redefining \dots on input line 50.
+LaTeX Info: Redefining \up on input line 50.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -538,16 +550,16 @@ LaTeX Info: Redefining \up on input line 42.
 (/usr/local/texlive/2019/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count133
-\scratchdimen=\dimen143
-\scratchbox=\box34
+\scratchdimen=\dimen148
+\scratchbox=\box35
 \nofMPsegments=\count134
 \nofMParguments=\count135
-\everyMPshowfont=\toks28
+\everyMPshowfont=\toks29
 \MPscratchCnt=\count136
-\MPscratchDim=\dimen144
+\MPscratchDim=\dimen149
 \MPnumerator=\count137
 \makeMPintoPDFobject=\count138
-\everyMPtoPDFconversion=\toks29
+\everyMPtoPDFconversion=\toks30
 ) (/usr/local/texlive/2019/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
 Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
 
@@ -565,8 +577,8 @@ G,.JBIG2,.JB2,.eps]
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
-\AtBeginShipoutBox=\box35
-Package hyperref Info: Link coloring OFF on input line 42.
+\AtBeginShipoutBox=\box36
+Package hyperref Info: Link coloring OFF on input line 50.
 
 (/usr/local/texlive/2019/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
@@ -576,9 +588,9 @@ Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
 \c@section@level=\count139
 )
-LaTeX Info: Redefining \ref on input line 42.
-LaTeX Info: Redefining \pageref on input line 42.
-LaTeX Info: Redefining \nameref on input line 42.
+LaTeX Info: Redefining \ref on input line 50.
+LaTeX Info: Redefining \pageref on input line 50.
+LaTeX Info: Redefining \nameref on input line 50.
 
 (./Rapport_Final.out) (./Rapport_Final.out)
 \@outlinefile=\write3
@@ -586,7 +598,7 @@ LaTeX Info: Redefining \nameref on input line 42.
 
 Package lastpage Info: Please have a look at the pageslts package at
 (lastpage)             https://www.ctan.org/pkg/pageslts
-(lastpage)             ! on input line 42.
+(lastpage)             ! on input line 50.
 \c@lstlisting=\count140
 *geometry* verbose mode - [ newgeometry ] result:
 * driver: pdftex
@@ -620,49 +632,49 @@ Package lastpage Info: Please have a look at the pageslts package at
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-<logo_Paris_Nanterre_couleur_RVB.png, id=172, 619.31375pt x 132.495pt>
+<logo_Paris_Nanterre_couleur_RVB.png, id=200, 619.31375pt x 132.495pt>
 File: logo_Paris_Nanterre_couleur_RVB.png Graphic file (type png)
 <use logo_Paris_Nanterre_couleur_RVB.png>
 Package pdftex.def Info: logo_Paris_Nanterre_couleur_RVB.png  used on input lin
-e 43.
+e 51.
 (pdftex.def)             Requested size: 307.2929pt x 65.74391pt.
-<logo_entreprise.png, id=174, 524.96124pt x 478.78876pt>
+<logo_entreprise.png, id=202, 524.96124pt x 478.78876pt>
 File: logo_entreprise.png Graphic file (type png)
 <use logo_entreprise.png>
-Package pdftex.def Info: logo_entreprise.png  used on input line 43.
+Package pdftex.def Info: logo_entreprise.png  used on input line 51.
 (pdftex.def)             Requested size: 102.42836pt x 93.41821pt.
-LaTeX Font Info:    Try loading font information for OT1+lmr on input line 43.
+LaTeX Font Info:    Try loading font information for OT1+lmr on input line 51.
 
 (/usr/local/texlive/2019/texmf-dist/tex/latex/lm/ot1lmr.fd
 File: ot1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Try loading font information for OML+lmm on input line 43.
+LaTeX Font Info:    Try loading font information for OML+lmm on input line 51.
 
 (/usr/local/texlive/2019/texmf-dist/tex/latex/lm/omllmm.fd
 File: omllmm.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Try loading font information for OMS+lmsy on input line 43.
+LaTeX Font Info:    Try loading font information for OMS+lmsy on input line 51.
 
 
 (/usr/local/texlive/2019/texmf-dist/tex/latex/lm/omslmsy.fd
 File: omslmsy.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Try loading font information for OMX+lmex on input line 43.
+LaTeX Font Info:    Try loading font information for OMX+lmex on input line 51.
 
 
 (/usr/local/texlive/2019/texmf-dist/tex/latex/lm/omxlmex.fd
 File: omxlmex.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <12> on input line 43.
+(Font)              <12> on input line 51.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <8> on input line 43.
+(Font)              <8> on input line 51.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 43.
-<bordure.png, id=175, 63.23625pt x 522.95375pt>
+(Font)              <6> on input line 51.
+<bordure.png, id=203, 63.23625pt x 522.95375pt>
 File: bordure.png Graphic file (type png)
 <use bordure.png>
-Package pdftex.def Info: bordure.png  used on input line 43.
+Package pdftex.def Info: bordure.png  used on input line 51.
 (pdftex.def)             Requested size: 45.98355pt x 380.2685pt.
  [1
 
@@ -673,58 +685,187 @@ re.png> <./logo_Paris_Nanterre_couleur_RVB.png> <./logo_entreprise.png>]
 \openout4 = `Rapport_Final.nlo'.
 
 Package nomencl Info: Writing nomenclature file Rapport_Final.nlo on input line
- 43.
- [2
+ 51.
 
-]
-(./Rapport_Final.toc [3])
+Underfull \hbox (badness 10000) in paragraph at lines 56--58
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 59--61
+
+ []
+
+[2
+
+] (./Rapport_Final.toc [3])
 \tf@toc=\write5
 \openout5 = `Rapport_Final.toc'.
 
- [4] [5]
-Overfull \hbox (1.88557pt too wide) in paragraph at lines 83--83
- []\T1/aer/bx/n/12 Ensuite cela s'agit comme une sorte de ré-seau consti-tué de
- branches (branch)
+ [4]
+Underfull \hbox (badness 10000) in paragraph at lines 71--72
+
  []
 
-[6] [7]
-LaTeX Font Info:    Try loading font information for T1+aett on input line 126.
 
+Underfull \hbox (badness 10000) in paragraph at lines 73--74
+
+ []
+
+LaTeX Font Info:    Try loading font information for T1+aess on input line 75.
+(/usr/local/texlive/2019/texmf-dist/tex/latex/ae/t1aess.fd
+File: t1aess.fd 1997/11/16 Font definitions for T1/aess.
+)
+Underfull \hbox (badness 10000) in paragraph at lines 75--76
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 77--78
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 79--80
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 81--82
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 83--84
+
+ []
+
+[5] [6]
+LaTeX Font Info:    Try loading font information for T1+aett on input line 97.
  (/usr/local/texlive/2019/texmf-dist/tex/latex/ae/t1aett.fd
 File: t1aett.fd 1997/11/16 Font definitions for T1/aett.
-) [8]
-Overfull \hbox (40.08264pt too wide) in paragraph at lines 190--190
+)
+Underfull \hbox (badness 10000) in paragraph at lines 97--98
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 99--101
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 102--103
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 104--105
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 106--109
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 111--112
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 116--117
+
+ []
+
+[7]
+Underfull \hbox (badness 10000) in paragraph at lines 118--119
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 131--132
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 133--134
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 135--136
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 137--138
+
+ []
+
+[8]
+Underfull \hbox (badness 10000) in paragraph at lines 139--140
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 155--156
+
+ []
+
+[9]
+Overfull \hbox (40.08264pt too wide) in paragraph at lines 202--202
 []     \T1/aett/m/n/12 def __init (brand, size, model_,name, color, price) :   
     #constructeur[] 
  []
 
 
-Overfull \hbox (40.08264pt too wide) in paragraph at lines 190--190
+Overfull \hbox (40.08264pt too wide) in paragraph at lines 202--202
 []  \T1/aett/m/n/12 Pull1 = Pullover("ZARA", "XS", "AED934", "black", 19)      
    #instanciation[] 
  []
 
-[9] [10]
-Overfull \hbox (3.19342pt too wide) in paragraph at lines 196--196
- []\T1/aer/bx/n/12 Il y a deux mé-thodes d'ins-tal-la-tion soit di-rec-te-ment 
-avec une li-cence (payante
+[10]
+Underfull \hbox (badness 10000) in paragraph at lines 205--206
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 207--208
+
  []
 
 [11]
-<console.png, id=332, 501.875pt x 237.88875pt>
+<console.png, id=329, 501.875pt x 237.88875pt>
 File: console.png Graphic file (type png)
 <use console.png>
-Package pdftex.def Info: console.png  used on input line 234.
+Package pdftex.def Info: console.png  used on input line 245.
 (pdftex.def)             Requested size: 401.50053pt x 190.31123pt.
  [12 <./console.png>] [13]
-Overfull \hbox (22.16188pt too wide) in paragraph at lines 290--291
-[]\T1/aer/m/it/12 Un jeu est une ana-lyse des in-ter-ac-tions stra-té-giques, i
-n-té-grant des contraintes
+Underfull \hbox (badness 10000) in paragraph at lines 309--310
+
  []
 
-[14] [15]
-Underfull \hbox (badness 10000) in paragraph at lines 333--334
 
+Underfull \hbox (badness 10000) in paragraph at lines 311--312
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 319--320
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 327--328
+
+ []
+
+
+Overfull \hbox (5.51718pt too wide) in paragraph at lines 331--332
+[]\T1/aer/m/it/12 La stra-té-gie d'un ac-teur est l'une des op-tions qu'il choi
+-sit dans un contexte
  []
 
 
@@ -732,131 +873,173 @@ Underfull \hbox (badness 10000) in paragraph at lines 334--335
 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 335--336
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 336--337
+[14]
+Underfull \hbox (badness 10000) in paragraph at lines 342--343
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 338--339
+Underfull \hbox (badness 10000) in paragraph at lines 344--345
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 339--340
+Underfull \hbox (badness 10000) in paragraph at lines 357--358
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 383--384
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 385--386
+
+ []
+
+[15]
+Underfull \hbox (badness 10000) in paragraph at lines 402--403
+
+ []
+
+[16] [17]
+Underfull \hbox (badness 10000) in paragraph at lines 426--427
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 427--428
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 428--429
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 429--430
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 431--432
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 432--433
 [][]$\T1/aett/m/n/12 http : / / www . cril . univ-[]artois . fr / ~konieczny / 
 enseignement /
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 339--340
+Underfull \hbox (badness 10000) in paragraph at lines 432--433
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 340--341
+Underfull \hbox (badness 10000) in paragraph at lines 433--434
 [][]$\T1/aett/m/n/12 http : / / www . cril . univ-[]artois . fr / ~konieczny / 
 enseignement /
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 340--341
+Underfull \hbox (badness 10000) in paragraph at lines 433--434
 
  []
 
-[16pdfTeX warning (ext4): destination with the same identifier (name{cite.Gurob
+[18pdfTeX warning (ext4): destination with the same identifier (name{cite.Gurob
 i}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.346 \newpage
+l.436 \newpage
               pdfTeX warning (ext4): destination with the same identifier (name
 {cite.RO}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.346 \newpage
+l.436 \newpage
               pdfTeX warning (ext4): destination with the same identifier (name
 {cite.RO}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.346 \newpage
-              ] [17] [18] [19]
-<gurobish.png, id=429, 575.14874pt x 556.0775pt>
+l.436 \newpage
+              ] [19] [20] [21]
+<gurobish.png, id=412, 575.14874pt x 556.0775pt>
 File: gurobish.png Graphic file (type png)
 <use gurobish.png>
-Package pdftex.def Info: gurobish.png  used on input line 469.
+Package pdftex.def Info: gurobish.png  used on input line 553.
 (pdftex.def)             Requested size: 230.05542pt x 222.42705pt.
-<gurobipython.png, id=430, 577.15625pt x 570.13pt>
+<gurobipython.png, id=413, 577.15625pt x 570.13pt>
 File: gurobipython.png Graphic file (type png)
 <use gurobipython.png>
-Package pdftex.def Info: gurobipython.png  used on input line 474.
+Package pdftex.def Info: gurobipython.png  used on input line 558.
 (pdftex.def)             Requested size: 230.8584pt x 228.04796pt.
- [20 <./gurobish.png> <./gurobipython.png>]
-<CV.pdf, id=442, 542.025pt x 782.925pt>
+ [22 <./gurobish.png> <./gurobipython.png>]
+<CV.pdf, id=423, 542.025pt x 782.925pt>
 File: CV.pdf Graphic file (type pdf)
 <use CV.pdf>
-Package pdftex.def Info: CV.pdf  used on input line 484.
+Package pdftex.def Info: CV.pdf  used on input line 568.
 (pdftex.def)             Requested size: 449.88063pt x 649.82759pt.
 
-Overfull \hbox (8.8629pt too wide) in paragraph at lines 484--485
+Overfull \hbox (8.8629pt too wide) in paragraph at lines 568--569
  [][] 
  []
 
-[21 <./CV.pdf>] (./Rapport_Final.lof)
+[23 <./CV.pdf>] (./Rapport_Final.lof)
 \tf@lof=\write6
 \openout6 = `Rapport_Final.lof'.
 
  
 AED: lastpage setting LastPage
-[22]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 489.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 489.
+[24]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 573.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 573.
  (./Rapport_Final.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 489.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 489.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 573.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 573.
 Package rerunfilecheck Info: File `Rapport_Final.out' has not changed.
-(rerunfilecheck)             Checksum: AF100DFA3D28C99C4F5CD182EA913DE6;2794.
+(rerunfilecheck)             Checksum: 214999B9216756F2B08CEC1FE5F423C4;3539.
 
 
 LaTeX Warning: There were multiply-defined labels.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 489.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 573.
  ) 
 Here is how much of TeX's memory you used:
- 10997 strings out of 492616
- 161202 string characters out of 6129480
- 312820 words of memory out of 5000000
- 14530 multiletter control sequences out of 15000+600000
- 45602 words of font info for 76 fonts, out of 8000000 for 9000
+ 11225 strings out of 492616
+ 164728 string characters out of 6129480
+ 318817 words of memory out of 5000000
+ 14810 multiletter control sequences out of 15000+600000
+ 44765 words of font info for 75 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 38i,13n,48p,756b,587s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/local/texlive/2019/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{/usr/local/
-texlive/2019/texmf-dist/fonts/enc/dvips/lm/lm-mathex.enc}{/usr/local/texlive/20
-19/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/local/texlive/2019/texmf-d
-ist/fonts/enc/dvips/lm/lm-mathsy.enc}</usr/local/texlive/2019/texmf-dist/fonts/
+ 38i,13n,48p,570b,601s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/local/texlive/2019/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/lo
+cal/texlive/2019/texmf-dist/fonts/enc/dvips/lm/lm-mathex.enc}{/usr/local/texliv
+e/2019/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{/usr/local/texlive/2019/texmf-d
+ist/fonts/enc/dvips/lm/lm-mathit.enc}</usr/local/texlive/2019/texmf-dist/fonts/
 type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2019/texmf-dist/fonts/t
-ype1/public/amsfonts/cm/cmbxti10.pfb></usr/local/texlive/2019/texmf-dist/fonts/
-type1/public/amsfonts/cm/cmcsc10.pfb></usr/local/texlive/2019/texmf-dist/fonts/
-type1/public/amsfonts/cm/cmmi12.pfb></usr/local/texlive/2019/texmf-dist/fonts/t
-ype1/public/amsfonts/cm/cmmib10.pfb></usr/local/texlive/2019/texmf-dist/fonts/t
-ype1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2019/texmf-dist/fonts/typ
-e1/public/amsfonts/cm/cmr17.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1
-/public/amsfonts/cm/cmti12.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/
-public/amsfonts/cm/cmtt12.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/p
-ublic/lm/lmex10.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/lm/l
-mmi12.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/lm/lmr12.pfb><
-/usr/local/texlive/2019/texmf-dist/fonts/type1/public/lm/lmsy10.pfb>
-Output written on Rapport_Final.pdf (22 pages, 2144087 bytes).
+ype1/public/amsfonts/cm/cmcsc10.pfb></usr/local/texlive/2019/texmf-dist/fonts/t
+ype1/public/amsfonts/cm/cmmi12.pfb></usr/local/texlive/2019/texmf-dist/fonts/ty
+pe1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2019/texmf-dist/fonts/type
+1/public/amsfonts/cm/cmr17.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/
+public/amsfonts/cm/cmss12.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/p
+ublic/amsfonts/cm/cmti12.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/pu
+blic/amsfonts/cm/cmtt12.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/pub
+lic/lm/lmex10.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/lm/lmm
+i12.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/lm/lmmi8.pfb></u
+sr/local/texlive/2019/texmf-dist/fonts/type1/public/lm/lmr12.pfb></usr/local/te
+xlive/2019/texmf-dist/fonts/type1/public/lm/lmr8.pfb></usr/local/texlive/2019/t
+exmf-dist/fonts/type1/public/lm/lmsy10.pfb></usr/local/texlive/2019/texmf-dist/
+fonts/type1/public/lm/lmsy8.pfb>
+Output written on Rapport_Final.pdf (24 pages, 2167458 bytes).
 PDF statistics:
- 971 PDF objects out of 1000 (max. 8388607)
- 729 compressed objects within 8 object streams
- 153 named destinations out of 1000 (max. 500000)
- 372 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 944 PDF objects out of 1000 (max. 8388607)
+ 699 compressed objects within 7 object streams
+ 95 named destinations out of 1000 (max. 500000)
+ 428 words of extra memory for PDF output out of 10000 (max. 10000000)
 

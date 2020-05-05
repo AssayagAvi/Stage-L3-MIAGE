@@ -21,7 +21,6 @@ public class Oeuvres extends Livres  {
         super(titre, auteur, nb_pages);
         this.critique=4;
         this.recommandation=recommandation;
-
     }
 
     public void lecture() {

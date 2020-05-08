@@ -1,43 +1,40 @@
 package JAVA.TD3.Exercice_1;
 
-public class Tablettes extends Ordinateur{
+public class Tablettes extends Portable{
+    
+    public boolean edge;
 
-    public boolean clavier_tactile;
-
-
-    public Tablettes(String num_serie, boolean wifi,boolean clavier_externe) {
-        super(num_serie, wifi,clavier_externe);
-        this.clavier_tactile=true;
+    public Tablettes(String num_serie, boolean clavier_externe, boolean wifi, boolean connection, boolean edge) {
+        super(num_serie, clavier_externe, wifi, connection);
+        this.edge = edge;
     }
 
-    public String identite() {
-        return ("Je suis une Tablette\n");
+    public void identite() {
+        System.out.println("Je suis une Tablette \n");
     }
 
-    public void saisie(){
-        if(this.clavier_externe == true) {
+    public void saisie() {
+        if (this.clavier_externe == true) {
             super.saisie();
         }
-        System.out.println("Clavier Externe : " + this.clavier_externe + "\t Clavier Tactile : " + this.clavier_tactile);
+        else System.out.println("Les données sont ecrite via le clavier tactile \n");
     }
 
-    public static void mobilite() {
-        System.out.println("Je suis mobile \n");       
+    public int ports(int x, int y, int z){
+        System.out.println("Le nombre de ports est : " + (x+y+z));
+        return x+y+z;
     }
 
-    public String ports(int x,int y,int z) {
-        int a = x + y + z;
-        return ("Il y a " + a + " ports USB dans l'ordinateur");
+    public void puissanceSignal(Portable p, float y) {
+        System.out.println("La force du signal est de " + y + "pour cette machine qui est du type " + getClass() );
+        
     }
 
-    public void puissanceSignal(Tablettes t, int x) {
-        System.out.println("La force du signal est de " + x + " pour ce  "+ getClass()); 
+    public void wifiAdHoc(Pc p) {
+        if (this.edge == true && this.connection == true ) {
+            System.out.println("Connection 3G : Possible \n");
+        }
+        else System.out.println("Connection 3G : Impossible \n");
+        
     }
-
-    public void GAdHoc(Ordinateur o) {
-        if (wifi == true)  {
-            System.out.println("Je suis lié en 3G\n");
-        }        
-    }
-
 }

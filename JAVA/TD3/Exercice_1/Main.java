@@ -1,35 +1,41 @@
 package JAVA.TD3.Exercice_1;
 
+
 public class Main {
 
-    public static void affiche_identite(Ordinateur[] tab) {
+    public static void affiche_identite(Pc[] tab) {
         for (int i = 0; i < tab.length; i++) {
-            System.out.println("Je suis l'appareil : "+ (i+1) + "\n" +tab[i].affiche()+"\t"+tab[i].identite());
-            
+        System.out.println("Machine : " + (i+1) + "\n");
+        tab[i].affiche();
+        tab[i].identite();
+        tab[i].saisie();
+        
         }
     }
     public static void main(String[] args) {
-                        //  Num_serie   Wifi    Clavier_externe
-        Ordinateur a = new Ordinateur("001", true);
-        Ordinateur b = new Ordinateur("002", false);
-        Portable c = new Portable("003", true, false);
-        Portable d = new Portable("004", true, true);
-        Portable e = new Portable("005", false, false);
-        Ordinateur f = new Tablettes("006", false, false);
-        Ordinateur g = new Tablettes("007", true, true);
+
+        Pc a = new Pc("PC1a");
+        Pc b = new Pc("PC2b");
+        Pc c = new Portable("Portable1a", false, false, false);
+        Pc d = new Portable("Portable2b", true, true, true);
+        Pc e = new Portable("Portable3c", false, true, true);
+        Pc f = new Tablettes("Tablette1a", false, false, false, true);
+        Pc g = new Tablettes("Tablettes2b", true, true, true, true);
 
         
-        d.puissanceSignal(d, 3);
+        Pc[] tab = new Pc[7];
+        tab[0] = a;
+        tab[1] = b;
+        tab[2] = c;
+        tab[3] = d;
+        tab[4] = e;
+        tab[5] = f;
+        tab[6] = g;
 
-        Ordinateur[] tab = new Ordinateur[7];
-        tab[0] = a;  tab[1] = b; tab[2] = c; tab[3] = d; tab[4] = e; tab[5] = f; tab[6] = g;
-        /* On n'est pas obliger de creer differents tableaux pour chaque types d'ordinateur puisqu'il y un enotion d"heritage
-        entre Ordinateur et Portable et entre Ordinateur et Tablettes. On peut donc caster le tableau en imposant un Ordinateur
-        a toute entré dans le tableau */  
-       // affiche_identite(tab);
-
-       
-       
+        affiche_identite(tab);
+        
     }
+
+
 
 }

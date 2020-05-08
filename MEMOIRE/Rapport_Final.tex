@@ -1,4 +1,3 @@
-
 \documentclass[a4paper, 12pt, twoside]{article}
 \usepackage[utf8]{inputenc}		% LaTeX, comprend les accents !
 \usepackage[T1]{fontenc}		
@@ -151,7 +150,7 @@ python setup.py install
 pip install <nom_module>
 \end{verbatim}
 
-\subsubsection{Un petit code Python}
+\subsubsection{Un exemple générique Python}
 Pour déclarer une variable il suffit seulement de la nommé, Python n'attend pas forcement le type de la variable; tout comme pour une fonction il n'attend pas le type de retour de la fonction.Ensuite pour les boucles et les conditions il suffit d'utiliser le mot clé en question suivit de " : " et donnez les instructions de façon indenter \newline
 
 Rien de mieux qu'un petit code Python pour mieux comprendre la syntaxe et la facilité d'utilisation du langage. Ainsi je vais vous présenter un code source de la fonction \textsf{Tri à bulles} :
@@ -312,7 +311,7 @@ Pour intégrer et comprendre ce concept, il y a d'autres notions à connaitre te
 
 Comme vous l'avez compris,un jeu nécessite la présence d'acteurs ; dans la suite de nos explications lorsque nous parlerons de \textsf{joueurs} nous ferons donc référence aux acteurs du jeu.
 
-\subsection{Jeux statiques}
+\subsection{Présentation des jeux statiques}
 \begin{definition}
 Un jeu est dit statique lorsque le jeu se déroule en une seule étape et de manière simultanée sans avoir accès aux informations de l'actions de ou des autres joueurs.
 \end{definition} 
@@ -322,46 +321,6 @@ Ainsi un \textsf{jeu statique} peut être défini par :
 \begin{itemize}
 \item Un nombre fini J de joueurs : {1,2, ....., J}
 \item Un nombre unique d'action par joueur fixé a : 1 
-\end{itemize}
-\subsection{Jeux statiques et résolution de programmes linéaires}
-Nous avons donc une connaissance supplémentaire sur les jeux, en particulier les \textsf{jeux statiques} mais nous n'avons pas aborder le sujet de "victoire", de "réussite" ou même de "gain" vis à vis ces jeux. \newline
-
-C'est alors qu'intervient la notion de stratégie afin qu'un acteur décide de prendre une décision pour une futur action du jeu.\newline
-\begin{definition}
-La stratégie d’un acteur est l’une des options qu’il choisit dans un contexte où son choix dépend non seulement de ses propres actions, mais également de celles des autres.
-\end{definition}
-
-On peut donc distinguer deux grandes catégories de \textsf{stratégies} soit pures soit mixtes, nous rentrerons en détails dans les sections suivantes (respectivement [4.2.1] et [4.2.2]. \newline
-
-Maintenant que nous avons abordez la notion de stratégie, intéressons nous à la programmation linéaire. La "victoire" ou "réussite" d'un jeu se traduit mathématiquement par le \textsf{gain} le plus élevé. Ainsi le but est donc de d'utiliser la stratégie la plus optimale qui permettrait de maximiser les \textsf{gains} du jeu.
-
-\begin{definition}
-La programmation linéaire (PL) est un problème d'optimisation où la fonction objectif et les contraintes sont toutes linéaires. Le but de résoudre un PL est de trouvé les variables optimales qui maximisent la fonction objective.
-\end{definition}
-
-C'est donc grâce à la \textsf{programmation linéaire} (via une implémentation sur \textsf{Gurobi}) que nous arriverons a trouvé la solution optimal et dans le meilleur des cas \textsf{l'équilibre de Nash}[4.4]. \newline
-
-D'une approche plus mathématiques on peut résumer la résolution d'un \textsf{jeu statique} par \textsf{programmation linéaire} comme ceci : \newline
-\begin{center}
-max  min $ \Sigma_{i}$ $\pi_{i}^{1}$ a$ _{ij} $ = max min $ \Sigma _{i} $ $ \Sigma _{j} $ $\pi_{i}^{1}$ a$ _{ij} $ $ \pi_{j}^{2} $
-\end{center}
-\subsubsection{Stratégies pures}
-
-\subsubsection{Stratégies mixtes}
-
-\subsection{Jeux dynamiques}
-\begin{definition}
-Un jeu est dynamique lorsqu'il se déroule en plusieurs étapes non simultané, c'est a dire que les joueurs jouent plusieurs fois mais en ayant connaissance des actions des autres joueurs et donc peuvent établir des stratégies.
-\end{definition}
-
-Prenons pour hypothèse un jeu dynamique à deux  J1 et J2, les deux joueurs vont effectuer tours à tours des actions en différé en ayant accès aux informations des actions du joueur précédent. \newline
-
-Ainsi un \textsf{jeu dynamique} peut être défini par : 
-\begin{itemize}
-\item Un nombre fini J de joueurs : {1,2, ....., J}
-\item Un nombre identique d'actions K par joueurs : {1,2,....K}  
-\item Un ensemble infini E d'états du jeu qui sont indicé par les actions des joueurs 
-\item Une stratégie pure par joueurs composé des actions des joueurs respectifs
 \end{itemize}
 
 \subsubsection{Jeux bimatriciel}
@@ -394,6 +353,50 @@ Ainsi un \textsf{jeu bimatriciel} est défini par :
 \item Une stratégie pure par joueurs composé des actions des joueurs respectifs
 \end{itemize}
 \subparagraph*{}{Il existe plusieurs jeux ou situations "connus" que l'on pourrait assimiler à un \textsf{jeu à somme nulle} comme le jeu de \textsf{pile ou face} ou encore \textsf{le dilemme du prisonnier} mais nous allons nous plonger sur un autre jeu un peu moins connu \textsf{Matching pennies} et nous allons essayer de mieux comprendre qu'est ce qu'un \textsf{jeu a somme nulle} et surtout comment le gagner ou du moins trouver la meilleur solution.}
+\subsection{Jeux statiques et résolution de programmes linéaires}
+Nous avons donc une connaissance supplémentaire sur les jeux, en particulier les \textsf{jeux statiques} mais nous n'avons pas aborder le sujet de "victoire", de "réussite" ou même de "gain" vis à vis ces jeux. \newline
+
+C'est alors qu'intervient la notion de \textsf{stratégie} (ou encore, règles de décision) pour  qu'un acteur puisse prendre une décision affin d'effectuer une future action dans le jeu.\newline
+\begin{definition}
+La stratégie d’un acteur est l’une des options qu’il choisit dans un contexte où son choix dépend non seulement de ses propres actions, mais également de celles des autres.
+\end{definition}
+
+On peut donc distinguer deux grandes catégories de \textsf{stratégies} soit pures soit mixtes, nous rentrerons en détails dans les sections suivantes (respectivement [4.2.1] et [4.2.2]. \newline
+
+Maintenant que nous avons abordez la notion de stratégie, intéressons nous à la programmation linéaire. La "victoire" ou "réussite" d'un jeu se traduit mathématiquement par le \textsf{gain} le plus élevé. Ainsi le but est donc de d'utiliser la stratégie la plus optimale qui permettrait de maximiser les \textsf{gains} du jeu.
+
+\begin{definition}
+La programmation linéaire (PL) est un problème d'optimisation où la fonction objectif et les contraintes sont toutes linéaires. Le but de résoudre un PL est de trouvé les variables optimales qui maximisent la fonction objective.
+\end{definition}
+
+C'est donc grâce à la \textsf{programmation linéaire} (via une implémentation sur \textsf{Gurobi}) que nous arriverons a trouvé la solution optimal et dans le meilleur des cas \textsf{l'équilibre de Nash}[4.4]. \newline
+
+D'une approche plus mathématiques on peut résumer la résolution d'un \textsf{jeu statique} par \textsf{programmation linéaire} comme ceci : \newline
+\begin{center}
+max  min $ \Sigma_{i}$ $\pi_{i}^{1}$ a$ _{ij} $ = max min $ \Sigma _{i} $ $ \Sigma _{j} $ $\pi_{i}^{1}$ a$ _{ij} $ $ \pi_{j}^{2} $
+\end{center}
+
+
+\subsubsection{Stratégies pures}
+Lorsque l'on parle de stratégie pure il s'agit d'une stratégie déterministe c'est à dire une stratégie dans laquelle une seule et unique action est effectuée. Elle détermine en particulier l'action qu'un acteur (joueur) réalisera devant toutes les situations auxquels ce dernier sera confronté. 
+\subsubsection{Stratégies mixtes}
+En parallèle aux stratégies pures, il existe aussi des stratégies dites mixtesss
+\subsection{Jeux dynamiques}
+\begin{definition}
+Un jeu est dynamique lorsqu'il se déroule en plusieurs étapes non simultané, c'est a dire que les joueurs jouent plusieurs fois mais en ayant connaissance des actions des autres joueurs et donc peuvent établir des stratégies.
+\end{definition}
+
+Prenons pour hypothèse un jeu dynamique à deux  J1 et J2, les deux joueurs vont effectuer tours à tours des actions en différé en ayant accès aux informations des actions du joueur précédent. \newline
+
+Ainsi un \textsf{jeu dynamique} peut être défini par : 
+\begin{itemize}
+\item Un nombre fini J de joueurs : {1,2, ....., J}
+\item Un nombre identique d'actions K par joueurs : {1,2,....K}  
+\item Un ensemble infini E d'états du jeu qui sont indicé par les actions des joueurs 
+\item Une stratégie pure par joueurs composé des actions des joueurs respectifs
+\end{itemize}
+
+
 
 \paragraph{Le jeu "Matching pennies"}{izfahzd}
 

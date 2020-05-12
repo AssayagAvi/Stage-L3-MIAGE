@@ -474,9 +474,11 @@ v $ \leq  \Sigma_{i} \pi_{i}^{1}$ a$ _{ij} $ \hspace{0.2 cm} et toujours \hspace
 \subsubsection{Stratégies pures}
 Lorsque l'on parle de stratégie pure il s'agit d'une stratégie déterministe c'est à dire une stratégie dans laquelle une seule et unique action est effectuée. Elle détermine en particulier l'action qu'un acteur (joueur) réalisera devant toutes les situations auxquels ce dernier sera confronté. \newline
 
-On note S$_{i}$ l'ensemble des stratégies pures du joueur i et par s$_{i}
+On note S$_{i}$ l'ensemble des stratégies pures du joueur i et par s$_{i} \in S_{i}$ une stratégie pure de ce joueur i. 
 \subsubsection{Stratégies mixtes}
-En parallèle aux stratégies pures, il existe aussi des stratégies dites mixtes
+En parallèle aux stratégies pures, il existe aussi des stratégies dites mixtes c'est à dire ou chaque action d'un joueur i  dépend d'une probabilité (connue ou non) provenant de la stratégie pure du même joueur. \newline
+
+On note $P_{i} $ l'ensemble des stratégies mixtes du joueur i. $ p_{i} $ correspond donc a une des stratégie mixte du joueur i.
 
 \subsection{L'équilibre de Nash}
 Maintenant que l'on en connait un peu plus sur le concept fondamental de la \textsf{théorie des jeux} nous avons bien compris que résoudre un jeu (dynamique bien évidement) revient non pas à "gagner" la partie mais trouver la meilleur stratégie permettant de maximiser ses gains et donc a fortiori minimiser ses pertes (puisqu'elles correspondent à gain réciproque des autres acteurs). \newline

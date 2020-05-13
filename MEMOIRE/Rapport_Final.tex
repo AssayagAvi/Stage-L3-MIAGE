@@ -123,7 +123,7 @@ Travaillant principalement au LIP6 (Département Desir ) en recherche opération
 
 Au vue de la situation peu évidente et inhabituelle, et dans le but de préserver un maximum notre santé j'ai effectué mon stage à domicile donc sans la présence de mon tuteur, ce qui aurai rendu le stage encore plus intéressant et plus évident à gérer (d'un point de vue logistique et pour des questions potentielles). Pour remédier à cela et à l'initiative de Monsieur \textsf{Hyon} mon tuteur, nous avons mis en place un lien \textsf{GitHub} mais aussi un rendez vous téléphonique hebdomadaire en début de semaine permettant de faire le point, de poser mes questions, de me donnez les axes que je devais améliorer ainsi que les points sur lesquels je devais travailler pour la semaine à venir.  
 
-\subsection{Mission proposé}
+\subsection{Mission proposée}
 Ainsi il m'à été confié de modéliser un jeu stochastique sur un point de vue informatique (via \textsf{pyhton}) mais surtout de trouver un moyen, par un algorithme de le résoudre c'est à dire de trouver la solution la plus optimale (nous reviendrons plus en détails dans les sections futures cf [4.2], [4.3]). \newline
 
 Pour cela j'ai du apprendre les bases, la syntaxe et le fonctionnement du langage \textsf{python} mais aussi me familiariser avec le concept orienté objet (déjà étudié durant mon cursus avec \textsf{C++} et \textsf{Java}) sur un nouveau langage : \textsf{python}. \newline
@@ -202,7 +202,7 @@ Quant à l'installation de Python, cette dernière est assez simple; il suffit d
 
 A savoir que sur Mac Os et Linux, Python est déjà préinstallé et il faudra peut être seulement mettre à jours la version qui pourrai être obsolète ou dépassé.
 
-\subsubsection{Installation de Python} 
+\subsubsection{Procédure d'installation de Python} 
 \paragraph{Méthode packages}{Pour cela il faut allez télécharger les packages en question sur le site officiel de Python puis les interpréter c'est dire ouvrir la console (terminal python) et demander à python d'exécuter le fichier \textsf{.py} en question via la commande :}
 \begin{verbatim}
 python setup.py install
@@ -231,7 +231,7 @@ source tutorial-env/bin/activate
 \end{verbatim}
 
 
-\subsubsection{Un exemple générique Python}
+\subsubsection{Un exemple générique de code Python}
 Pour déclarer une variable il suffit seulement de la nommé, Python n'attend pas forcement le type de la variable; tout comme pour une fonction il n'attend pas le type de retour de la fonction.Ensuite pour les boucles et les conditions il suffit d'utiliser le mot clé en question suivit de " : " et donnez les instructions de façon indenter \newline
 
 Rien de mieux qu'un petit code Python pour mieux comprendre la syntaxe et la facilité d'utilisation du langage. Ainsi je vais vous présenter un code source de la fonction \textsf{Tri à bulles} :
@@ -317,7 +317,7 @@ conda install gurobi
 \end{verbatim}
 
 
-\subsubsection{Shell interactive }
+\subsubsection{Utilsation de gurobi}
 Lorsque que \textsf{Gurobi} mentionne son "shell intercative" il s'agit en fait d'un script (fichier ".sh") qui est fournit avec le téléchargement du solveur. En en le lançant, c'est a dire en le tapant a la console le terminal lancera une console \textsf{gurobi} ou il faudra directement écrire le code a exécuter. Ainsi un interpréteur \textsf{Gurobi} sera ouvert et attendra des instructions, au même titre qu'un interpréteur \textsf{Python} .
 \begin{center}
 \begin{figure}[h!]
@@ -434,7 +434,7 @@ Ainsi un \textsf{jeu bimatriciel} est défini par :
 \item Une stratégie pure par joueurs composé des actions des joueurs respectifs
 \end{itemize}
 \subparagraph*{}{Il existe plusieurs jeux ou situations "connus" que l'on pourrait assimiler à un \textsf{jeu à somme nulle} comme le jeu de \textsf{pile ou face} ou encore \textsf{le dilemme du prisonnier} mais nous allons nous plonger sur un autre jeu un peu moins connu \textsf{Matching pennies} et nous allons essayer de mieux comprendre qu'est ce qu'un \textsf{jeu a somme nulle} et surtout comment le gagner ou du moins trouver la meilleur solution.}
-\subsection{Jeux statiques et résolution de programmes linéaires}
+\subsection{Jeux bimatriciel a somme et résolution par PL}
 Nous avons donc une connaissance supplémentaire sur les jeux, en particulier les \textsf{jeux statiques} mais nous n'avons pas aborder le sujet de "victoire", de "réussite" ou même de "gain" vis à vis ces jeux. \newline
 
 C'est alors qu'intervient la notion de \textsf{stratégie} (ou encore, règles de décision) pour  qu'un acteur puisse prendre une décision affin d'effectuer une future action dans le jeu.\newline
@@ -533,6 +533,7 @@ Pour la représentation du jeu nous allons estimer que le gain ou perte est de d
 \caption{Represenation matricielle de "Matching Pennies"}
 \end{figure}
 
+\subsection{Jeu stochastique}
 \newpage
 \section{Conclusions}
 \subsection{Difficultés rencontrées}

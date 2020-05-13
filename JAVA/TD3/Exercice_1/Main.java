@@ -16,11 +16,11 @@ public class Main {
 
         Pc a = new Pc("PC1a");
         Pc b = new Pc("PC2b");
-        Pc c = new Portable("Portable1a", false, false, false);
-        Pc d = new Portable("Portable2b", true, true, true);
-        Pc e = new Portable("Portable3c", false, true, true);
-        Pc f = new Tablettes("Tablette1a", false, false, false, true);
-        Pc g = new Tablettes("Tablettes2b", true, true, true, true);
+        Pc c = new Portable("Portable1a", false, false);
+        Pc d = new Portable("Portable2b", true, true);
+        Pc e = new Portable("Portable3c", false, true);
+        Pc f = new Tablettes("Tablette1a", false, false, true);
+        Pc g = new Tablettes("Tablettes2b", true, true, true);
 
         
         Pc[] tab = new Pc[7];
@@ -32,7 +32,10 @@ public class Main {
         tab[5] = f;
         tab[6] = g;
 
-        affiche_identite(tab);
+       // affiche_identite(tab);
+       Tablettes k = new Tablettes("222", false, true, true);
+
+       k.edgeAdHoc(g);
         
     }
 

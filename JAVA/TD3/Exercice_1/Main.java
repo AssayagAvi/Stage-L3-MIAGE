@@ -35,7 +35,7 @@ public class Main {
        // affiche_identite(tab);
        Tablettes k = new Tablettes("222", false, true, true);
 
-       k.edgeAdHoc(g);
+       f.adHoc(f);
         
     }
 

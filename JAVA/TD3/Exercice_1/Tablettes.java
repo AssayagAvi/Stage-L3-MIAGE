@@ -40,4 +40,21 @@ public class Tablettes extends Portable{
         }
         else System.out.println("Connection 3G : Impossible \n");
     }
+
+    public void adHoc(Pc p) {
+        if (p instanceof Tablettes) {
+            Tablettes o = (Tablettes)p;
+            if (o.edge && this.edge) {
+                System.out.println("Connection : 3G \n");
+            }
+        }
+        else super.adHoc(p);
+        
+    }
+
+
+
+
 }
+
+

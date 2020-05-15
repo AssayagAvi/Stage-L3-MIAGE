@@ -24,4 +24,9 @@ public class Pc {
         System.out.println("Le nombre de ports est : " + x);
         return x;
     }
+
+    public void adHoc(Pc p) {
+            System.out.println("Conncetion : Ethernet");
+        }
+    
 }

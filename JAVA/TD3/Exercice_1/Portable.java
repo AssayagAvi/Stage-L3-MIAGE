@@ -49,4 +49,14 @@ public class Portable extends Pc {
         
     }
     
+    public void adHoc(Pc p) {
+        if (p instanceof Portable) {
+            Portable o = (Portable)p;
+            if (o.wifi && this.wifi) {
+                System.out.println("Connection : Wifi \n");
+            }
+        }
+        else super.adHoc(p);
+        
+    }
 }

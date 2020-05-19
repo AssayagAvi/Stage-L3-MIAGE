@@ -204,7 +204,7 @@ Quant à l'installation de Python, cette dernière est assez simple; il suffit d
 
 A savoir que sur Mac Os et Linux, Python est déjà préinstallé et il faudra peut être seulement mettre à jours la version qui pourrai être obsolète ou dépassé.
 
-\subsubsection{Procédure d'installation de Python} 
+\subsubsection{Procédure d'installations de Python} 
 \paragraph{Méthode packages}{Pour cela il faut allez télécharger les packages en question sur le site officiel de Python puis les interpréter c'est dire ouvrir la console (terminal python) et demander à python d'exécuter le fichier \textsf{.py} en question via la commande :}
 \begin{verbatim}
 python setup.py install
@@ -329,7 +329,7 @@ Lorsque que \textsf{Gurobi} mentionne son "shell intercative" il s'agit en fait 
 \end{figure}
 \end{center}
 
-\subsubsection{Exemple Gurobi programmation linéaire (biere.py)}
+\subsubsection{Exemple de programmation linéaire avec Gurobi}
 Soit x1 et x2 les quantités (en volume) respectives produite pour les bières b1 et b2. Les quantités sont soumises à des contraintes (3) pour chaque ingrédients utilisé : \newline \textsf{Contraintes : }
 \begin{itemize} 
 \item   Contrainte C1 : 2,5 x1 + 7,5 x2  $\leq$ 240 (pour le maïs)
@@ -393,7 +393,7 @@ except AttributeError:
 
 
 
-\section{Théorie des jeux bis}
+\section{Théorie des jeux}
 
 \subsection{Jeux statiques}
 \subsubsection{Principes et modèles des jeux statiques }
@@ -465,19 +465,19 @@ Soit $\sigma ^{*} $ un profil de stratégie mixte. $\sigma ^{*} $est un équilib
 \forall \sigma ^{'i}, \hspace{0,2 cm} \in \hspace{0,2 cm} S^{i}, \hspace{0,2 cm} v_{i}(\sigma ^{*i} , \hspace{0,1 cm} \sigma^{*-i}) \hspace{0,2 cm} \geq (\sigma ^{'i} , \hspace{0,1 cm} \sigma^{*-i})
 \end{align*}
 
-\subsubsection{Fonction de valeur}
-Le critère d'évaluation d'une stratégie $\pi$ correspond à l'espérance mathématique de la somme des gains obtenus en suivant cette stratégie et en partant d’un sommet initial \textsf{s},  cette espérance est appelée \textsf{fonction de valeur}.
-
-\subparagraph*{}{Rappelons le tout de même une stratégie $\pi_{i}(s)$ dépend de l'action choisi par le joueur \textsf{i} à l'état \textsf{s} en stratégie pure et $\pi_{i}(s,a)$ en stratégie mixte avec une probabilité \textsf{a} pour l'état \textsf{s}}.
-
-\subparagraph*{}{L'une des variantes les plus connues est de pondérer les gains par un facteur $\gamma \in $ [0;1[ afin de prendre en compte la valeur des gains futur. En notant r$_{t}$ la récompense reçue à l'instant \textsf{t} $ \in $ K et \textsf{s$^{0}$} l'état initial, on définit la \textsf{fonction de valeur} pour tout \textsf{s} $\in $ S pour une stratégie $ \pi$ :}
-\begin{align*}
-V^{\pi}(s) \hspace{0,1 cm} = \hspace{0,1 cm} E^{\pi}\hspace{0,1 cm} (\sum_{t=0}^{\infty} \hspace{0,1cm}\gamma ^{t} \hspace{0,1cm} r^{t}\hspace{0,1cm} |\hspace{0,1cm} s^{0} = s )
-\end{align*}
 
 \subsubsection{Jeux bimatrciel}
 Un jeu bimatriciel se caractérise comme son nom l'indique par deux matrices. Ces dernières ne sont autres que les gains des joueurs. Autrement dit les joueurs jouent de manière simultané et on inscrit dans une matrice leurs gains (une matrice pour chaque joueur). Pour la suite du mémoire et du stage nous allosn donc utiliser strictement des jeux à deux joueurs JA et JB.
 
+Ainsi un \textsf{jeu bimatriciel} est défini par :
+\begin{itemize}
+\item Un nombre fini J de joueurs : \{1,2, ....., J\}
+\item Un nombre fini M d'actions pour le joueur 1 (JA) :\{1,2, ....., M\}
+\item Un nombre fini N d'actions pour le joueur 2 (JB) : \{1,2, ....., N\}
+\item Une matrice de gain (pay-off) G1 pour le joueur JA  [M $\times$ N]
+\item Une matrice de gain (pay-off) G2 pour le joueur JB  [N $\times$ M]
+\item Une stratégie pure par joueurs composé des actions des joueurs respectifs
+\end{itemize}
 
 \paragraph{Exemple de jeu bimatriciel}
 \[
@@ -494,7 +494,7 @@ Joueur\hspace{0,1cm} B \hspace{1cm}
 \]
 
 \paragraph{Équilibre en stratégie pure}
-D'après les matrices précédentes il apparait logique que le seul équilibre pur (obtenu par le théorème du \textsf{minimax}) est  \textbf{x = \{(1,0,0) , (1,0)\}}.
+D'après les matrices précédentes  le seul équilibre pur (obtenu par le théorème du \textsf{minimax}) est  \textbf{x = \{(1,0,0) , (1,0)\}}.
 \subparagraph*{}{Pour vérfiier cela il semble logique que si JA choisi (1,0,0) \textsf{soit 3} et JB choisi (1,0) \textsf{soit  3} il apparait un équilibre pur puisque le gain de JA serait de 3 et JB 3 aussi. C'est bien la seule solution possible pour équilibre.
 
 \paragraph{Équilibre en stratégie mixte}
@@ -554,21 +554,47 @@ Comme annoncé dans notre introduction nous essayerons de résoudre des jeux à 
 
 Un jeu à somme nul est un jeu où le gain d'un des acteurs (J1, par exemple) représente la perte équivalente réciproque des autres acteurs ((J2, par exemple). Pour faciliter la compréhension et la résolution de ces modèles, le nombre d'acteurs autrement dit de joueurs sera fixé à 2.\newline
 
-Ainsi un \textsf{jeu bimatriciel} est défini par :
+
+\subparagraph*{}{Il existe plusieurs jeux ou situations "connus" que l'on pourrait assimiler à un \textsf{jeu à somme nulle} comme le jeu de \textsf{pile ou face} mais nous allons nous plonger sur un autre jeu un peu moins connu \textsf{Matching pennies} et nous allons essayer de mieux comprendre qu'est ce qu'un \textsf{jeu a somme nulle} et surtout comment le gagner ou du moins trouver la meilleur solution.}
+
+\subsubsection{Un exemple de jeu :  "Matching pennies"}
+Si l'on essaie de traduire mot - a - mot le nom du jeu on obtient : "jeux d'appariement de sous"  ; évidemment cela ne nous avance pas plus. Alors comment pourrions nous définir et mieux intégrer le jeu \textsf{matching pennies} ? \newline
+
+C'est un jeu simple et l'un plus connu dans le concept de la théorie des jeux, il se joue seulement à deux joueurs JA : \textsf{Pair}  et JB : \textsf{Impair}. Chaque acteurs (Pair \& Impair) possèdent une pièce et choisissent simultanément et secrètement une des deux faces \textsf{Pile} ou \textsf{Face}, puis en fonction des résultats obtenu on assiste des scénarios de gains différents :
+
 \begin{itemize}
-\item Un nombre fini J de joueurs : \{1,2, ....., J\}
-\item Un nombre fini M d'actions pour le joueur 1 (J1) :\{1,2, ....., M\}
-\item Un nombre fini N d'actions pour le joueur 2 (J2) : \{1,2, ....., N\}
-\item Une matrice de gain (pay-off) G1 pour le joueur J1  [M $\times$ N]
-\item Une matrice de gain (pay-off) G2 pour le joueur J2  [N $\times$ M]
-\item Une stratégie pure par joueurs composé des actions des joueurs respectifs
-\end{itemize}
-\subparagraph*{}{Il existe plusieurs jeux ou situations "connus" que l'on pourrait assimiler à un \textsf{jeu à somme nulle} comme le jeu de \textsf{pile ou face} ou encore \textsf{le dilemme du prisonnier} mais nous allons nous plonger sur un autre jeu un peu moins connu \textsf{Matching pennies} et nous allons essayer de mieux comprendre qu'est ce qu'un \textsf{jeu a somme nulle} et surtout comment le gagner ou du moins trouver la meilleur solution.}
+\item Les deux faces des pièces correspondent et dans ce cas Pair garde les deux pièces (+1 Pair, -1 Impair)
+\item Les deux faces des pièces ne correspondent pas et dans ce cas Impair garde les deux pièces (+1 Impair, -1 Pair)
+\end{itemize}  \vspace{0.2 cm}
 
+\begin{figure}[h!]
+\centering
+\includegraphics[scale=0.4]{Matching.pdf}
+\caption{Represenation matricielle de "Matching Pennies"}
+\end{figure} 
 
+\subparagraph*{}{Ainsi d'après ce que nous avons déjà vu dans les sections précédentes on peut comprendre que \textsf{matching pennies} est un jeu à somme nulle puisque le gain d'un des deux joueurs (par exemple Pair) est bien la perte réciproque de l'autre joueur (ici Impair).} 
+\subparagraph*{}{De même vous aurez compris que ce jeu permet aussi d'illustrer le concept  de stratégies et de l'\textsf{équilibre de Nash} cependant cette configuration n'admet pas de stratégie pure pour l'\textsf{équilibre de Nash} mais plutôt une stratégie mixte reposant sur le choix probabiliste de chaque joueurs à choisir une des deux faces de la pièce.}
+
+\subparagraph*{}{Puisque c'est un jeu bi-matricel a somme nulle, profitons de sa définition même pour avoir une vue d'ensemble sur le jeu ; c'est à dire les actions de chaque joueurs mais aussi les gains ou pertes respectifs en fonction des choix effectués (cf [4.1.1]).} \newline
+
+Pour la représentation du jeu nous allons estimer que le gain ou perte est de de 1 puisque c'est avec une seule pièce que nous jouons, que le joueur JA \textsf{Pair} joue sur les lignes tandis que le joueur JB \textsf{Impair} joue les colones.  \vspace{0.4 cm}
+
+\paragraph{Matrice de gains des joueurs A et B}{Ainsi comme nous l'expliquons depuis plusieurs paragraphes, le propre même du jeu bimatricel repose sur l'existence de la matrice de "gain" ou de "payoff".  Nous allons donc donner la matrice de gain A de JA \textsf{Pair} et celle de JB \textsf{Impair} qui n'est autre que l'opposé de celle de  A (B = - A).}
+
+\[
+Matrice\hspace{0,1cm} A\hspace{1cm}
+\begin{pmatrix}1&-1\\
+-1&1\\
+\end{pmatrix}\                      \hspace{2,5cm}  
+Matrice\hspace{0,1cm} B \hspace{1cm}  
+\begin{pmatrix}-1&1\\
+1&-1\\
+\end{pmatrix} 
+\]
 
 \subsection{Jeux bimatriciel a sommes nulles et résolution par PL}
-Nous avons donc une connaissance supplémentaire sur les jeux, en particulier les \textsf{jeux statiques} mais nous n'avons pas aborder le sujet de "victoire", de "réussite" ou même de "gain" vis à vis ces jeux. \newline
+%Blablate sur le jeux
 
 C'est alors qu'intervient la notion de \textsf{stratégie} (ou encore, règles de décision) pour  qu'un acteur puisse prendre une décision affin d'effectuer une future action dans le jeu.\newline
 \begin{definition}
@@ -605,32 +631,19 @@ Le problème devient donc sous forme linéaire (PL) avec pour fonction objective
 \large{v \hspace{0.2 cm} \leq  \hspace{0.2 cm}\Sigma_{i}\hspace{0.2 cm} \pi_{i}^{1}\hspace{0.2 cm} a _{ij}} \\ et \hspace{0,2 cm} toujours : \hspace{0,4 cm}
 \large{\Sigma_{i} \hspace{0.2 cm} \pi_{i}^{1} = 1}
 \end{align*}
+{Comme nous l'avons expliquer plus haut dans un jeu à somme nul trouver l'\textit{équilibre de Nash} n'est pas forcement possible il faut donc résonner autrement et utiliser le théoreme du \textsf{minimax}. Pour résoudre cela, il faut tenter de maximiser la stratégie pure de JA \textsf{Pair} et donc trouver : \newline
+\begin{align*}
+ \large {\textsf{maximiser} \underset{1 \leq j \leq m}{\textsf{min}} \hspace{0,2cm}  \underset{i}{\Sigma} \hspace{0,2cm} \pi_{i}^{1} \hspace{0,2cm}  a _{ij} }  
+\end{align*}
+\subparagraph*{}{Cependant le problème n'est pas tout à fait encore sous forme linéaire et donc cela il suffit de trouver la fonction à maximiser \textsf{v} tel que \textsf{v} soit plus petite que toutes les sommes que nous cherchons à minimiser. D'ou :} 
+\begin{align*}
+\large {\textsf{maximiser} \hspace{0,2 cm} v }\\ 
+\large{ s.c \hspace{0.4 cm} v \hspace{0,2 cm} \leq  \hspace{0.2 cm}\Sigma_{i}\hspace{0.2 cm} \pi_{i}^{1}\hspace{0.2 cm} a _{ij}} \\
+\large{\Sigma_{i} \hspace{0.2 cm} \pi_{i}^{1} = 1} \\ 
+\large{ \pi_{i}^{1} \hspace{0,2 cm} \geq \hspace{0,2 cm} 0 \hspace{0,2 cm} \forall i }
+\end{align*}
 
 
-
-
-\subsubsection{Un exemple de jeu :  "Matching pennies"}
-Si l'on essaie de traduire mot - a - mot le nom du jeu on obtient : "jeux d'appariement de sous"  ; évidemment cela ne nous avance pas plus. Alors comment pourrions nous définir et mieux intégrer le jeu \textsf{matching pennies} ? \newline
-
-C'est un jeu simple et l'un plus connu dans le concept de la théorie des jeux, il se joue seulement à deux joueurs JA : \textsf{Pair}  et JB : \textsf{Impair}. Chaque acteurs (Pair \& Impair) possèdent une pièce et choisissent simultanément et secrètement une des deux faces \textsf{Pile} ou \textsf{Face}, puis en fonction des résultats obtenu on assiste des scénarios de gains différents :
-
-\begin{itemize}
-\item Les deux faces des pièces correspondent et dans ce cas Pair garde les deux pièces (+1 Pair, -1 Impair)
-\item Les deux faces des pièces ne correspondent pas et dans ce cas Impair garde les deux pièces (+1 Impair, -1 Pair)
-\end{itemize}  \vspace{0.2 cm}
-
-\begin{figure}[h!]
-\centering
-\includegraphics[scale=0.4]{Matching.pdf}
-\caption{Represenation matricielle de "Matching Pennies"}
-\end{figure} 
-
-\subparagraph*{}{Ainsi d'après ce que nous avons déjà vu dans les sections précédentes on peut comprendre que \textsf{matching pennies} est un jeu à somme nulle puisque le gain d'un des deux joueurs (par exemple Pair) est bien la perte réciproque de l'autre joueur (ici Impair).} 
-\subparagraph*{}{De même vous aurez compris que ce jeu permet aussi d'illustrer le concept  de stratégies et de l'\textsf{équilibre de Nash} cependant cette configuration n'admet pas de stratégie pure pour l'\textsf{équilibre de Nash} mais plutôt une stratégie mixte reposant sur le choix probabiliste de chaque joueurs à choisir une des deux faces de la pièce.}
-
-\subparagraph*{}{Puisque c'est un jeu bi-matricel a somme nulle, profitons de sa définition même pour avoir une vue d'ensemble sur le jeu ; c'est à dire les actions de chaque joueurs mais aussi les gains ou pertes respectifs en fonction des choix effectués (cf [4.1.1]).} \newline
-
-Pour la représentation du jeu nous allons estimer que le gain ou perte est de de 1 puisque c'est avec une seule pièce que nous jouons, que le joueur JA \textsf{Pair} joue sur les lignes tandis que le joueur JB \textsf{Impair} joue les colones.  \vspace{0.4 cm}
 
 
 \subsubsection{Matrice de gains des joueurs A et B}{Ainsi comme nous l'expliquons depuis plusieurs paragraphes, le propre même du jeu bimatricel repose sur l'existence de la matrice de "gain" ou de "payoff".  Nous allons donc donner la matrice de gain A de JA \textsf{Pair} et celle de JB \textsf{Impair} qui n'est autre que l'opposé de celle de  A (B = - A).}
@@ -645,54 +658,8 @@ Matrice\hspace{0,1cm} B \hspace{1cm}
 1&-1\\
 \end{pmatrix} 
 \]
-\subsubsection{Résolution via programmation linéaire}{Comme nous l'avons expliquer plus haut dans un jeu à somme nul trouver l'\textit{équilibre de Nash} n'est pas forcement possible il faut donc résonner autrement et utiliser le théoreme du \textsf{minimax}. Pour résoudre cela, il faut tenter de maximiser la stratégie pure de JA \textsf{Pair} et donc trouver : \newline
-\begin{align*}
- \large {\textsf{maximiser} \underset{1 \leq j \leq m}{\textsf{min}} \hspace{0,2cm}  \underset{i}{\Sigma} \hspace{0,2cm} \pi_{i}^{1} \hspace{0,2cm}  a _{ij} }  
-\end{align*}
-\subparagraph*{}{Cependant le problème n'est pas tout à fait encore sous forme linéaire et donc cela il suffit de trouver la fonction à maximiser \textsf{v} tel que \textsf{v} soit plus petite que toutes les sommes que nous cherchons à minimiser. D'ou :} 
-\begin{align*}
-\large {\textsf{maximiser} \hspace{0,2 cm} v }\\ 
-\large{ s.c \hspace{0.4 cm} v \hspace{0,2 cm} \leq  \hspace{0.2 cm}\Sigma_{i}\hspace{0.2 cm} \pi_{i}^{1}\hspace{0.2 cm} a _{ij}} \\
-\large{\Sigma_{i} \hspace{0.2 cm} \pi_{i}^{1} = 1} \\ 
-\large{ \pi_{i}^{1} \hspace{0,2 cm} \geq \hspace{0,2 cm} 0 \hspace{0,2 cm} \forall i }
-\end{align*}
- \subparagraph*{}{Essayons maintenant de mettre des chiffres sur ces formules et donc trouve les stratégies de JA \textsf{Pair} et JB \textsf{Impair}. On supposera un support tel que x = (x$_{1}$, x$_{2}$) et y = (y$_{1}$, y$_{2}$) corresponde a une stratégie mixte avec (x$_{1}$, x$_{2}$ , y$_{1}$ ,y$_{2} > 0 $).
 
-\subparagraph*{}{Ainsi d'après les donnés précédentes, x = (x$_{1}$, x$_{2}$) et y = (y$_{1}$, y$_{2}$) impliquent respectivement que (Ay$ _{1} $) et (Ay$ _{2} $) ont la même valeur tout comme (Bx$ _{1} $) et (Bx$ _{2} $). D'ou le système suivant : }
-\begin{align*}
-\left \{
-   \begin{array}{r c l}
-      x_{1} - x_{2} & = & \textsf{v} \\
-      - x_{1} +x_{2}  & = &\textsf{v}  \\
-      x_{1} + x_{2} & = & 1
-   \end{array}
-   \right.
-   & \hspace{3 cm}
-   \left \{
-   \begin{array}{r c l}
-     - y_{1} + y_{2} & = & \textsf{w} \\
-      y_{1} -y_{2}  & = &\textsf{w}  \\
-      y_{1} + y_{2} & = & 1
-   \end{array}
-   \right .
-\end{align*}
-ce qui nous donne : 
-\begin{align*}
-\left \{
-   \begin{array}{r c l}
-     0  & = &\textsf{v}  \\
-      x_{1} & = & 1 -x_{2} 
-   \end{array}
-   \right.
-   & \hspace{3 cm}
-   \left \{
-   \begin{array}{r c l}
-      0 & = &\textsf{w}  \\
-      y_{1} & = & 1 - y_{2} 
-   \end{array}
-   \right .
-\end{align*}
-\subparagraph*{}{Comme on peut le constater il n'y a pas de solution apparente , c'est à dire qu'il n'existe pas d'\textsf{équilibre de Nash} en stratégie pure puisque les fonctions \textsf{v} et \textsf{w} sont nulles (\textsf{v} = 0 et \textsf{w} = 0) cf annexe [].}
+ 
 
 \subsubsection{L''équilibre de Nash dans Matching Pennies}{Supposons maintenant que le JA \textsf{Pair} joue \textsf{Pile} avec une probabilité \textsf{p} (donc il joue \textsf{Face} avec une probabilité de \textsf{(1-p)} et que le JB \textsf{Impair} joue \textsf{Pile} avec une probabilité \textsf{q} (donc il joue \textsf{Face} avec une probabilité de \textsf{(1-q)} le jeu se \\
  donc sous cette forme : } 
@@ -729,6 +696,17 @@ Ainsi un \textsf{jeu dynamique} peut être défini par :
 \item Un ensemble infini E d'états du jeu qui sont indicé par les actions des joueurs 
 \item Une stratégie pure par joueurs composé des actions des joueurs respectifs
 \end{itemize}
+
+\subsubsection{Fonction de valeur}
+Le critère d'évaluation d'une stratégie $\pi$ correspond à l'espérance mathématique de la somme des gains obtenus en suivant cette stratégie et en partant d’un sommet initial \textsf{s},  cette espérance est appelée \textsf{fonction de valeur}.
+
+\subparagraph*{}{Rappelons le tout de même une stratégie $\pi_{i}(s)$ dépend de l'action choisi par le joueur \textsf{i} à l'état \textsf{s} en stratégie pure et $\pi_{i}(s,a)$ en stratégie mixte avec une probabilité \textsf{a} pour l'état \textsf{s}}.
+
+\subparagraph*{}{L'une des variantes les plus connues est de pondérer les gains par un facteur $\gamma \in $ [0;1[ afin de prendre en compte la valeur des gains futur. En notant r$_{t}$ la récompense reçue à l'instant \textsf{t} $ \in $ K et \textsf{s$^{0}$} l'état initial, on définit la \textsf{fonction de valeur} pour tout \textsf{s} $\in $ S pour une stratégie $ \pi$ :}
+\begin{align*}
+V^{\pi}(s) \hspace{0,1 cm} = \hspace{0,1 cm} E^{\pi}\hspace{0,1 cm} (\sum_{t=0}^{\infty} \hspace{0,1cm}\gamma ^{t} \hspace{0,1cm} r^{t}\hspace{0,1cm} |\hspace{0,1cm} s^{0} = s )
+\end{align*}
+
 
 \subsubsection{Modèles et principes de jeux stochastiques }
 Au début de chaque étape, le jeu est dans un certain état . Les joueurs sélectionnent des actions et chaque joueur reçoit un gain cela dépend de l'état actuel et des actions choisies. Le jeu passe alors à un nouvel état aléatoire dont la distribution dépend de l'état précédent et des actions choisies par les joueurs. La procédure est répétée au nouvel état et le jeu continue pour un nombre fini ou infini d'étapes. Le gain total pour un joueur est souvent considéré comme la somme actualisée des gains de l'étape ou la limite inférieure des moyennes des gains de l'étape.

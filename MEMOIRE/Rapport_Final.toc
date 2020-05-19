@@ -12,7 +12,7 @@
 \contentsline {subsubsection}{\numberline {3.1.3}D\IeC {\'e}p\IeC {\^o}t et mises \IeC {\`a} jours}{10}{subsubsection.3.1.3}% 
 \contentsline {subsubsection}{\numberline {3.1.4}Clonage}{10}{subsubsection.3.1.4}% 
 \contentsline {subsection}{\numberline {3.2}Python}{10}{subsection.3.2}% 
-\contentsline {subsubsection}{\numberline {3.2.1}Proc\IeC {\'e}dure d'installation de Python}{11}{subsubsection.3.2.1}% 
+\contentsline {subsubsection}{\numberline {3.2.1}Proc\IeC {\'e}dure d'installations de Python}{11}{subsubsection.3.2.1}% 
 \contentsline {paragraph}{\numberline {3.2.1.1}M\IeC {\'e}thode packages}{11}{paragraph.3.2.1.1}% 
 \contentsline {paragraph}{\numberline {3.2.1.2}M\IeC {\'e}thode module Pip}{11}{paragraph.3.2.1.2}% 
 \contentsline {paragraph}{\numberline {3.2.1.3}Environnement virtuel python}{11}{paragraph.3.2.1.3}% 
@@ -29,8 +29,8 @@
 \contentsline {subparagraph}{}{14}{paragraph.3.3.1.1}% 
 \contentsline {paragraph}{\numberline {3.3.1.2}M\IeC {\'e}thode via Anaconda}{14}{paragraph.3.3.1.2}% 
 \contentsline {subsubsection}{\numberline {3.3.2}Utilsation de gurobi}{15}{subsubsection.3.3.2}% 
-\contentsline {subsubsection}{\numberline {3.3.3}Exemple Gurobi programmation lin\IeC {\'e}aire (biere.py)}{15}{subsubsection.3.3.3}% 
-\contentsline {section}{\numberline {4}Th\IeC {\'e}orie des jeux bis}{17}{section.4}% 
+\contentsline {subsubsection}{\numberline {3.3.3}Exemple de programmation lin\IeC {\'e}aire avec Gurobi}{15}{subsubsection.3.3.3}% 
+\contentsline {section}{\numberline {4}Th\IeC {\'e}orie des jeux}{17}{section.4}% 
 \contentsline {subsection}{\numberline {4.1}Jeux statiques}{17}{subsection.4.1}% 
 \contentsline {subsubsection}{\numberline {4.1.1}Principes et mod\IeC {\`e}les des jeux statiques }{17}{subsubsection.4.1.1}% 
 \contentsline {paragraph}{\numberline {4.1.1.1}Principe des jeux statiques}{17}{paragraph.4.1.1.1}% 
@@ -38,24 +38,24 @@
 \contentsline {paragraph}{\numberline {4.1.1.3}Equilibre de Nash}{18}{paragraph.4.1.1.3}% 
 \contentsline {subparagraph}{Nash en strat\IeC {\'e}gie pure}{18}{definition.6}% 
 \contentsline {subparagraph}{Nash en strat\IeC {\'e}gie mixte}{18}{definition.7}% 
-\contentsline {subsubsection}{\numberline {4.1.2}Fonction de valeur}{18}{subsubsection.4.1.2}% 
-\contentsline {subsubsection}{\numberline {4.1.3}Jeux bimatrciel}{19}{subsubsection.4.1.3}% 
-\contentsline {paragraph}{\numberline {4.1.3.1}Exemple de jeu bimatriciel}{19}{paragraph.4.1.3.1}% 
-\contentsline {paragraph}{\numberline {4.1.3.2}\IeC {\'E}quilibre en strat\IeC {\'e}gie pure}{19}{paragraph.4.1.3.2}% 
-\contentsline {paragraph}{\numberline {4.1.3.3}\IeC {\'E}quilibre en strat\IeC {\'e}gie mixte}{19}{paragraph.4.1.3.3}% 
-\contentsline {subparagraph}{}{20}{paragraph.4.1.3.3}% 
-\contentsline {subsubsection}{\numberline {4.1.4}Jeux \IeC {\`a} somme nulle}{20}{subsubsection.4.1.4}% 
-\contentsline {subsection}{\numberline {4.2}Jeux bimatriciel a sommes nulles et r\IeC {\'e}solution par PL}{20}{subsection.4.2}% 
-\contentsline {subsubsection}{\numberline {4.2.1}Un exemple de jeu : "Matching pennies"}{22}{subsubsection.4.2.1}% 
-\contentsline {subsubsection}{\numberline {4.2.2}Matrice de gains des joueurs A et B}{23}{subsubsection.4.2.2}% 
-\contentsline {subsubsection}{\numberline {4.2.3}R\IeC {\'e}solution via programmation lin\IeC {\'e}aire}{23}{subsubsection.4.2.3}% 
-\contentsline {subsubsection}{\numberline {4.2.4}L''\IeC {\'e}quilibre de Nash dans Matching Pennies}{24}{subsubsection.4.2.4}% 
-\contentsline {subsection}{\numberline {4.3}Jeux Stochastiques}{24}{subsection.4.3}% 
-\contentsline {subsubsection}{\numberline {4.3.1}Jeux dynamqiue}{24}{subsubsection.4.3.1}% 
-\contentsline {subsubsection}{\numberline {4.3.2}Mod\IeC {\`e}les et principes de jeux stochastiques }{24}{subsubsection.4.3.2}% 
-\contentsline {paragraph}{\numberline {4.3.2.1}Mod\IeC {\`e}les des jeux stochastiques}{25}{paragraph.4.3.2.1}% 
-\contentsline {paragraph}{\numberline {4.3.2.2}Principes des jeux stochastiques}{25}{paragraph.4.3.2.2}% 
-\contentsline {paragraph}{\numberline {4.3.2.3}\IeC {\'E}quilibre de Nash en jeux stochastiques}{25}{paragraph.4.3.2.3}% 
+\contentsline {subsubsection}{\numberline {4.1.2}Jeux bimatrciel}{18}{subsubsection.4.1.2}% 
+\contentsline {paragraph}{\numberline {4.1.2.1}Exemple de jeu bimatriciel}{19}{paragraph.4.1.2.1}% 
+\contentsline {paragraph}{\numberline {4.1.2.2}\IeC {\'E}quilibre en strat\IeC {\'e}gie pure}{19}{paragraph.4.1.2.2}% 
+\contentsline {paragraph}{\numberline {4.1.2.3}\IeC {\'E}quilibre en strat\IeC {\'e}gie mixte}{19}{paragraph.4.1.2.3}% 
+\contentsline {subparagraph}{}{19}{paragraph.4.1.2.3}% 
+\contentsline {subsubsection}{\numberline {4.1.3}Jeux \IeC {\`a} somme nulle}{20}{subsubsection.4.1.3}% 
+\contentsline {subsubsection}{\numberline {4.1.4}Un exemple de jeu : "Matching pennies"}{20}{subsubsection.4.1.4}% 
+\contentsline {paragraph}{\numberline {4.1.4.1}Matrice de gains des joueurs A et B}{21}{paragraph.4.1.4.1}% 
+\contentsline {subsection}{\numberline {4.2}Jeux bimatriciel a sommes nulles et r\IeC {\'e}solution par PL}{21}{subsection.4.2}% 
+\contentsline {subsubsection}{\numberline {4.2.1}Matrice de gains des joueurs A et B}{23}{subsubsection.4.2.1}% 
+\contentsline {subsubsection}{\numberline {4.2.2}L''\IeC {\'e}quilibre de Nash dans Matching Pennies}{23}{subsubsection.4.2.2}% 
+\contentsline {subsection}{\numberline {4.3}Jeux Stochastiques}{23}{subsection.4.3}% 
+\contentsline {subsubsection}{\numberline {4.3.1}Jeux dynamqiue}{23}{subsubsection.4.3.1}% 
+\contentsline {subsubsection}{\numberline {4.3.2}Fonction de valeur}{24}{subsubsection.4.3.2}% 
+\contentsline {subsubsection}{\numberline {4.3.3}Mod\IeC {\`e}les et principes de jeux stochastiques }{24}{subsubsection.4.3.3}% 
+\contentsline {paragraph}{\numberline {4.3.3.1}Mod\IeC {\`e}les des jeux stochastiques}{24}{paragraph.4.3.3.1}% 
+\contentsline {paragraph}{\numberline {4.3.3.2}Principes des jeux stochastiques}{24}{paragraph.4.3.3.2}% 
+\contentsline {paragraph}{\numberline {4.3.3.3}\IeC {\'E}quilibre de Nash en jeux stochastiques}{25}{paragraph.4.3.3.3}% 
 \contentsline {section}{\numberline {5}Conclusions}{26}{section.5}% 
 \contentsline {subsection}{\numberline {5.1}Contributions apport\IeC {\'e}es}{26}{subsection.5.1}% 
 \contentsline {subsection}{\numberline {5.2}Difficult\IeC {\'e}s rencontr\IeC {\'e}es}{26}{subsection.5.2}% 

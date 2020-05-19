@@ -11,46 +11,45 @@
 \BOOKMARK [3][-]{subsubsection.3.1.3}{D\351p\364t et mises \340 jours}{subsection.3.1}% 11
 \BOOKMARK [3][-]{subsubsection.3.1.4}{Clonage}{subsection.3.1}% 12
 \BOOKMARK [2][-]{subsection.3.2}{Python}{section.3}% 13
-\BOOKMARK [3][-]{subsubsection.3.2.1}{Proc\351dure d'installation de Python}{subsection.3.2}% 14
+\BOOKMARK [3][-]{subsubsection.3.2.1}{Proc\351dure d'installations de Python}{subsection.3.2}% 14
 \BOOKMARK [3][-]{subsubsection.3.2.2}{Un exemple g\351n\351rique de code Python}{subsection.3.2}% 15
 \BOOKMARK [3][-]{subsubsection.3.2.3}{La programmation objet en Python}{subsection.3.2}% 16
 \BOOKMARK [2][-]{subsection.3.3}{Gurobi}{section.3}% 17
 \BOOKMARK [3][-]{subsubsection.3.3.1}{Installation de Gurobi}{subsection.3.3}% 18
 \BOOKMARK [3][-]{subsubsection.3.3.2}{Utilsation de gurobi}{subsection.3.3}% 19
-\BOOKMARK [3][-]{subsubsection.3.3.3}{Exemple Gurobi programmation lin\351aire \(biere.py\)}{subsection.3.3}% 20
-\BOOKMARK [1][-]{section.4}{Th\351orie des jeux bis}{}% 21
+\BOOKMARK [3][-]{subsubsection.3.3.3}{Exemple de programmation lin\351aire avec Gurobi}{subsection.3.3}% 20
+\BOOKMARK [1][-]{section.4}{Th\351orie des jeux}{}% 21
 \BOOKMARK [2][-]{subsection.4.1}{Jeux statiques}{section.4}% 22
 \BOOKMARK [3][-]{subsubsection.4.1.1}{Principes et mod\350les des jeux statiques }{subsection.4.1}% 23
-\BOOKMARK [3][-]{subsubsection.4.1.2}{Fonction de valeur}{subsection.4.1}% 24
-\BOOKMARK [3][-]{subsubsection.4.1.3}{Jeux bimatrciel}{subsection.4.1}% 25
-\BOOKMARK [3][-]{subsubsection.4.1.4}{Jeux \340 somme nulle}{subsection.4.1}% 26
+\BOOKMARK [3][-]{subsubsection.4.1.2}{Jeux bimatrciel}{subsection.4.1}% 24
+\BOOKMARK [3][-]{subsubsection.4.1.3}{Jeux \340 somme nulle}{subsection.4.1}% 25
+\BOOKMARK [3][-]{subsubsection.4.1.4}{Un exemple de jeu : "Matching pennies"}{subsection.4.1}% 26
 \BOOKMARK [2][-]{subsection.4.2}{Jeux bimatriciel a sommes nulles et r\351solution par PL}{section.4}% 27
-\BOOKMARK [3][-]{subsubsection.4.2.1}{Un exemple de jeu : "Matching pennies"}{subsection.4.2}% 28
-\BOOKMARK [3][-]{subsubsection.4.2.2}{Matrice de gains des joueurs A et B}{subsection.4.2}% 29
-\BOOKMARK [3][-]{subsubsection.4.2.3}{R\351solution via programmation lin\351aire}{subsection.4.2}% 30
-\BOOKMARK [3][-]{subsubsection.4.2.4}{L''\351quilibre de Nash dans Matching Pennies}{subsection.4.2}% 31
-\BOOKMARK [2][-]{subsection.4.3}{Jeux Stochastiques}{section.4}% 32
-\BOOKMARK [3][-]{subsubsection.4.3.1}{Jeux dynamqiue}{subsection.4.3}% 33
-\BOOKMARK [3][-]{subsubsection.4.3.2}{Mod\350les et principes de jeux stochastiques }{subsection.4.3}% 34
-\BOOKMARK [1][-]{section.5}{Conclusions}{}% 35
-\BOOKMARK [2][-]{subsection.5.1}{Contributions apport\351es}{section.5}% 36
-\BOOKMARK [2][-]{subsection.5.2}{Difficult\351s rencontr\351es}{section.5}% 37
-\BOOKMARK [2][-]{subsection.5.3}{Axes d'am\351lioration}{section.5}% 38
-\BOOKMARK [1][-]{section.6}{Webographie}{}% 39
-\BOOKMARK [1][-]{section.7}{Annexes}{}% 40
-\BOOKMARK [2][-]{subsection.7.1}{Nanterre}{section.7}% 41
-\BOOKMARK [2][-]{subsection.7.2}{Python en g\351n\351ral}{section.7}% 42
-\BOOKMARK [3][-]{subsubsection.7.2.1}{ Structure Conditionelle If }{subsection.7.2}% 43
-\BOOKMARK [3][-]{subsubsection.7.2.2}{ Structure Conditionelle Else}{subsection.7.2}% 44
-\BOOKMARK [3][-]{subsubsection.7.2.3}{ Structure Conditionelle Elif }{subsection.7.2}% 45
-\BOOKMARK [3][-]{subsubsection.7.2.4}{ Boucle For}{subsection.7.2}% 46
-\BOOKMARK [3][-]{subsubsection.7.2.5}{ Boucle While }{subsection.7.2}% 47
-\BOOKMARK [3][-]{subsubsection.7.2.6}{ Les fonctions}{subsection.7.2}% 48
-\BOOKMARK [2][-]{subsection.7.3}{L'orient\351 objet en Python}{section.7}% 49
-\BOOKMARK [3][-]{subsubsection.7.3.1}{Cr\351ation de class}{subsection.7.3}% 50
-\BOOKMARK [3][-]{subsubsection.7.3.2}{Cr\351ation du constructeur}{subsection.7.3}% 51
-\BOOKMARK [3][-]{subsubsection.7.3.3}{Le mot cl\351 pass}{subsection.7.3}% 52
-\BOOKMARK [3][-]{subsubsection.7.3.4}{L'h\351ritage en python}{subsection.7.3}% 53
-\BOOKMARK [2][-]{subsection.7.4}{GitHub}{section.7}% 54
-\BOOKMARK [2][-]{subsection.7.5}{Gurobi}{section.7}% 55
-\BOOKMARK [2][-]{subsection.7.6}{CV}{section.7}% 56
+\BOOKMARK [3][-]{subsubsection.4.2.1}{Matrice de gains des joueurs A et B}{subsection.4.2}% 28
+\BOOKMARK [3][-]{subsubsection.4.2.2}{L''\351quilibre de Nash dans Matching Pennies}{subsection.4.2}% 29
+\BOOKMARK [2][-]{subsection.4.3}{Jeux Stochastiques}{section.4}% 30
+\BOOKMARK [3][-]{subsubsection.4.3.1}{Jeux dynamqiue}{subsection.4.3}% 31
+\BOOKMARK [3][-]{subsubsection.4.3.2}{Fonction de valeur}{subsection.4.3}% 32
+\BOOKMARK [3][-]{subsubsection.4.3.3}{Mod\350les et principes de jeux stochastiques }{subsection.4.3}% 33
+\BOOKMARK [1][-]{section.5}{Conclusions}{}% 34
+\BOOKMARK [2][-]{subsection.5.1}{Contributions apport\351es}{section.5}% 35
+\BOOKMARK [2][-]{subsection.5.2}{Difficult\351s rencontr\351es}{section.5}% 36
+\BOOKMARK [2][-]{subsection.5.3}{Axes d'am\351lioration}{section.5}% 37
+\BOOKMARK [1][-]{section.6}{Webographie}{}% 38
+\BOOKMARK [1][-]{section.7}{Annexes}{}% 39
+\BOOKMARK [2][-]{subsection.7.1}{Nanterre}{section.7}% 40
+\BOOKMARK [2][-]{subsection.7.2}{Python en g\351n\351ral}{section.7}% 41
+\BOOKMARK [3][-]{subsubsection.7.2.1}{ Structure Conditionelle If }{subsection.7.2}% 42
+\BOOKMARK [3][-]{subsubsection.7.2.2}{ Structure Conditionelle Else}{subsection.7.2}% 43
+\BOOKMARK [3][-]{subsubsection.7.2.3}{ Structure Conditionelle Elif }{subsection.7.2}% 44
+\BOOKMARK [3][-]{subsubsection.7.2.4}{ Boucle For}{subsection.7.2}% 45
+\BOOKMARK [3][-]{subsubsection.7.2.5}{ Boucle While }{subsection.7.2}% 46
+\BOOKMARK [3][-]{subsubsection.7.2.6}{ Les fonctions}{subsection.7.2}% 47
+\BOOKMARK [2][-]{subsection.7.3}{L'orient\351 objet en Python}{section.7}% 48
+\BOOKMARK [3][-]{subsubsection.7.3.1}{Cr\351ation de class}{subsection.7.3}% 49
+\BOOKMARK [3][-]{subsubsection.7.3.2}{Cr\351ation du constructeur}{subsection.7.3}% 50
+\BOOKMARK [3][-]{subsubsection.7.3.3}{Le mot cl\351 pass}{subsection.7.3}% 51
+\BOOKMARK [3][-]{subsubsection.7.3.4}{L'h\351ritage en python}{subsection.7.3}% 52
+\BOOKMARK [2][-]{subsection.7.4}{GitHub}{section.7}% 53
+\BOOKMARK [2][-]{subsection.7.5}{Gurobi}{section.7}% 54
+\BOOKMARK [2][-]{subsection.7.6}{CV}{section.7}% 55

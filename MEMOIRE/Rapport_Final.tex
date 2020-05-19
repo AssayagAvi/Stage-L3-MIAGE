@@ -1,7 +1,7 @@
 \documentclass[a4paper, 12pt, twoside]{article}
 \usepackage[utf8]{inputenc}		% LaTeX, comprend les accents !
 \usepackage[T1]{fontenc}		
-\usepackage[francais]{babel}
+\usepackage[french]{babel}
 \usepackage{lmodern}
 \usepackage{ae,aecompl}
 \usepackage[top=2.5cm, bottom=2cm, left=3cm, right=2.5cm,headheight=15pt]{geometry}
@@ -11,6 +11,7 @@
 \usepackage{amsmath}
 \usepackage{hyperref}
  \usepackage{array}
+ \usepackage{amsmath,amsfonts,amssymb}
 \usepackage{lastpage}
 \definecolor{bleuleger}{RGB}{0,0,200}
 \newtheorem{definition}{Définition}
@@ -29,9 +30,9 @@
 \entreprise{Université Paris Nanterre}
 \fonction{Développeur Junior Python }
 \datedebut{23 mars 2020}
-\datefin{25 mai 2020}
+\datefin{22 mai 2020}
 
-\date{1 juin 2020}
+\date{25 mai 2020}
 \jurya{M. François Delbot}{Maître de conférences}{Responsable du L3 MIAGE}
 
 \juryb{M. François Delbot}{Maître de conférences}{Tuteur enseignant}
@@ -55,8 +56,9 @@ Merci à Monsieur Hyon, maitre de conférence à l'Université de Nanterre et ch
 Cette opportunité n'a été seulement possible que par la collaboration de Monsieur Emmanuel Hyon, mon tuteur ainsi que Monsieur François Delbot, responsable de la Licence 3, et les remercie de leur patience , de leur encouragement et de le encadrement tout au long de ce stage.
 \newline
 
-Merci aussi aux autres professeurs qui ont contribué tout a long de l'année à parfaire toutes nos compétences autant sur le plan théorique que techniques. 
+Merci aussi aux autres professeurs qui ont contribué tout a long de l'année à parfaire toutes nos compétences autant sur le plan théorique que techniques. \newline
 
+Enfin je tiens aussi à remercier mes relecteurs qui ont permis de rendre ce mémoire aussi précis et grammaticalement correct  , mais aussi d'être un document accessible et utile à tous si un jour vous décider de vous lancer dans le même sujet que moi.
 \newpage
 
 %La table des matières
@@ -80,7 +82,7 @@ Les \textsf{jeux à sommes nulles} sont nombreux vous connaissez surement le jeu
 
 Dans les semaines de ce stage nous avons décider d'implémenter un \textsf{jeu à somme nulle} moins connu que les précédents mais tout aussi intéressant il s'agit : du jeu  \textsf{ "Matching Pennies"}\newline
 
-Enfin nous étudierons plus en profondeurs qu'est ce que sont les jeux stochastiques mais surtout comment définir un modèle informatique (en\textsf{python}) et sa résolution grâce à la programmation linéaire (via \textsf{gurobi}).
+Enfin nous étudierons plus en profondeurs qu'est ce que sont les jeux stochastiques mais surtout comment définir un modèle informatique (en \textsf{python}) et sa résolution grâce à la programmation linéaire (via \textsf{gurobi}).
 
 \newpage
 \section{Contexte du Stage}
@@ -385,28 +387,99 @@ except AttributeError:
 \paragraph*{}{Ci dessus le code python utilisé pour permettre a \textsf{Gurobi} de trouver la solution de maximisation, soit  : \textbf{x1= 12 et x2 = 28}}
 \newpage
 
-\section{La théorie des jeux}
+
+
+
+
+
+
+\section{Théorie des jeux bis}
+
+\subsection{Jeux statiques}
+\subsubsection{Principes et modèles des jeux statiques }
+\paragraph{Principe des jeux statiques}
 Comme nous l'avons expliqué un peu plus haut, l'un des objectifs de ce stage est la modélisation d'algorithmes afin de résoudre des jeux stochastiques. Mais tout d'abord détaillons un peu le concept des \textsf{jeux}. \newline
 
-Pour intégrer et comprendre ce concept, il y a d'autres notions à connaitre telles que \textsf{jeux statiques} , \textsf{jeux dynamiques} , \textsf{stratégie } ou encore \textsf{jeux bimatricel} et enfin \textsf{gains à somme nulle}.\newline
+Pour intégrer et comprendre ce concept, il y a d'autres notions à connaitre telles que \textsf{jeux statiques} , \textsf{jeux dynamiques} , \textsf{stratégie}, \textsf{concurrent}  ou encore \textsf{jeux bimatricel} et enfin \textsf{gain}.\newline
 
 Comme vous l'avez compris,un jeu nécessite la présence d'acteurs ; dans la suite de nos explications lorsque nous parlerons de \textsf{joueurs} nous ferons donc référence aux acteurs du jeu.
 
-\subsection{Présentation des jeux statiques}
+\paragraph{Modèle des jeux statiques}
 \begin{definition}
 Un jeu est dit statique lorsque le jeu se déroule en une seule étape et de manière simultanée sans avoir accès aux informations de l'actions de ou des autres joueurs.
 \end{definition} 
-Prenons pour hypothèse un jeu statique à deux joueurs J1 et J2, les deux joueurs vont effectuer une action en même temps sans avoir idée de ce que son adversaire aura choisi comme action. \newline
 
 Ainsi un \textsf{jeu statique} peut être défini par : 
 \begin{itemize}
 \item Un nombre fini J de joueurs : {1,2, ....., J}
-\item Un nombre unique d'action par joueur fixé a : 1 
+\item Pour chaque joueur \textsf{i}, un ensemble de stratégies $ \Pi^{i} $ = \{ $ \pi^{1} ,...,\pi{j} $\}
+\item Pour chaque joueur \textsf{i} une fonction de valeur \textsf{v}$_{i}$ tel que : 
+$ \Pi^{i} \times ... \times \Pi^{j} \rightarrow \mathbf{R} $
 \end{itemize}
 
-\subsubsection{Jeux bimatriciel}
-Un jeu bimatriciel se caractérise comme son nom l'indique par deux matrices. Ces dernières ne sont autres que les gains des joueurs. Autrement dit les joueurs jouent de manière simultané et on inscrit dans une matrice leurs gains (une matrice pour chaque joueur). Voici un exemple de deux matrices de gains pour deux joueurs A et B qui joue respectivement les lignes et les colonnes.
+\begin{definition}
+On appelle stratégie la manière dont un joueur choisit l'action qu'il effectue. C'est un vecteur de taille |A$ _{i} ^{1}$| où |A$ _{i} ^{1}$| est l'ensemble des actions du joueur A,, |A$_{i}$| est le cardinal de l'ensemble A'. Ce vecteur est noté $\pi^{1}$ pour le joueur 1 et $\pi^{2}$ pour le joueur 2.
+\end{definition}
 
+Lorsque l'on parle de stratégie pure il s'agit d'une stratégie déterministe c'est à dire une stratégie dans laquelle une seule et unique action est effectuée. Elle détermine en particulier l'action qu'un acteur (joueur) réalisera devant toutes les situations auxquels ce dernier sera confronté. \newline
+
+\begin{definition}
+On note par $ \pi^{1}(i)$ la cordonné d'indice i du vecteur $\pi^{1}$ représentant le choix d'un joueur, ce choix est déterministe. Par convention :   $\pi^{1}(i) = 0$ l'action n'est pas choisie et  $\pi^{1}(i) =1$ l'action est choisie.
+\end{definition}
+
+En parallèle aux stratégies pures, il existe aussi des stratégies dites mixtes c'est à dire ou chaque action d'un joueur i  dépend d'une probabilité (connue ou non) provenant de la stratégie pure du même joueur. \newline
+
+
+\begin{definition}
+L'action est choisie en fonction d'une probabilité. Le vecteur $\pi^{1}$ est maintenant une distribution  de probabilité sur les actions du joueur. $\pi^{1}(i)$ est la probabilité que l'action i soit choisie. De plus comme  $\pi^{1}$ est une probabilité on à obligatoirement $\underset{i}{\Sigma}  \hspace{0,2 cm} \pi^{1}(i) = 1$.
+\end{definition}
+
+\paragraph{Equilibre de Nash}
+{Maintenant que l'on en connait un peu plus sur le concept fondamental de la \textsf{théorie des jeux} nous avons bien compris que résoudre un jeu (dynamique bien évidement) revient non pas à "gagner" la partie mais trouver la meilleur stratégie permettant de maximiser ses gains et donc a fortiori minimiser ses pertes (puisqu'elles correspondent à gain réciproque des autres acteurs).} 
+
+\begin{definition}
+Une action conjointe a* est un équilibre de Nash si et seulement si : $ \forall $j, $ \forall a_{j}$ R$ _{j} $(a*) $ \geq $ R$ _{j} $(a$ _{j} $,a*$ _{-j} $).
+\end{definition}
+
+
+\subparagraph*{}{Autrement dit, trouver \textsf{un équilibre de Nash} dans un jeu revient a trouvé la solution optimal de stratégies mixtes (x,y) qui sont meilleurs réponses l'une fonction de l'autre, c'est à dire :}
+\begin{itemize}
+\item x est la meilleur réponse dans la stratégie de y (J2) qui maximise la matrice de gain du J1 donc x.
+\item y est la meilleur réponse dans la stratégie de x (J1) qui maximise la matrice de gain du J1  donc x
+\end{itemize}  
+
+
+\subparagraph{Nash en stratégie pure}{Un profil de stratégie est un ensemble de spécifiant pleinement pour tout joueur, toutes les actions dans le jeu. Il comporte une et une seule stratégie pour chaque joueur.}
+\begin{definition}
+Soit $\pi^{i} $ une stratégie du joueur i et $ \pi^{-i} $ la stratégie des autres joueurs. Un profil de stratégies $\pi^{*} = \pi^{i}$ est un équilibre de Nash si et seulement si :
+\end{definition}
+\begin{align*}
+\forall i, \hspace{0,2 cm} \forall \pi^{'i} \hspace{0,2 cm} \in \hspace{0,2 cm} \Pi^{i}, \hspace{0,2 cm} v_{i}(\pi^{i}\hspace{0,1 cm}, \pi^{-i}) \hspace{0,2 cm} \geq \hspace{0,2 cm} v_{i}(\pi^{'i}\hspace{0,1 cm}, \pi^{-i})
+\end{align*}
+
+\subparagraph{Nash en stratégie mixte}{On appelle $\sigma^{i}$  une stratégie mixte (ou profil de stratégie mixte) une distribution de probabilités sur les actions. L’ensemble des stratégies mixtes du joueur i est noté S$^{i}$.}
+\begin{definition}
+Soit $\sigma ^{*} $ un profil de stratégie mixte. $\sigma ^{*} $est un équilibre de Nash si, pour tout joueur i on a : 
+\end{definition}
+\begin{align*}
+\forall \sigma ^{'i}, \hspace{0,2 cm} \in \hspace{0,2 cm} S^{i}, \hspace{0,2 cm} v_{i}(\sigma ^{*i} , \hspace{0,1 cm} \sigma^{*-i}) \hspace{0,2 cm} \geq (\sigma ^{'i} , \hspace{0,1 cm} \sigma^{*-i})
+\end{align*}
+
+\subsubsection{Fonction de valeur}
+Le critère d'évaluation d'une stratégie $\pi$ correspond à l'espérance mathématique de la somme des gains obtenus en suivant cette stratégie et en partant d’un sommet initial \textsf{s},  cette espérance est appelée \textsf{fonction de valeur}.
+
+\subparagraph*{}{Rappelons le tout de même une stratégie $\pi_{i}(s)$ dépend de l'action choisi par le joueur \textsf{i} à l'état \textsf{s} en stratégie pure et $\pi_{i}(s,a)$ en stratégie mixte avec une probabilité \textsf{a} pour l'état \textsf{s}}.
+
+\subparagraph*{}{L'une des variantes les plus connues est de pondérer les gains par un facteur $\gamma \in $ [0;1[ afin de prendre en compte la valeur des gains futur. En notant r$_{t}$ la récompense reçue à l'instant \textsf{t} $ \in $ K et \textsf{s$^{0}$} l'état initial, on définit la \textsf{fonction de valeur} pour tout \textsf{s} $\in $ S pour une stratégie $ \pi$ :}
+\begin{align*}
+V^{\pi}(s) \hspace{0,1 cm} = \hspace{0,1 cm} E^{\pi}\hspace{0,1 cm} (\sum_{t=0}^{\infty} \hspace{0,1cm}\gamma ^{t} \hspace{0,1cm} r^{t}\hspace{0,1cm} |\hspace{0,1cm} s^{0} = s )
+\end{align*}
+
+\subsubsection{Jeux bimatrciel}
+Un jeu bimatriciel se caractérise comme son nom l'indique par deux matrices. Ces dernières ne sont autres que les gains des joueurs. Autrement dit les joueurs jouent de manière simultané et on inscrit dans une matrice leurs gains (une matrice pour chaque joueur). Pour la suite du mémoire et du stage nous allosn donc utiliser strictement des jeux à deux joueurs JA et JB.
+
+
+\paragraph{Exemple de jeu bimatriciel}
 \[
 Joueur\hspace{0,1cm} A\hspace{1cm}
 \begin{pmatrix}3&3\\
@@ -419,6 +492,63 @@ Joueur\hspace{0,1cm} B \hspace{1cm}
 3&1\\
 \end{pmatrix} 
 \]
+
+\paragraph{Équilibre en stratégie pure}
+D'après les matrices précédentes il apparait logique que le seul équilibre pur (obtenu par le théorème du \textsf{minimax}) est  \textbf{x = \{(1,0,0) , (1,0)\}}.
+\subparagraph*{}{Pour vérfiier cela il semble logique que si JA choisi (1,0,0) \textsf{soit 3} et JB choisi (1,0) \textsf{soit  3} il apparait un équilibre pur puisque le gain de JA serait de 3 et JB 3 aussi. C'est bien la seule solution possible pour équilibre.
+
+\paragraph{Équilibre en stratégie mixte}
+On cherche a savoir si il existe un support de la forme x=($x_{1},x_{2},0$) et y=($y_{1}, y_{2}$) correspondant à une stratégie mixte tel que ($x_{1},x_{2},y_{1}, y_{2} > 0$). 
+
+insi d'après les donnés précédentes, x = (x$_{1}$, x$_{2}$) et y = (y$_{1}$, y$_{2}$) impliquent respectivement que (Ay$ _{1} $) et (Ay$ _{2} $) ont la même valeur tout comme (Bx$ _{1} $) et (Bx$ _{2} $). D'ou le système suivant : }
+\begin{align*}
+\left \{
+   \begin{array}{r c l}
+      3x_{1} + 2x_{2} & = & \textsf{v} \\
+      2x_{1} +6x_{2}  & = &\textsf{v}  \\
+      x_{1} + x_{2} & = & 1
+   \end{array}
+   \right.
+   & \hspace{3 cm}
+   \left \{
+   \begin{array}{r c l}
+     3y_{1} + 3y_{2} & = & \textsf{w} \\
+     2y_{1} + 5y_{2}  & = &\textsf{w}  \\
+      y_{1} + y_{2} & = & 1
+   \end{array}
+   \right .
+\end{align*}
+ce qui nous donne : 
+\begin{align*}
+\left \{
+   \begin{array}{r c l}
+      x_{1}  & = & 4x_{2} \\
+      x_{1} + x_{2} & = & 1 
+   \end{array}
+   \right.
+   & \hspace{3 cm}
+   \left \{
+   \begin{array}{r c l}
+     y_{1} & = & 2y_{2}  \\
+      y_{1} + y_{2} & = & 1  
+   \end{array}
+   \right .
+\end{align*}
+\subparagraph{}{Ainsi il apparait rapidement les stratégies mixtes suivantes : 
+\begin{align*}
+     x=(\frac{4}{5}, \frac{1}{5},0)
+   & \hspace{3 cm}
+  y=(\frac{2}{3}, \frac{1}{3}).
+  \intertext {donnant les vecteur de PayOff respectif :}
+      Ay=(3,3,2)
+   & \hspace{3 cm}
+  Bx=(\frac{14}{5}, \frac{14}{5}).
+  \intertext {pour un PayOff total respectif :}
+   x^{t}Ay=(3)
+   & \hspace{3 cm}
+  x^{t}By=(\frac{14}{5}).
+\end{align*}
+
 \subsubsection{Jeux à somme nulle}
 Comme annoncé dans notre introduction nous essayerons de résoudre des jeux à sommes nulles via des algorithmes que nous allons implémenter par la suite. Mais qu'est ce qu'un jeu à somme nul ? \newline
 
@@ -426,15 +556,18 @@ Un jeu à somme nul est un jeu où le gain d'un des acteurs (J1, par exemple) re
 
 Ainsi un \textsf{jeu bimatriciel} est défini par :
 \begin{itemize}
-\item Un nombre fini J de joueurs : {1,2, ....., J}
-\item Un nombre fini M d'actions pour le joueur 1 (J1) : {1,2, ....., M}
-\item Un nombre fini N d'actions pour le joueur 2 (J2) : {1,2, ....., N}
-\item Une matrice de gain (pay-off) G1 pour le joueur J1  [M X N]
-\item Une matrice de gain (pay-off) G2 pour le joueur J2  [N X M]
+\item Un nombre fini J de joueurs : \{1,2, ....., J\}
+\item Un nombre fini M d'actions pour le joueur 1 (J1) :\{1,2, ....., M\}
+\item Un nombre fini N d'actions pour le joueur 2 (J2) : \{1,2, ....., N\}
+\item Une matrice de gain (pay-off) G1 pour le joueur J1  [M $\times$ N]
+\item Une matrice de gain (pay-off) G2 pour le joueur J2  [N $\times$ M]
 \item Une stratégie pure par joueurs composé des actions des joueurs respectifs
 \end{itemize}
 \subparagraph*{}{Il existe plusieurs jeux ou situations "connus" que l'on pourrait assimiler à un \textsf{jeu à somme nulle} comme le jeu de \textsf{pile ou face} ou encore \textsf{le dilemme du prisonnier} mais nous allons nous plonger sur un autre jeu un peu moins connu \textsf{Matching pennies} et nous allons essayer de mieux comprendre qu'est ce qu'un \textsf{jeu a somme nulle} et surtout comment le gagner ou du moins trouver la meilleur solution.}
-\subsection{Jeux bimatriciel a somme et résolution par PL}
+
+
+
+\subsection{Jeux bimatriciel a sommes nulles et résolution par PL}
 Nous avons donc une connaissance supplémentaire sur les jeux, en particulier les \textsf{jeux statiques} mais nous n'avons pas aborder le sujet de "victoire", de "réussite" ou même de "gain" vis à vis ces jeux. \newline
 
 C'est alors qu'intervient la notion de \textsf{stratégie} (ou encore, règles de décision) pour  qu'un acteur puisse prendre une décision affin d'effectuer une future action dans le jeu.\newline
@@ -450,51 +583,139 @@ Maintenant que nous avons abordez la notion de stratégie, intéressons nous à 
 La programmation linéaire (PL) est un problème d'optimisation où la fonction objectif et les contraintes sont toutes linéaires. Le but de résoudre un PL est de trouvé les variables optimales qui maximisent la fonction objective.
 \end{definition}
 
-C'est donc grâce à la \textsf{programmation linéaire} (via une implémentation sur \textsf{Gurobi}) que nous arriverons a trouvé la solution optimal et dans le meilleur des cas \textsf{l'équilibre de Nash}[4.4]. \newline
+C'est donc grâce à la \textsf{programmation linéaire} (via une implémentation sur \textsf{Gurobi}) que nous arriverons a trouvé la solution optimal et dans le meilleur des cas \textsf{l'équilibre de Nash}[4.2.3]. \newline
 
 D'une approche plus mathématiques on peut résumer la résolution d'un \textsf{jeu statique} par \textsf{programmation linéaire} comme ceci : \newline
-\begin{center}
-max  min $ \sum_{i=0} \pi_{i}^{1}$ a$ _{ij} $ = max min $ \Sigma _{i} $ $ \Sigma _{j} $ $\pi_{i}^{1}$ a$ _{ij} $ $ \pi_{j}^{2} $
-\end{center}
+\begin{align*}
+\large \textsf{max} \hspace{0,2 cm} \textsf{min} \hspace{0,2 cm} \sum_{i=0}\hspace{0,2 cm} \pi_{i}^{1}\hspace{0,2 cm} a _{ij}  =\hspace{0,2 cm} \textsf{max} \hspace{0,2 cm} \textsf{min} \hspace{0,2 cm}\Sigma _{i}\hspace{0,2 cm} \Sigma _{j}\hspace{0,2 cm} \pi_{i}^{1}\hspace{0,2 cm} a _{ij} \hspace{0,2 cm} \pi_{j}^{2} 
+\end{align*}
 
 Expliquons un peu plus cette formule; $ \pi $ est un probabilité relative à une stratégie donc 
 $\pi_{i}^{1}$ est la stratégie relative 1 en fonction de i (etc...), quand à a$ _{ij} $ il s'agit de la matrice (ligne \textsf{i} x colonne \textsf{j}) de gain ou récompense de A (donc du premier joueur).  Le but même est de trouver, pour A, la stratégie mixte répondant à l'objectif de maximiser les gains de A. \newline
 
 Ainsi le joueur A, doit résoudre :
-\begin{center}
-max min  $ \Sigma_{i}$ $\pi_{i}^{1}$ a$ _{ij} $ \hspace{0.2 cm} avec seule contrainte \hspace{0.2 cm} $ \Sigma_{i}$ $\pi_{i}^{1}$ = 1
-\end{center}
-puisque $\pi_{i}^{1}$ étant une probabilité, sa somme ne peut pas être supérieur a 1. Cependant nous ne somme pas en présence encore d'un programme linéaire (dont nous avons connaissance de technique de résolution), pour cela nous allons le transformer  en posant une fonction  \textsf{v} à maximiser et ceux pour chacune des sommes dont on cherche le minimum de gain (du joueur adverse , ici B). \newline 
+\begin{align*}
+\large {\textsf{max} \hspace{0.2 cm} \textsf{min} \hspace{0.2 cm} \Sigma_{i}\hspace{0.2 cm} \pi_{i}^{1}\hspace{0.2 cm} a _{ij} } \\ s.c \hspace{0,4 cm}
+\large {\Sigma_{i}\hspace{0,2 cm}\pi_{i}^{1} = \hspace{0,2 cm}1}
+\end{align*}
+\paragraph*{}{Puisque $\pi_{i}^{1}$ étant une probabilité, sa somme ne peut pas être supérieur a 1. Cependant nous ne somme pas en présence encore d'un programme linéaire (dont nous avons connaissance de technique de résolution), pour cela nous allons le transformer  en posant une fonction  \textsf{v} à maximiser et ceux pour chacune des sommes dont on cherche le minimum de gain (du joueur adverse , ici B)}. \newline 
 
 Le problème devient donc sous forme linéaire (PL) avec pour fonction objective \textsf{v} à maximiser avec pour seules contraintes : 
-\begin{center}
-v $ \leq  \Sigma_{i} \pi_{i}^{1}$ a$ _{ij} $ \hspace{0.2 cm} et toujours \hspace{0.2 cm} $ \Sigma_{i}$ $\pi_{i}^{1}$ = 1
-\end{center}
-
-\subsubsection{Stratégies pures}
-Lorsque l'on parle de stratégie pure il s'agit d'une stratégie déterministe c'est à dire une stratégie dans laquelle une seule et unique action est effectuée. Elle détermine en particulier l'action qu'un acteur (joueur) réalisera devant toutes les situations auxquels ce dernier sera confronté. \newline
-
-On note S$_{i}$ l'ensemble des stratégies pures du joueur i et par s$_{i} \in S_{i}$ une stratégie pure de ce joueur i. 
-\subsubsection{Stratégies mixtes}
-En parallèle aux stratégies pures, il existe aussi des stratégies dites mixtes c'est à dire ou chaque action d'un joueur i  dépend d'une probabilité (connue ou non) provenant de la stratégie pure du même joueur. \newline
-
-On note $P_{i} $ l'ensemble des stratégies mixtes du joueur i. $ p_{i} $ correspond donc a une des stratégie mixte du joueur i.
-
-\subsection{L'équilibre de Nash}
-Maintenant que l'on en connait un peu plus sur le concept fondamental de la \textsf{théorie des jeux} nous avons bien compris que résoudre un jeu (dynamique bien évidement) revient non pas à "gagner" la partie mais trouver la meilleur stratégie permettant de maximiser ses gains et donc a fortiori minimiser ses pertes (puisqu'elles correspondent à gain réciproque des autres acteurs). \newline
+\begin{align*}
+\large{v \hspace{0.2 cm} \leq  \hspace{0.2 cm}\Sigma_{i}\hspace{0.2 cm} \pi_{i}^{1}\hspace{0.2 cm} a _{ij}} \\ et \hspace{0,2 cm} toujours : \hspace{0,4 cm}
+\large{\Sigma_{i} \hspace{0.2 cm} \pi_{i}^{1} = 1}
+\end{align*}
 
 
-\begin{definition}
-Une action conjointe a* est un équilibre de Nash si et seulement si : $ \forall $j, $ \forall a_{j}$ R$ _{j} $(a*) $ \geq $ R$ _{j} $(a$ _{j} $,a*$ _{-j} $).
-\end{definition}
-Autrement dit, trouver \textsf{un équilibre de Nash} dans un jeu revient a trouvé la solution optimal de stratégies mixtes (x,y) qui sont meilleurs réponses l'une fonction de l'autre, c'est à dire :
+
+
+\subsubsection{Un exemple de jeu :  "Matching pennies"}
+Si l'on essaie de traduire mot - a - mot le nom du jeu on obtient : "jeux d'appariement de sous"  ; évidemment cela ne nous avance pas plus. Alors comment pourrions nous définir et mieux intégrer le jeu \textsf{matching pennies} ? \newline
+
+C'est un jeu simple et l'un plus connu dans le concept de la théorie des jeux, il se joue seulement à deux joueurs JA : \textsf{Pair}  et JB : \textsf{Impair}. Chaque acteurs (Pair \& Impair) possèdent une pièce et choisissent simultanément et secrètement une des deux faces \textsf{Pile} ou \textsf{Face}, puis en fonction des résultats obtenu on assiste des scénarios de gains différents :
+
 \begin{itemize}
-\item x est la meilleur réponse dans la stratégie de y (J2) qui maximise la matrice de gain du J1 donc x.
-\item y est la meilleur réponse dans la stratégie de x (J1) qui maximise la matrice de gain du J1  donc x
-\end{itemize}  
+\item Les deux faces des pièces correspondent et dans ce cas Pair garde les deux pièces (+1 Pair, -1 Impair)
+\item Les deux faces des pièces ne correspondent pas et dans ce cas Impair garde les deux pièces (+1 Impair, -1 Pair)
+\end{itemize}  \vspace{0.2 cm}
+
+\begin{figure}[h!]
+\centering
+\includegraphics[scale=0.4]{Matching.pdf}
+\caption{Represenation matricielle de "Matching Pennies"}
+\end{figure} 
+
+\subparagraph*{}{Ainsi d'après ce que nous avons déjà vu dans les sections précédentes on peut comprendre que \textsf{matching pennies} est un jeu à somme nulle puisque le gain d'un des deux joueurs (par exemple Pair) est bien la perte réciproque de l'autre joueur (ici Impair).} 
+\subparagraph*{}{De même vous aurez compris que ce jeu permet aussi d'illustrer le concept  de stratégies et de l'\textsf{équilibre de Nash} cependant cette configuration n'admet pas de stratégie pure pour l'\textsf{équilibre de Nash} mais plutôt une stratégie mixte reposant sur le choix probabiliste de chaque joueurs à choisir une des deux faces de la pièce.}
+
+\subparagraph*{}{Puisque c'est un jeu bi-matricel a somme nulle, profitons de sa définition même pour avoir une vue d'ensemble sur le jeu ; c'est à dire les actions de chaque joueurs mais aussi les gains ou pertes respectifs en fonction des choix effectués (cf [4.1.1]).} \newline
+
+Pour la représentation du jeu nous allons estimer que le gain ou perte est de de 1 puisque c'est avec une seule pièce que nous jouons, que le joueur JA \textsf{Pair} joue sur les lignes tandis que le joueur JB \textsf{Impair} joue les colones.  \vspace{0.4 cm}
 
 
-\subsection{Jeux dynamiques}
+\subsubsection{Matrice de gains des joueurs A et B}{Ainsi comme nous l'expliquons depuis plusieurs paragraphes, le propre même du jeu bimatricel repose sur l'existence de la matrice de "gain" ou de "payoff".  Nous allons donc donner la matrice de gain A de JA \textsf{Pair} et celle de JB \textsf{Impair} qui n'est autre que l'opposé de celle de  A (B = - A).}
+
+\[
+Matrice\hspace{0,1cm} A\hspace{1cm}
+\begin{pmatrix}1&-1\\
+-1&1\\
+\end{pmatrix}\                      \hspace{2,5cm}  
+Matrice\hspace{0,1cm} B \hspace{1cm}  
+\begin{pmatrix}-1&1\\
+1&-1\\
+\end{pmatrix} 
+\]
+\subsubsection{Résolution via programmation linéaire}{Comme nous l'avons expliquer plus haut dans un jeu à somme nul trouver l'\textit{équilibre de Nash} n'est pas forcement possible il faut donc résonner autrement et utiliser le théoreme du \textsf{minimax}. Pour résoudre cela, il faut tenter de maximiser la stratégie pure de JA \textsf{Pair} et donc trouver : \newline
+\begin{align*}
+ \large {\textsf{maximiser} \underset{1 \leq j \leq m}{\textsf{min}} \hspace{0,2cm}  \underset{i}{\Sigma} \hspace{0,2cm} \pi_{i}^{1} \hspace{0,2cm}  a _{ij} }  
+\end{align*}
+\subparagraph*{}{Cependant le problème n'est pas tout à fait encore sous forme linéaire et donc cela il suffit de trouver la fonction à maximiser \textsf{v} tel que \textsf{v} soit plus petite que toutes les sommes que nous cherchons à minimiser. D'ou :} 
+\begin{align*}
+\large {\textsf{maximiser} \hspace{0,2 cm} v }\\ 
+\large{ s.c \hspace{0.4 cm} v \hspace{0,2 cm} \leq  \hspace{0.2 cm}\Sigma_{i}\hspace{0.2 cm} \pi_{i}^{1}\hspace{0.2 cm} a _{ij}} \\
+\large{\Sigma_{i} \hspace{0.2 cm} \pi_{i}^{1} = 1} \\ 
+\large{ \pi_{i}^{1} \hspace{0,2 cm} \geq \hspace{0,2 cm} 0 \hspace{0,2 cm} \forall i }
+\end{align*}
+ \subparagraph*{}{Essayons maintenant de mettre des chiffres sur ces formules et donc trouve les stratégies de JA \textsf{Pair} et JB \textsf{Impair}. On supposera un support tel que x = (x$_{1}$, x$_{2}$) et y = (y$_{1}$, y$_{2}$) corresponde a une stratégie mixte avec (x$_{1}$, x$_{2}$ , y$_{1}$ ,y$_{2} > 0 $).
+
+\subparagraph*{}{Ainsi d'après les donnés précédentes, x = (x$_{1}$, x$_{2}$) et y = (y$_{1}$, y$_{2}$) impliquent respectivement que (Ay$ _{1} $) et (Ay$ _{2} $) ont la même valeur tout comme (Bx$ _{1} $) et (Bx$ _{2} $). D'ou le système suivant : }
+\begin{align*}
+\left \{
+   \begin{array}{r c l}
+      x_{1} - x_{2} & = & \textsf{v} \\
+      - x_{1} +x_{2}  & = &\textsf{v}  \\
+      x_{1} + x_{2} & = & 1
+   \end{array}
+   \right.
+   & \hspace{3 cm}
+   \left \{
+   \begin{array}{r c l}
+     - y_{1} + y_{2} & = & \textsf{w} \\
+      y_{1} -y_{2}  & = &\textsf{w}  \\
+      y_{1} + y_{2} & = & 1
+   \end{array}
+   \right .
+\end{align*}
+ce qui nous donne : 
+\begin{align*}
+\left \{
+   \begin{array}{r c l}
+     0  & = &\textsf{v}  \\
+      x_{1} & = & 1 -x_{2} 
+   \end{array}
+   \right.
+   & \hspace{3 cm}
+   \left \{
+   \begin{array}{r c l}
+      0 & = &\textsf{w}  \\
+      y_{1} & = & 1 - y_{2} 
+   \end{array}
+   \right .
+\end{align*}
+\subparagraph*{}{Comme on peut le constater il n'y a pas de solution apparente , c'est à dire qu'il n'existe pas d'\textsf{équilibre de Nash} en stratégie pure puisque les fonctions \textsf{v} et \textsf{w} sont nulles (\textsf{v} = 0 et \textsf{w} = 0) cf annexe [].}
+
+\subsubsection{L''équilibre de Nash dans Matching Pennies}{Supposons maintenant que le JA \textsf{Pair} joue \textsf{Pile} avec une probabilité \textsf{p} (donc il joue \textsf{Face} avec une probabilité de \textsf{(1-p)} et que le JB \textsf{Impair} joue \textsf{Pile} avec une probabilité \textsf{q} (donc il joue \textsf{Face} avec une probabilité de \textsf{(1-q)} le jeu se \\
+ donc sous cette forme : } 
+
+\[
+\begin{pmatrix}(pq)& p(q-1)\\
+q(p-1)&(1-p)(1-q)\\
+\end{pmatrix}\            
+\]
+\subparagraph*{}{En utilisant le théorème du \textsf{minimax} on arrive à la proposition suivante (pour JA \textsf{Pair}) : }
+\begin{align*}
+\begin{array}{r c l}
+     pq + (1-p)(1-q) -p(1-q) -q(1-p)  & = & 4pq -2p -2q +1  \\
+     & = & (1-2p)(1-2q) 
+   \end{array}     
+\end{align*}
+
+\subparagraph*{}{On peut tout de suite voir que pour chaque "membre" soit positif autrement dit que JA \textsf{Pair} maximise ses gains et minimise sa perte (ou inversement avec JB \textsf{Impair} la seule situation stable s'apparente que si : 
+\textbf{p = $\frac{1}{2}$} et que \textbf{q = $\frac{1}{2}$}.}
+
+
+\subsection{Jeux Stochastiques}
+\subsubsection{Jeux dynamqiue}
 \begin{definition}
 Un jeu est dynamique lorsqu'il se déroule en plusieurs étapes non simultané, c'est a dire que les joueurs jouent plusieurs fois mais en ayant connaissance des actions des autres joueurs et donc peuvent établir des stratégies.
 \end{definition}
@@ -503,41 +724,52 @@ Prenons pour hypothèse un jeu dynamique à deux  J1 et J2, les deux joueurs von
 
 Ainsi un \textsf{jeu dynamique} peut être défini par : 
 \begin{itemize}
-\item Un nombre fini J de joueurs : {1,2, ....., J}
-\item Un nombre identique d'actions K par joueurs : {1,2,....K}  
+\item Un nombre fini J de joueurs : \{1,2, ....., J\}
+\item Un nombre identique d'actions K par joueurs : \{1,2,....K\}  
 \item Un ensemble infini E d'états du jeu qui sont indicé par les actions des joueurs 
 \item Une stratégie pure par joueurs composé des actions des joueurs respectifs
 \end{itemize}
 
+\subsubsection{Modèles et principes de jeux stochastiques }
+Au début de chaque étape, le jeu est dans un certain état . Les joueurs sélectionnent des actions et chaque joueur reçoit un gain cela dépend de l'état actuel et des actions choisies. Le jeu passe alors à un nouvel état aléatoire dont la distribution dépend de l'état précédent et des actions choisies par les joueurs. La procédure est répétée au nouvel état et le jeu continue pour un nombre fini ou infini d'étapes. Le gain total pour un joueur est souvent considéré comme la somme actualisée des gains de l'étape ou la limite inférieure des moyennes des gains de l'étape.
 
-\subsubsection{Jeu "Matching pennies"}
-Si l'on essaie de traduire mot - a - mot le nom du jeu on obtient : "jeux d'appariement de sous"  ; évidemment cela ne nous avance pas plus. Alors comment pourrions nous définir et mieux intégrer le jeu \textsf{matching pennies} ? \newline
-
-C'est un jeu simple et l'un plus connu dans le concept de la théorie des jeux, il se joue seulement à deux joueurs J1 : \textsf{Even} (pair) et J2 : \textsf{Odd} (impair). Chaque acteurs (Even \& Odd) possèdent une pièce et choisissent simultanément et secrètement une des deux faces \textsf{Heads} (pile) ou \textsf{Tails} (face), puis en fonction des résultats obtenu on assiste des scénarios de gains différents :
-
+\paragraph{Modèles des jeux stochastiques}
+On définit $\Phi$ un jeu stochastique fini à somme nulle tel que :
 \begin{itemize}
-\item Les deux faces des pièces correspondent et dans ce cas Even garde les deux pièces (+1 Even, -1 Odd)
-\item Les deux faces des pièces ne correspondent pas et dans ce cas Odd garde les deux pièces (+1 Odd, -1 Even)
-\end{itemize}  \vspace{0.2 cm}
+\item Un ensemble $\Omega$ fini d'états
+\item I l'ensemble fini d'action du joueur A
+\item J l'ensemble fini d'action du joueur B
+\item Une fonction de paiement $g : I \times J \times\Omega\rightarrow [ -M,M]$ (max JA et min JB)
+\item Une probabilité de transition d'état $\rho : I \times J \times \Omega \rightarrow \Delta (\Omega)$
+\end{itemize}
 
-\subparagraph*{}{Ainsi d'après ce que nous avons déjà vu dans les sections précédentes on peut comprendre que \textsf{matching pennies} est un jeu à somme nulle puisque le gain d'un des deux joueurs (par exemple Even) est bien la perte réciproque de l'autre joueur (ici Odd).} 
-\subparagraph*{}{De même vous aurez compris que ce jeu permet aussi d'illustrer le concept  de stratégies et de l'\textsf{équilibre de Nash} cependant cette configuration n'admet pas de stratégie pure pour l'\textsf{équilibre de Nash} mais plutôt une stratégie mixte reposant sur le choix probabiliste de chaque joueurs à choisir une des deux faces de la pièce.}
-\subsubsection{Représentation du jeu sous forme matricielle }
-Puisque c'est un jeu bi-matricel a somme nulle, profitons de sa définition même pour avoir une vue d'ensemble sur le jeu ; c'est à dire les actions de chaque joueurs mais aussi les gains ou pertes respectifs en fonction des choix effectués (cf [4.1.1]). \newline
+\paragraph{Principes des jeux stochastiques}
+On part d'un état $\omega_{1}$ donné et connu des deux joueurs (JA et JB), pour chaque étape $t \in \mathbf{N}$ on observe :
+\begin{itemize}
+\item JA et JB observe $\omega_{t}$ l'état courant et se rappelle des états précédents
+\item Simultanément et respectivement JA choisit une action mixte $x_{t}$ dans $X = \Delta (I)$ et JB choisit une action mixte $y_{t}$ dans $Y = \Delta (J)$ 
+\item Respectivement JA effectue une une action $i_{t} $ en fonction de $x_{t}$ et JB effectue une une action $j_{t} $ en fonction de $y_{t}$
+\item Une étape de paiement $t : g_{t} = g\hspace{0,1 cm} (i_{t},j_{t},\omega_{t})$ 
+\item L'état suivant $\omega_{t+1}$ attribué selon $\rho \hspace{0,1 cm} (i_{t},j_{t},\omega_{t})$ 
+\end{itemize}
+\subparagraph*{}{Ainsi, dans un jeu stochastique, chaque action conjointe mène tous les joueurs à un nouvel état où se jouel ’équivalent d’un jeu statique avec des gains particuliers à chaque état. En théorie, dans un jeu stochastique, les probabilités de transition peuvent dépendre de l’historique de tous les états passés ; lorsque les probabilités de transition ne dépendent que de l’état courant, il s’agit au sens strict d’un jeu de Markov. Durant le stage, on considérera uniquement des jeux où les probabilités de transition ne dépendent que de l’état courant.}
 
-Pour la représentation du jeu nous allons estimer que le gain ou perte est de de 1 puisque c'est avec une seule pièce que nous jouons, que le joueur J1 \textsf{Even} joue sur les colonnes tandis que le joueur J2 \textsf{Odd} joue les lignes.  \vspace{0.4 cm}
+\subparagraph*{}{À la différence des jeux statiques, les jeux stochastiques ne disposent pas de solutions optimales qui soient indépendantes des joueurs. Par conséquent, il faut définir la notion de stratégie optimale de manière analogue à
+celle d’un jeu classique. Ainsi, en notant $\Pi_{j}$ l’ensemble des stratégies possibles du joueur $j$, on peut adapter la notion\textsf{d’équilibre de Nash} aux jeux stochastiques.
 
-\begin{figure}[h!]
-\centering
-\includegraphics[scale=0.3]{matching.png}
-\caption{Represenation matricielle de "Matching Pennies"}
-\end{figure}
-
-\subsection{Jeu stochastique}
+\paragraph{Équilibre de Nash en jeux stochastiques}
+\begin{definition}
+Une stratégie conjointe $\pi^{*}$ est un équilibre de Nash si et seulement si : 
+\end{definition}
+\begin{align*}
+\forall s \in S,\hspace{0,2 cm} \forall j \in J, \hspace{0,2 cm} \forall \pi_{j} \in \Pi_{j}, \hspace{0,2 cm} V_{j}^{\pi*}(s) \hspace{0,2 cm}\geq \hspace{0,2 cm} V_{j}^{\pi_{j},\pi_{-j}^{*}}(s)
+\end{align*}
 \newpage
 \section{Conclusions}
+\subsection{Contributions apportées}
 \subsection{Difficultés rencontrées}
 \subsection{Axes d'amélioration}
+
 \newpage
 \section{Webographie}
 \begin{thebibliography}{2}
@@ -697,7 +929,7 @@ Voici les deux méthodes (via gurobi.sh ou alors via le module gurobipy) que l'o
 \end{center}
 Il est logique que le résultat produit est le même sauf la commande utilisé n'est pas la même. L'avantage de la deuxième méthode est que l'on peut importer le module \textsf{gurobipy} dans n'importe quelle future création Python.
 \newpage
-\subsection{ CV}
+\subsection{CV}
 \begin{center}
 \begin{figure}[h!]
 \centering

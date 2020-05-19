@@ -32,10 +32,6 @@ public class Main {
         tab[5] = f;
         tab[6] = g;
 
-       // affiche_identite(tab);
-       Tablettes k = new Tablettes("222", false, true, true);
-
-       f.adHoc(f);
         
     }
 

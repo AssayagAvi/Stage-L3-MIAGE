@@ -3,7 +3,7 @@
 \contentsline {section}{\numberline {2}Contexte du Stage}{6}{section.2}% 
 \contentsline {subsection}{\numberline {2.1}Pr\IeC {\'e}sentation de l'entreprise}{6}{subsection.2.1}% 
 \contentsline {subsection}{\numberline {2.2}Pr\IeC {\'e}sentation du service et de l'\IeC {\'e}quipe}{7}{subsection.2.2}% 
-\contentsline {subsection}{\numberline {2.3}Mission propos\IeC {\'e}}{8}{subsection.2.3}% 
+\contentsline {subsection}{\numberline {2.3}Mission propos\IeC {\'e}e}{8}{subsection.2.3}% 
 \contentsline {subsection}{\numberline {2.4}Cahier des charges}{8}{subsection.2.4}% 
 \contentsline {section}{\numberline {3}Outils utilis\IeC {\'e}s}{9}{section.3}% 
 \contentsline {subsection}{\numberline {3.1}GitHub}{9}{subsection.3.1}% 
@@ -12,11 +12,11 @@
 \contentsline {subsubsection}{\numberline {3.1.3}D\IeC {\'e}p\IeC {\^o}t et mises \IeC {\`a} jours}{10}{subsubsection.3.1.3}% 
 \contentsline {subsubsection}{\numberline {3.1.4}Clonage}{10}{subsubsection.3.1.4}% 
 \contentsline {subsection}{\numberline {3.2}Python}{10}{subsection.3.2}% 
-\contentsline {subsubsection}{\numberline {3.2.1}Installation de Python}{11}{subsubsection.3.2.1}% 
+\contentsline {subsubsection}{\numberline {3.2.1}Proc\IeC {\'e}dure d'installation de Python}{11}{subsubsection.3.2.1}% 
 \contentsline {paragraph}{\numberline {3.2.1.1}M\IeC {\'e}thode packages}{11}{paragraph.3.2.1.1}% 
 \contentsline {paragraph}{\numberline {3.2.1.2}M\IeC {\'e}thode module Pip}{11}{paragraph.3.2.1.2}% 
 \contentsline {paragraph}{\numberline {3.2.1.3}Environnement virtuel python}{11}{paragraph.3.2.1.3}% 
-\contentsline {subsubsection}{\numberline {3.2.2}Un exemple g\IeC {\'e}n\IeC {\'e}rique Python}{12}{subsubsection.3.2.2}% 
+\contentsline {subsubsection}{\numberline {3.2.2}Un exemple g\IeC {\'e}n\IeC {\'e}rique de code Python}{12}{subsubsection.3.2.2}% 
 \contentsline {subsubsection}{\numberline {3.2.3}La programmation objet en Python}{12}{subsubsection.3.2.3}% 
 \contentsline {paragraph}{\numberline {3.2.3.1}Code g\IeC {\'e}n\IeC {\'e}rique Classe "Lambda"}{12}{paragraph.3.2.3.1}% 
 \contentsline {paragraph}{\numberline {3.2.3.2}Constructeur de la Classe "Lambda"}{12}{paragraph.3.2.3.2}% 
@@ -28,40 +28,56 @@
 \contentsline {subparagraph}{}{14}{paragraph.3.3.1.1}% 
 \contentsline {subparagraph}{}{14}{paragraph.3.3.1.1}% 
 \contentsline {paragraph}{\numberline {3.3.1.2}M\IeC {\'e}thode via Anaconda}{14}{paragraph.3.3.1.2}% 
-\contentsline {subsubsection}{\numberline {3.3.2}Shell interactive }{15}{subsubsection.3.3.2}% 
+\contentsline {subsubsection}{\numberline {3.3.2}Utilsation de gurobi}{15}{subsubsection.3.3.2}% 
 \contentsline {subsubsection}{\numberline {3.3.3}Exemple Gurobi programmation lin\IeC {\'e}aire (biere.py)}{15}{subsubsection.3.3.3}% 
-\contentsline {section}{\numberline {4}La th\IeC {\'e}orie des jeux}{17}{section.4}% 
-\contentsline {subsection}{\numberline {4.1}Pr\IeC {\'e}sentation des jeux statiques}{17}{subsection.4.1}% 
-\contentsline {subsubsection}{\numberline {4.1.1}Jeux bimatriciel}{17}{subsubsection.4.1.1}% 
-\contentsline {subsubsection}{\numberline {4.1.2}Jeux \IeC {\`a} somme nulle}{17}{subsubsection.4.1.2}% 
-\contentsline {subsection}{\numberline {4.2}Jeux statiques et r\IeC {\'e}solution de programmes lin\IeC {\'e}aires}{18}{subsection.4.2}% 
-\contentsline {subsubsection}{\numberline {4.2.1}Strat\IeC {\'e}gies pures}{19}{subsubsection.4.2.1}% 
-\contentsline {subsubsection}{\numberline {4.2.2}Strat\IeC {\'e}gies mixtes}{19}{subsubsection.4.2.2}% 
-\contentsline {subsection}{\numberline {4.3}L'\IeC {\'e}quilibre de Nash}{19}{subsection.4.3}% 
-\contentsline {subsection}{\numberline {4.4}Jeux dynamiques}{20}{subsection.4.4}% 
-\contentsline {subsubsection}{\numberline {4.4.1}Jeu "Matching pennies"}{20}{subsubsection.4.4.1}% 
-\contentsline {subsubsection}{\numberline {4.4.2}Repr\IeC {\'e}sentation du jeu sous forme matricielle }{21}{subsubsection.4.4.2}% 
-\contentsline {section}{\numberline {5}Conclusions}{22}{section.5}% 
-\contentsline {subsection}{\numberline {5.1}Difficult\IeC {\'e}s rencontr\IeC {\'e}es}{22}{subsection.5.1}% 
-\contentsline {subsection}{\numberline {5.2}Axes d'am\IeC {\'e}lioration}{22}{subsection.5.2}% 
-\contentsline {section}{\numberline {6}Webographie}{23}{section.6}% 
-\contentsline {section}{\numberline {7}Annexes}{24}{section.7}% 
-\contentsline {subsection}{\numberline {7.1}Nanterre}{24}{subsection.7.1}% 
-\contentsline {subsection}{\numberline {7.2}Python en g\IeC {\'e}n\IeC {\'e}ral}{25}{subsection.7.2}% 
-\contentsline {subsubsection}{\numberline {7.2.1} Structure Conditionelle If }{25}{subsubsection.7.2.1}% 
-\contentsline {subsubsection}{\numberline {7.2.2} Structure Conditionelle Else}{25}{subsubsection.7.2.2}% 
-\contentsline {subsubsection}{\numberline {7.2.3} Structure Conditionelle Elif }{25}{subsubsection.7.2.3}% 
-\contentsline {subsubsection}{\numberline {7.2.4} Boucle For}{25}{subsubsection.7.2.4}% 
-\contentsline {subsubsection}{\numberline {7.2.5} Boucle While }{25}{subsubsection.7.2.5}% 
-\contentsline {subsubsection}{\numberline {7.2.6} Les fonctions}{26}{subsubsection.7.2.6}% 
-\contentsline {subsection}{\numberline {7.3}L'orient\IeC {\'e} objet en Python}{26}{subsection.7.3}% 
-\contentsline {subsubsection}{\numberline {7.3.1}Cr\IeC {\'e}ation de class}{26}{subsubsection.7.3.1}% 
-\contentsline {subsubsection}{\numberline {7.3.2}Cr\IeC {\'e}ation du constructeur}{26}{subsubsection.7.3.2}% 
-\contentsline {subsubsection}{\numberline {7.3.3}Le mot cl\IeC {\'e} pass}{26}{subsubsection.7.3.3}% 
-\contentsline {subsubsection}{\numberline {7.3.4}L'h\IeC {\'e}ritage en python}{27}{subsubsection.7.3.4}% 
-\contentsline {subparagraph}{}{27}{subsubsection.7.3.4}% 
-\contentsline {subparagraph}{}{27}{subsubsection.7.3.4}% 
-\contentsline {subparagraph}{}{27}{subsubsection.7.3.4}% 
-\contentsline {subsection}{\numberline {7.4}GitHub}{27}{subsection.7.4}% 
-\contentsline {subsection}{\numberline {7.5}Gurobi}{28}{subsection.7.5}% 
-\contentsline {subsection}{\numberline {7.6} CV}{29}{subsection.7.6}% 
+\contentsline {section}{\numberline {4}Th\IeC {\'e}orie des jeux bis}{17}{section.4}% 
+\contentsline {subsection}{\numberline {4.1}Jeux statiques}{17}{subsection.4.1}% 
+\contentsline {subsubsection}{\numberline {4.1.1}Principes et mod\IeC {\`e}les des jeux statiques }{17}{subsubsection.4.1.1}% 
+\contentsline {paragraph}{\numberline {4.1.1.1}Principe des jeux statiques}{17}{paragraph.4.1.1.1}% 
+\contentsline {paragraph}{\numberline {4.1.1.2}Mod\IeC {\`e}le des jeux statiques}{17}{paragraph.4.1.1.2}% 
+\contentsline {paragraph}{\numberline {4.1.1.3}Equilibre de Nash}{18}{paragraph.4.1.1.3}% 
+\contentsline {subparagraph}{Nash en strat\IeC {\'e}gie pure}{18}{definition.6}% 
+\contentsline {subparagraph}{Nash en strat\IeC {\'e}gie mixte}{18}{definition.7}% 
+\contentsline {subsubsection}{\numberline {4.1.2}Fonction de valeur}{18}{subsubsection.4.1.2}% 
+\contentsline {subsubsection}{\numberline {4.1.3}Jeux bimatrciel}{19}{subsubsection.4.1.3}% 
+\contentsline {paragraph}{\numberline {4.1.3.1}Exemple de jeu bimatriciel}{19}{paragraph.4.1.3.1}% 
+\contentsline {paragraph}{\numberline {4.1.3.2}\IeC {\'E}quilibre en strat\IeC {\'e}gie pure}{19}{paragraph.4.1.3.2}% 
+\contentsline {paragraph}{\numberline {4.1.3.3}\IeC {\'E}quilibre en strat\IeC {\'e}gie mixte}{19}{paragraph.4.1.3.3}% 
+\contentsline {subparagraph}{}{20}{paragraph.4.1.3.3}% 
+\contentsline {subsubsection}{\numberline {4.1.4}Jeux \IeC {\`a} somme nulle}{20}{subsubsection.4.1.4}% 
+\contentsline {subsection}{\numberline {4.2}Jeux bimatriciel a sommes nulles et r\IeC {\'e}solution par PL}{20}{subsection.4.2}% 
+\contentsline {subsubsection}{\numberline {4.2.1}Un exemple de jeu : "Matching pennies"}{22}{subsubsection.4.2.1}% 
+\contentsline {subsubsection}{\numberline {4.2.2}Matrice de gains des joueurs A et B}{23}{subsubsection.4.2.2}% 
+\contentsline {subsubsection}{\numberline {4.2.3}R\IeC {\'e}solution via programmation lin\IeC {\'e}aire}{23}{subsubsection.4.2.3}% 
+\contentsline {subsubsection}{\numberline {4.2.4}L''\IeC {\'e}quilibre de Nash dans Matching Pennies}{24}{subsubsection.4.2.4}% 
+\contentsline {subsection}{\numberline {4.3}Jeux Stochastiques}{24}{subsection.4.3}% 
+\contentsline {subsubsection}{\numberline {4.3.1}Jeux dynamqiue}{24}{subsubsection.4.3.1}% 
+\contentsline {subsubsection}{\numberline {4.3.2}Mod\IeC {\`e}les et principes de jeux stochastiques }{24}{subsubsection.4.3.2}% 
+\contentsline {paragraph}{\numberline {4.3.2.1}Mod\IeC {\`e}les des jeux stochastiques}{25}{paragraph.4.3.2.1}% 
+\contentsline {paragraph}{\numberline {4.3.2.2}Principes des jeux stochastiques}{25}{paragraph.4.3.2.2}% 
+\contentsline {paragraph}{\numberline {4.3.2.3}\IeC {\'E}quilibre de Nash en jeux stochastiques}{25}{paragraph.4.3.2.3}% 
+\contentsline {section}{\numberline {5}Conclusions}{26}{section.5}% 
+\contentsline {subsection}{\numberline {5.1}Contributions apport\IeC {\'e}es}{26}{subsection.5.1}% 
+\contentsline {subsection}{\numberline {5.2}Difficult\IeC {\'e}s rencontr\IeC {\'e}es}{26}{subsection.5.2}% 
+\contentsline {subsection}{\numberline {5.3}Axes d'am\IeC {\'e}lioration}{26}{subsection.5.3}% 
+\contentsline {section}{\numberline {6}Webographie}{27}{section.6}% 
+\contentsline {section}{\numberline {7}Annexes}{28}{section.7}% 
+\contentsline {subsection}{\numberline {7.1}Nanterre}{28}{subsection.7.1}% 
+\contentsline {subsection}{\numberline {7.2}Python en g\IeC {\'e}n\IeC {\'e}ral}{29}{subsection.7.2}% 
+\contentsline {subsubsection}{\numberline {7.2.1} Structure Conditionelle If }{29}{subsubsection.7.2.1}% 
+\contentsline {subsubsection}{\numberline {7.2.2} Structure Conditionelle Else}{29}{subsubsection.7.2.2}% 
+\contentsline {subsubsection}{\numberline {7.2.3} Structure Conditionelle Elif }{29}{subsubsection.7.2.3}% 
+\contentsline {subsubsection}{\numberline {7.2.4} Boucle For}{29}{subsubsection.7.2.4}% 
+\contentsline {subsubsection}{\numberline {7.2.5} Boucle While }{29}{subsubsection.7.2.5}% 
+\contentsline {subsubsection}{\numberline {7.2.6} Les fonctions}{30}{subsubsection.7.2.6}% 
+\contentsline {subsection}{\numberline {7.3}L'orient\IeC {\'e} objet en Python}{30}{subsection.7.3}% 
+\contentsline {subsubsection}{\numberline {7.3.1}Cr\IeC {\'e}ation de class}{30}{subsubsection.7.3.1}% 
+\contentsline {subsubsection}{\numberline {7.3.2}Cr\IeC {\'e}ation du constructeur}{30}{subsubsection.7.3.2}% 
+\contentsline {subsubsection}{\numberline {7.3.3}Le mot cl\IeC {\'e} pass}{30}{subsubsection.7.3.3}% 
+\contentsline {subsubsection}{\numberline {7.3.4}L'h\IeC {\'e}ritage en python}{31}{subsubsection.7.3.4}% 
+\contentsline {subparagraph}{}{31}{subsubsection.7.3.4}% 
+\contentsline {subparagraph}{}{31}{subsubsection.7.3.4}% 
+\contentsline {subparagraph}{}{31}{subsubsection.7.3.4}% 
+\contentsline {subsection}{\numberline {7.4}GitHub}{31}{subsection.7.4}% 
+\contentsline {subsection}{\numberline {7.5}Gurobi}{32}{subsection.7.5}% 
+\contentsline {subsection}{\numberline {7.6}CV}{33}{subsection.7.6}% 

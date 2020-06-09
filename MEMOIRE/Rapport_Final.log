@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2019.10.29)  19 MAY 2020 15:50
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2019.10.29)  25 MAY 2020 09:47
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -634,13 +634,13 @@ Package lastpage Info: Please have a look at the pageslts package at
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-<logo_Paris_Nanterre_couleur_RVB.png, id=229, 619.31375pt x 132.495pt>
+<logo_Paris_Nanterre_couleur_RVB.png, id=221, 619.31375pt x 132.495pt>
 File: logo_Paris_Nanterre_couleur_RVB.png Graphic file (type png)
 <use logo_Paris_Nanterre_couleur_RVB.png>
 Package pdftex.def Info: logo_Paris_Nanterre_couleur_RVB.png  used on input lin
 e 48.
 (pdftex.def)             Requested size: 307.2929pt x 65.74391pt.
-<logo_entreprise.png, id=231, 524.96124pt x 478.78876pt>
+<logo_entreprise.png, id=223, 524.96124pt x 478.78876pt>
 File: logo_entreprise.png Graphic file (type png)
 <use logo_entreprise.png>
 Package pdftex.def Info: logo_entreprise.png  used on input line 48.
@@ -683,7 +683,7 @@ LaTeX Font Info:    Try loading font information for U+msb on input line 48.
 (/usr/local/texlive/2019/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-<bordure.png, id=232, 63.23625pt x 522.95375pt>
+<bordure.png, id=224, 63.23625pt x 522.95375pt>
 File: bordure.png Graphic file (type png)
 <use bordure.png>
 Package pdftex.def Info: bordure.png  used on input line 48.
@@ -715,99 +715,71 @@ Underfull \hbox (badness 10000) in paragraph at lines 59--60
 
 [2
 
-] (./Rapport_Final.toc [3])
+]
+LaTeX Font Info:    Try loading font information for T1+aess on input line 64.
+ (/usr/local/texlive/2019/texmf-dist/tex/latex/ae/t1aess.fd
+File: t1aess.fd 1997/11/16 Font definitions for T1/aess.
+) [3]
+(./Rapport_Final.toc [4])
 \tf@toc=\write5
 \openout5 = `Rapport_Final.toc'.
 
- [4]
-Underfull \hbox (badness 10000) in paragraph at lines 69--70
+ [5]
+Underfull \hbox (badness 10000) in paragraph at lines 84--85
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 71--72
-
- []
-
-LaTeX Font Info:    Try loading font information for T1+aess on input line 73.
-(/usr/local/texlive/2019/texmf-dist/tex/latex/ae/t1aess.fd
-File: t1aess.fd 1997/11/16 Font definitions for T1/aess.
-)
-Underfull \hbox (badness 10000) in paragraph at lines 73--74
+Underfull \hbox (badness 10000) in paragraph at lines 86--87
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 75--76
+Underfull \hbox (badness 10000) in paragraph at lines 88--89
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 77--78
+Underfull \hbox (badness 10000) in paragraph at lines 90--91
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 79--80
+Underfull \hbox (badness 10000) in paragraph at lines 92--93
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 81--82
+Underfull \hbox (badness 10000) in paragraph at lines 94--95
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 83--84
-
- []
-
-[5]
-Underfull \hbox (badness 10000) in paragraph at lines 89--90
+Underfull \hbox (badness 10000) in paragraph at lines 96--97
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 93--94
+Underfull \hbox (badness 10000) in paragraph at lines 98--99
 
  []
 
-<campus.jpeg, id=323, 298.11375pt x 170.6375pt>
+[6]
+Underfull \hbox (badness 10000) in paragraph at lines 104--105
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 108--109
+
+ []
+
+<campus.jpeg, id=318, 298.11375pt x 170.6375pt>
 File: campus.jpeg Graphic file (type jpg)
 <use campus.jpeg>
-Package pdftex.def Info: campus.jpeg  used on input line 99.
+Package pdftex.def Info: campus.jpeg  used on input line 114.
 (pdftex.def)             Requested size: 387.54784pt x 221.8287pt.
-[6 <./campus.jpeg>]
-Underfull \hbox (badness 10000) in paragraph at lines 118--119
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 120--121
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 122--123
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 124--125
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 129--130
-
- []
-
-[7]
-Underfull \hbox (badness 10000) in paragraph at lines 131--132
-
- []
-
-
+[7 <./campus.jpeg>]
 Underfull \hbox (badness 10000) in paragraph at lines 133--134
 
  []
@@ -817,38 +789,51 @@ Underfull \hbox (badness 10000) in paragraph at lines 135--136
 
  []
 
-[8]
-LaTeX Font Info:    Try loading font information for T1+aett on input line 161.
+
+Underfull \hbox (badness 10000) in paragraph at lines 137--138
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 139--140
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 144--145
+
+ []
+
+
+Underfull \vbox (badness 4582) has occurred while \output is active []
+
+ [8]
+Underfull \hbox (badness 10000) in paragraph at lines 146--147
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 148--149
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 150--151
+
+ []
+
+[9]
+LaTeX Font Info:    Try loading font information for T1+aett on input line 176.
 
  (/usr/local/texlive/2019/texmf-dist/tex/latex/ae/t1aett.fd
 File: t1aett.fd 1997/11/16 Font definitions for T1/aett.
 )
-Underfull \hbox (badness 10000) in paragraph at lines 161--162
+Underfull \hbox (badness 10000) in paragraph at lines 176--177
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 163--165
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 166--167
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 168--169
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 170--173
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 175--176
+Underfull \hbox (badness 10000) in paragraph at lines 178--179
 
  []
 
@@ -857,399 +842,379 @@ Underfull \hbox (badness 10000) in paragraph at lines 180--181
 
  []
 
-[9]
+
 Underfull \hbox (badness 10000) in paragraph at lines 182--183
 
  []
 
 
+Underfull \hbox (badness 10000) in paragraph at lines 184--186
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 188--189
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 193--194
+
+ []
+
+[10]
 Underfull \hbox (badness 10000) in paragraph at lines 195--196
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 197--198
+Underfull \hbox (badness 10000) in paragraph at lines 208--209
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 199--200
+Underfull \hbox (badness 10000) in paragraph at lines 210--211
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 201--202
-
- []
-
-[10]
-Underfull \hbox (badness 10000) in paragraph at lines 203--204
+Underfull \hbox (badness 10000) in paragraph at lines 212--213
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 237--238
+Underfull \hbox (badness 10000) in paragraph at lines 214--215
 
  []
 
-[11] [12]
-Overfull \hbox (40.08264pt too wide) in paragraph at lines 284--284
+[11]
+Underfull \hbox (badness 10000) in paragraph at lines 216--217
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 250--251
+
+ []
+
+[12] [13]
+Overfull \hbox (40.08264pt too wide) in paragraph at lines 297--297
 []     \T1/aett/m/n/12 def __init (brand, size, model_,name, color, price) :   
     #constructeur[] 
  []
 
 
-Overfull \hbox (40.08264pt too wide) in paragraph at lines 284--284
+Overfull \hbox (40.08264pt too wide) in paragraph at lines 297--297
 []  \T1/aett/m/n/12 Pull1 = Pullover("ZARA", "XS", "AED934", "black", 19)      
    #instanciation[] 
  []
 
-[13]
-Underfull \hbox (badness 10000) in paragraph at lines 287--288
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 289--290
-
- []
-
 [14]
-<console.png, id=385, 501.875pt x 237.88875pt>
+Underfull \hbox (badness 10000) in paragraph at lines 300--301
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 302--303
+
+ []
+
+[15]
+<console.png, id=380, 501.875pt x 237.88875pt>
 File: console.png Graphic file (type png)
 <use console.png>
-Package pdftex.def Info: console.png  used on input line 327.
+Package pdftex.def Info: console.png  used on input line 340.
 (pdftex.def)             Requested size: 401.50053pt x 190.31123pt.
- [15 <./console.png>] [16]
-Underfull \hbox (badness 10000) in paragraph at lines 401--402
+ [16 <./console.png>] [17] [18]
+Underfull \hbox (badness 10000) in paragraph at lines 442--443
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 403--404
+Underfull \hbox (badness 10000) in paragraph at lines 444--445
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 424--425
+Underfull \hbox (badness 10000) in paragraph at lines 464--465
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 430--431
+Underfull \hbox (badness 10000) in paragraph at lines 470--471
 
  []
 
-[17] [18]
-Underfull \hbox (badness 10000) in paragraph at lines 553--554
-
- []
-
-[19]
-Underfull \hbox (badness 10000) in paragraph at lines 555--556
+[19] [20] [21]
+Underfull \hbox (badness 10000) in paragraph at lines 605--606
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 561--562
+Underfull \hbox (badness 10000) in paragraph at lines 607--608
 
  []
 
-<Matching.pdf, id=438, 963.6pt x 542.025pt>
+<Matching.pdf, id=440, 963.6pt x 542.025pt>
 File: Matching.pdf Graphic file (type pdf)
 <use Matching.pdf>
-Package pdftex.def Info: Matching.pdf  used on input line 572.
+Package pdftex.def Info: Matching.pdf  used on input line 633.
 (pdftex.def)             Requested size: 385.43317pt x 216.80615pt.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 579--580
+Underfull \hbox (badness 10000) in paragraph at lines 640--641
 
  []
-
-[20]
-Overfull \hbox (5.51718pt too wide) in paragraph at lines 601--602
-[]\T1/aer/m/it/12 La stra-té-gie d'un ac-teur est l'une des op-tions qu'il choi
--sit dans un contexte
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 604--605
-
- []
-
-[21 <./Matching.pdf>]
-Underfull \hbox (badness 10000) in paragraph at lines 612--613
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 614--615
-
- []
-
-
-LaTeX Font Warning: Command \large invalid in math mode on input line 617.
-
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <14.4> on input line 617.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10> on input line 617.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7> on input line 617.
-
-LaTeX Font Warning: Command \large invalid in math mode on input line 617.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 619--621
-
- []
-
-
-LaTeX Font Warning: Command \large invalid in math mode on input line 626.
-
-
-LaTeX Font Warning: Command \large invalid in math mode on input line 626.
-
-
-LaTeX Font Warning: Command \large invalid in math mode on input line 626.
-
-
-LaTeX Font Warning: Command \large invalid in math mode on input line 626.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 627--628
-
- []
-
-
-LaTeX Font Warning: Command \large invalid in math mode on input line 633.
-
-
-LaTeX Font Warning: Command \large invalid in math mode on input line 633.
-
-
-LaTeX Font Warning: Command \large invalid in math mode on input line 633.
-
-
-LaTeX Font Warning: Command \large invalid in math mode on input line 633.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 633--635
-
- []
-
-
-LaTeX Font Warning: Command \large invalid in math mode on input line 637.
-
-
-LaTeX Font Warning: Command \large invalid in math mode on input line 637.
-
-
-LaTeX Font Warning: Command \large invalid in math mode on input line 644.
-
-
-LaTeX Font Warning: Command \large invalid in math mode on input line 644.
-
-
-LaTeX Font Warning: Command \large invalid in math mode on input line 644.
-
-
-LaTeX Font Warning: Command \large invalid in math mode on input line 644.
-
-
-LaTeX Font Warning: Command \large invalid in math mode on input line 644.
-
-
-LaTeX Font Warning: Command \large invalid in math mode on input line 644.
-
-
-LaTeX Font Warning: Command \large invalid in math mode on input line 644.
-
-
-LaTeX Font Warning: Command \large invalid in math mode on input line 644.
 
 [22]
-Underfull \hbox (badness 10000) in paragraph at lines 690--691
+Underfull \hbox (badness 10000) in paragraph at lines 660--662
 
  []
 
-[23] [24] [25] [26]
-Underfull \hbox (badness 10000) in paragraph at lines 754--755
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 755--756
+[23 <./Matching.pdf>]
+Underfull \hbox (badness 10000) in paragraph at lines 669--670
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 756--757
+Underfull \hbox (badness 10000) in paragraph at lines 671--672
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 757--758
+LaTeX Font Warning: Command \large invalid in math mode on input line 674.
+
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <14.4> on input line 674.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <10> on input line 674.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <7> on input line 674.
+
+LaTeX Font Warning: Command \large invalid in math mode on input line 674.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 676--677
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 758--759
+LaTeX Font Warning: Command \large invalid in math mode on input line 682.
+
+
+LaTeX Font Warning: Command \large invalid in math mode on input line 682.
+
+
+LaTeX Font Warning: Command \large invalid in math mode on input line 682.
+
+
+LaTeX Font Warning: Command \large invalid in math mode on input line 682.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 683--684
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 759--760
+LaTeX Font Warning: Command \large invalid in math mode on input line 689.
+
+
+LaTeX Font Warning: Command \large invalid in math mode on input line 689.
+
+
+LaTeX Font Warning: Command \large invalid in math mode on input line 689.
+
+
+LaTeX Font Warning: Command \large invalid in math mode on input line 689.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 689--690
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 760--761
+LaTeX Font Warning: Command \large invalid in math mode on input line 692.
+
+
+LaTeX Font Warning: Command \large invalid in math mode on input line 692.
+
+[24] [25]
+Underfull \hbox (badness 10000) in paragraph at lines 762--763
+
+ []
+
+[26] [27] [28] [29]
+Underfull \hbox (badness 10000) in paragraph at lines 846--847
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 847--848
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 848--849
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 849--850
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 850--851
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 851--852
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 852--853
 [][]$\T1/aett/m/n/12 http : / / www . cril . univ-[]artois . fr / ~konieczny / 
 enseignement /
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 760--761
+Underfull \hbox (badness 10000) in paragraph at lines 852--853
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 761--762
+Underfull \hbox (badness 10000) in paragraph at lines 853--854
 [][]$\T1/aett/m/n/12 http : / / www . cril . univ-[]artois . fr / ~konieczny / 
 enseignement /
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 761--762
+Underfull \hbox (badness 10000) in paragraph at lines 853--854
 
  []
 
-[27pdfTeX warning (ext4): destination with the same identifier (name{cite.Gurob
+[30pdfTeX warning (ext4): destination with the same identifier (name{cite.Gurob
 i}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.765 \newpage
+l.857 \newpage
               pdfTeX warning (ext4): destination with the same identifier (name
 {cite.RO}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.765 \newpage
+l.857 \newpage
               pdfTeX warning (ext4): destination with the same identifier (name
 {cite.RO}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.765 \newpage
+l.857 \newpage
               ]
-<chiffres.png, id=521, 902.37125pt x 704.6325pt>
+<chiffres.png, id=531, 902.37125pt x 704.6325pt>
 File: chiffres.png Graphic file (type png)
 <use chiffres.png>
-Package pdftex.def Info: chiffres.png  used on input line 771.
+Package pdftex.def Info: chiffres.png  used on input line 863.
 (pdftex.def)             Requested size: 360.94211pt x 281.848pt.
-<plan.jpeg, id=522, 268.00125pt x 189.70876pt>
+<plan.jpeg, id=532, 268.00125pt x 189.70876pt>
 File: plan.jpeg Graphic file (type jpg)
 <use plan.jpeg>
-Package pdftex.def Info: plan.jpeg  used on input line 779.
+Package pdftex.def Info: plan.jpeg  used on input line 871.
 (pdftex.def)             Requested size: 348.40157pt x 246.62134pt.
- [28 <./chiffres.png> <./plan.jpeg>] [29] [30] [31]
-<gurobish.png, id=548, 575.14874pt x 556.0775pt>
+ [31 <./chiffres.png> <./plan.jpeg>] [32] [33] [34]
+<gurobish.png, id=558, 575.14874pt x 556.0775pt>
 File: gurobish.png Graphic file (type png)
 <use gurobish.png>
-Package pdftex.def Info: gurobish.png  used on input line 899.
+Package pdftex.def Info: gurobish.png  used on input line 991.
 (pdftex.def)             Requested size: 230.05542pt x 222.42705pt.
-<gurobipython.png, id=549, 577.15625pt x 570.13pt>
+<gurobipython.png, id=559, 577.15625pt x 570.13pt>
 File: gurobipython.png Graphic file (type png)
 <use gurobipython.png>
-Package pdftex.def Info: gurobipython.png  used on input line 904.
+Package pdftex.def Info: gurobipython.png  used on input line 996.
 (pdftex.def)             Requested size: 230.8584pt x 228.04796pt.
- [32 <./gurobish.png> <./gurobipython.png>]
-<CV.pdf, id=559, 542.025pt x 782.925pt>
+ [35 <./gurobish.png> <./gurobipython.png>]
+<CV.pdf, id=569, 542.025pt x 782.925pt>
 File: CV.pdf Graphic file (type pdf)
 <use CV.pdf>
-Package pdftex.def Info: CV.pdf  used on input line 914.
+Package pdftex.def Info: CV.pdf  used on input line 1006.
 (pdftex.def)             Requested size: 449.88063pt x 649.82759pt.
 
-Overfull \hbox (8.8629pt too wide) in paragraph at lines 914--915
+Overfull \hbox (8.8629pt too wide) in paragraph at lines 1006--1007
  [][] 
  []
 
-[33 <./CV.pdf>] (./Rapport_Final.lof)
+[36 <./CV.pdf>] (./Rapport_Final.lof)
 \tf@lof=\write6
 \openout6 = `Rapport_Final.lof'.
 
  
 AED: lastpage setting LastPage
-[34]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 919.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 919.
+[37]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1011.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1011.
  (./Rapport_Final.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 919.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 919.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1011.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1011.
 
+Package rerunfilecheck Info: File `Rapport_Final.out' has not changed.
+(rerunfilecheck)             Checksum: 585D5BE02B9B22CC769A16CA8BD2FF85;4073.
 
-Package rerunfilecheck Warning: File `Rapport_Final.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `Rapport_Final.out':
-(rerunfilecheck)             Before: D14639A5E3175D4624E14FA040AB9E67;4249
-(rerunfilecheck)             After:  A45003680A784225FB90C2DC2EB84165;4146.
 
 LaTeX Warning: There were multiply-defined labels.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 919.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1011.
  )
-(\end occurred inside a group at level 3)
+(\end occurred inside a group at level 5)
 
-### simple group (level 3) entered at line 735 ({)
-### simple group (level 2) entered at line 634 ({)
-### simple group (level 1) entered at line 537 ({)
+### simple group (level 5) entered at line 807 ({)
+### simple group (level 4) entered at line 736 ({)
+### simple group (level 3) entered at line 719 ({)
+### simple group (level 2) entered at line 689 ({)
+### simple group (level 1) entered at line 589 ({)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 11628 strings out of 492616
- 169343 string characters out of 6129480
- 320284 words of memory out of 5000000
- 15134 multiletter control sequences out of 15000+600000
- 89796 words of font info for 115 fonts, out of 8000000 for 9000
+ 11629 strings out of 492616
+ 169317 string characters out of 6129480
+ 320285 words of memory out of 5000000
+ 15131 multiletter control sequences out of 15000+600000
+ 91333 words of font info for 116 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 38i,16n,48p,748b,765s stack positions out of 5000i,500n,10000p,200000b,80000s
-pdfTeX warning (dest): name{subsubsection.4.2.4} has been refer
-enced but does not exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{subsubsection.4.2.3} has been referenced but does n
-ot exist, replaced by a fixed one
-
-{/usr/local/texlive/2019/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/loca
-l/texlive/2019/texmf-dist/fonts/enc/dvips/lm/lm-mathex.enc}{/usr/local/texlive/
-2019/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/local/texlive/2019/texmf
--dist/fonts/enc/dvips/lm/lm-rm.enc}</usr/local/texlive/2019/texmf-dist/fonts/ty
-pe1/public/amsfonts/cm/cmbsy10.pfb></usr/local/texlive/2019/texmf-dist/fonts/ty
-pe1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2019/texmf-dist/fonts/typ
-e1/public/amsfonts/cm/cmcsc10.pfb></usr/local/texlive/2019/texmf-dist/fonts/typ
-e1/public/amsfonts/cm/cmmi12.pfb></usr/local/texlive/2019/texmf-dist/fonts/type
-1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/
-public/amsfonts/cm/cmr17.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/pu
-blic/amsfonts/cm/cmss12.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/pub
-lic/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/publ
-ic/amsfonts/cm/cmti12.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/publi
-c/amsfonts/cm/cmtt12.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public
-/lm/lmbx12.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/lm/lmex10
-.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/lm/lmmi12.pfb></usr
-/local/texlive/2019/texmf-dist/fonts/type1/public/lm/lmmi6.pfb></usr/local/texl
-ive/2019/texmf-dist/fonts/type1/public/lm/lmmi8.pfb></usr/local/texlive/2019/te
-xmf-dist/fonts/type1/public/lm/lmr12.pfb></usr/local/texlive/2019/texmf-dist/fo
-nts/type1/public/lm/lmr8.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/pu
-blic/lm/lmsy10.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/lm/lm
-sy6.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/lm/lmsy8.pfb>
-Output written on Rapport_Final.pdf (34 pages, 2412334 bytes).
+ 38i,16n,48p,765b,845s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/local/texlive/2019/texmf-dist/fonts/enc/dvips/lm/lm-mathi
+t.enc}{/usr/local/texlive/2019/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{/usr/lo
+cal/texlive/2019/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/local/texliv
+e/2019/texmf-dist/fonts/enc/dvips/lm/lm-mathex.enc}</usr/local/texlive/2019/tex
+mf-dist/fonts/type1/public/amsfonts/cm/cmbsy10.pfb></usr/local/texlive/2019/tex
+mf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2019/texm
+f-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/local/texlive/2019/texm
+f-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/texlive/2019/texmf
+-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2019/texmf-d
+ist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local/texlive/2019/texmf-dis
+t/fonts/type1/public/amsfonts/cm/cmsl12.pfb></usr/local/texlive/2019/texmf-dist
+/fonts/type1/public/amsfonts/cm/cmss12.pfb></usr/local/texlive/2019/texmf-dist/
+fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2019/texmf-dist/f
+onts/type1/public/amsfonts/cm/cmti12.pfb></usr/local/texlive/2019/texmf-dist/fo
+nts/type1/public/amsfonts/cm/cmtt12.pfb></usr/local/texlive/2019/texmf-dist/fon
+ts/type1/public/lm/lmbx12.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/p
+ublic/lm/lmex10.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/lm/l
+mmi12.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/lm/lmmi6.pfb><
+/usr/local/texlive/2019/texmf-dist/fonts/type1/public/lm/lmmi8.pfb></usr/local/
+texlive/2019/texmf-dist/fonts/type1/public/lm/lmr12.pfb></usr/local/texlive/201
+9/texmf-dist/fonts/type1/public/lm/lmr6.pfb></usr/local/texlive/2019/texmf-dist
+/fonts/type1/public/lm/lmr8.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1
+/public/lm/lmsy10.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/lm
+/lmsy6.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/lm/lmsy8.pfb>
+</usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.
+pfb>
+Output written on Rapport_Final.pdf (37 pages, 2453276 bytes).
 PDF statistics:
- 1108 PDF objects out of 1200 (max. 8388607)
- 838 compressed objects within 9 object streams
- 135 named destinations out of 1000 (max. 500000)
- 504 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1130 PDF objects out of 1200 (max. 8388607)
+ 854 compressed objects within 9 object streams
+ 138 named destinations out of 1000 (max. 500000)
+ 488 words of extra memory for PDF output out of 10000 (max. 10000000)
 

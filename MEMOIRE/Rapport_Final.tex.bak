@@ -461,6 +461,9 @@ $ \Pi^{i} \times ... \times \Pi^{j} \rightarrow \mathbf{R} $
 On appelle stratégie la manière dont un joueur choisit l'action qu'il effectue. C'est un vecteur de taille |A$ _{i} ^{1}$| où |A$ _{i} ^{1}$| est l'ensemble des actions du joueur A,, |A$_{i}$| est le cardinal de l'ensemble A'. Ce vecteur est noté $\pi^{1}$ pour le joueur 1 et $\pi^{2}$ pour le joueur 2. La stratégie d’un acteur est l’une des options qu’il choisit dans un contexte où son choix dépend non seulement de ses propres actions, mais également de celles des autres.
 \end{definition}
 
+C'est maintenant qu'intervient la notion de \textsf{stratégie} (ou encore, règles de décision) pour qu'un acteur puisse prendre une décision affin d'effectuer une future action dans le jeu.
+On peut donc distinguer deux grandes catégories de \textsf{stratégies} soit pures soit mixtes \newline
+
 Lorsque l'on parle de stratégie pure il s'agit d'une stratégie déterministe c'est à dire une stratégie dans laquelle une seule et unique action est effectuée. Elle détermine en particulier l'action qu'un acteur (joueur) réalisera devant toutes les situations auxquelles ce dernier sera confronté. \newline
 
 \begin{definition}
@@ -506,7 +509,7 @@ Soit $\sigma ^{*} $ un profil de stratégie mixte. $\sigma ^{*} $est un équilib
 \end{align*}
 
 
-\subsubsection{Jeux bimatrciel}
+\subsection{Jeux bimatrciel}
 Un jeu bimatriciel se caractérise comme son nom l'indique par deux matrices. Ces dernières ne sont autres que les gains des joueurs. Autrement dit les joueurs jouent de manière simultanée et on inscrit dans une matrice leurs gains (une matrice pour chaque joueur). Pour la suite du mémoire et du stage je vais  allons donc utiliser strictement des jeux à deux joueurs JA et \textsf{JB}.
 
 Ainsi un \textsf{jeu bimatriciel} est défini par :
@@ -520,8 +523,7 @@ Ainsi un \textsf{jeu bimatriciel} est défini par :
 \end{itemize}
 
 
-\paragraph{Exemple de jeu bimatriciel}
-
+\subsubsection{Exemple de jeu bimatriciel et illustration des concepts}
 
 \[
 Jeu \hspace{0,2cm} total \hspace{1cm}
@@ -552,41 +554,7 @@ D'après les matrices précédentes  le seul équilibre pur (obtenu par le théo
 \paragraph{Équilibre en stratégie mixte}
 On cherche a savoir si il existe un support de la forme x=($x_{1},x_{2},0$) et y=($y_{1}, y_{2}$) correspondant à une stratégie mixte tel que ($x_{1},x_{2},y_{1}, y_{2} > 0$). 
 
-Ainsi d'après les donnés précédentes, x = (x$_{1}$, x$_{2}$) et y = (y$_{1}$, y$_{2}$) impliquent respectivement que (Ay$ _{1} $) et (Ay$ _{2} $) ont la même valeur tout comme (Bx$ _{1} $) et (Bx$ _{2} $). D'ou le système suivant : }
-\begin{align*}
-\left \{
-   \begin{array}{r c l}
-      3x_{1} + 2x_{2} & = & \textsf{v} \\
-      2x_{1} +6x_{2}  & = &\textsf{v}  \\
-      x_{1} + x_{2} & = & 1
-   \end{array}
-   \right.
-   & \hspace{3 cm}
-   \left \{
-   \begin{array}{r c l}
-     3y_{1} + 3y_{2} & = & \textsf{w} \\
-     2y_{1} + 5y_{2}  & = &\textsf{w}  \\
-      y_{1} + y_{2} & = & 1
-   \end{array}
-   \right .
-\end{align*}
-ce qui nous donne : 
-\begin{align*}
-\left \{
-   \begin{array}{r c l}
-      x_{1}  & = & 4x_{2} \\
-      x_{1} + x_{2} & = & 1 
-   \end{array}
-   \right.
-   & \hspace{3 cm}
-   \left \{
-   \begin{array}{r c l}
-     y_{1} & = & 2y_{2}  \\
-      y_{1} + y_{2} & = & 1  
-   \end{array}
-   \right .
-\end{align*}
-\subparagraph{}{Ainsi il apparait rapidement les stratégies mixtes suivantes : 
+\subparagraph{}{Considérons alors les stratégies mixtes suivantes : 
 \begin{align*}
      x=(\frac{4}{5}, \frac{1}{5},0)
    & \hspace{3 cm}
@@ -600,8 +568,9 @@ ce qui nous donne :
    & \hspace{3 cm}
   x^{t}By=(\frac{14}{5}).
 \end{align*}
-
-\subsubsection{Jeux à sommes nulles}
+\paragraph{Équilibre en stratégie pure}
+Voila
+\subsection{Jeux à sommes nulles}
 Comme annoncé dans notre introduction, je vais résoudre des jeux à sommes nulles via des algorithmes que je vais implémenter par la suite. \newline
 
 Un jeu à somme nulle est un jeu où le gain d'un des acteurs (JA, par exemple) représente la perte équivalente des autres acteurs ((JB, par exemple). Pour faciliter la compréhension et la résolution de ces modèles, le nombre d'acteurs sera fixé à 2.\newline
@@ -620,7 +589,7 @@ V^{*} = max_{\pi_{1} \in \Pi_{1}}\hspace{0,1cm} min_{\pi_{2} \in \Pi_{2}} \hspac
 
 Il existe plusieurs jeux ou situations "connus" que l'on peut assimiler à un \textsf{jeu à somme nulle}, comme le jeu de \textsf{pile ou face} mais je vais m'intéresser  à un autre jeu  moins étudié ,\textsf{Matching pennies} et je vais essayer de comprendre ce qu'est un \textsf{jeu a somme nulle} et trouver la solution optimale.
 
-\subsubsection{Un exemple de jeu :  "Matching pennies"}
+\subsubsection{Un exemple de jeu à somme nulle  :  "Matching pennies"}
 C'est un jeu simple de la théorie des jeux, il se joue à deux joueurs \textsf{JA} : \textsf{Pair}  et \textsf{JB} : \textsf{Impair}. Chaque acteur possède une pièce et choisit simultanément et secrètement une face., En fonction du choix de chacun, on obtient des résultats suivant :
 
 \begin{itemize}
@@ -653,12 +622,12 @@ Matrice\hspace{0,1cm} B \hspace{1cm}
 1&-1\\
 \end{pmatrix} 
 \]
-
+\subsubsection{Un autre exemple de jeu à somme nulle : " "}
+L'exemple
 \subsection{Jeux bimatriciel à sommes nulles et résolution par PL}
 %Blablate sur le jeux
 
-C'est maintenant qu'intervient la notion de \textsf{stratégie} (ou encore, règles de décision) pour qu'un acteur puisse prendre une décision affin d'effectuer une future action dans le jeu.
-On peut donc distinguer deux grandes catégories de \textsf{stratégies} soit pures soit mixtes \newline
+
 
 Maintenant que j'ai abordé la notion de stratégie, je m'intéresse à la programmation linéaire. La "victoire" ou "réussite" d'un jeu se traduit mathématiquement par le \textsf{gain} le plus élevé. Ainsi le but est donc de d'utiliser la stratégie la plus optimale qui permettra de maximiser les \textsf{gains} du jeu.
 
@@ -698,6 +667,21 @@ Le problème devient donc sous forme linéaire (PL) avec pour fonction objective
 \pi_{i}^{1} \hspace{0,2 cm} \geq \hspace{0,2 cm} 0 \hspace{0,2 cm} \forall i 
 \end{align*}
 
+\subsubsection{Programme linéaire du Joueur A : maximiser v}{Pour trouver la stratégie de JA il suffit de trouver une fonction à maximiser \textsf{v} tel que \textsf{v} soit plus petite que toutes les sommes que nous cherchons à minimiser, soit :}
+\begin{align*}
+\textsf{maximiser} \hspace{0,2 cm} v \\ 
+ s.c \hspace{0.4 cm} v \hspace{0,2 cm}  \leq  \hspace{0.2 cm}\sum_{i}\hspace{0.2 cm} \pi_{i}^{1}\hspace{0.2 cm} a _{ij} \hspace{0,2 cm} \forall j\\
+\sum_{i} \hspace{0.2 cm} \pi_{i}^{1} =1 \\ 
+\pi_{i}^{1} \hspace{0,2 cm} \geq \hspace{0,2 cm} 0 \hspace{0,2 cm} \forall i 
+\end{align*}
+
+\subsubsection{Programme linéaire du Joueur B : maximiser w}{D'après le paragraphe précédent nous venons de calculer la stratégie du\textsf{JA} , afin de trouver celle du \textsf{JB} il suffit simplement de résoudre le problème dual soit :}
+\begin{align*}
+\textsf{minimiser} \hspace{0,2 cm} w \\ 
+ s.c \hspace{0.4 cm} w \hspace{0,2 cm}  \geq  \hspace{0.2 cm}\sum_{i}\hspace{0.2 cm} \pi_{j}^{2}\hspace{0.2 cm} a _{ij} \hspace{0,2 cm} \forall i\\
+\sum_{j} \hspace{0.2 cm} \pi_{j}^{2} =1 \\ 
+\pi_{j}^{1} \hspace{0,2 cm} \geq \hspace{0,2 cm} 0 \hspace{0,2 cm} \forall j
+\end{align*}
 
 
 
@@ -718,43 +702,11 @@ Matrice\hspace{0,1cm} B \hspace{1cm}
 
 \subparagraph*{}{Dans un jeu à \textsf{somme nulle} étant donné que le gain de JA représente la perte équivalente de JB il n'existe pas d'\textsf{équilibre de Nash) en stratégie pure mais donc en stratégie mixte.}
 
-\subparagraph{}{On suppose que JA \textsf{Pair} joue avec une probabilité $p$ \textsf{Pile} et joue donc \textsf{Face} avec une probabilité $1-p$. Si on cherche à optimiser les gains de JA \textsf{Pair} on suppose que les deux espérances sont égales. On fait exactement la même chose avec JB \textsf{Impair} en posant $q$ à la place de $p$ :}
-\begin{align*}
-\begin{array}{r c l}
-          \mathbb{E}(JA):p -(1-p) &=& -p + (1-p) \\
-          2p -1 &=& 1 -2p \\
-          p &=& \frac{1}{2}
-\end{array} 
-          \hspace{1 cm}
-\begin{array}{r c l}
-          \mathbb{E}(JB) :-q + (1-q) &=& q - (1-q) \\
-          1 -2q &=& -1 +2q \\
-          q &=& \frac{1}{2}
-\end{array}
- \end{align*}
+\paragraph{Expression concrète du programme linéaire du Joueur A}{Explications}
 
-\subparagraph*{}{Il y aura deux programme linéaire à résoudre , un pour chaque joueur, maximiser $v$ pour le premier joueur \textsf{\textsf{JA}} et donc réciproquement minimiser $w$ pour le deuxième joueur \textsf{JB}
-
-
-\paragraph{Programme linéaire du JA : maximiser $v$}{Pour trouver la stratégie de JA il suffit de trouver une fonction à maximiser \textsf{v} tel que \textsf{v} soit plus petite que toutes les sommes que nous cherchons à minimiser, soit :}
-\begin{align*}
-\textsf{maximiser} \hspace{0,2 cm} v \\ 
- s.c \hspace{0.4 cm} v \hspace{0,2 cm}  \leq  \hspace{0.2 cm}\sum_{i}\hspace{0.2 cm} \pi_{i}^{1}\hspace{0.2 cm} a _{ij} \hspace{0,2 cm} \forall j\\
-\sum_{i} \hspace{0.2 cm} \pi_{i}^{1} =1 \\ 
-\pi_{i}^{1} \hspace{0,2 cm} \geq \hspace{0,2 cm} 0 \hspace{0,2 cm} \forall i 
-\end{align*}
-
-\paragraph{Programme linéaire du JB : minimiser $w$}{D'après le paragraphe précédent nous venons de calculer la stratégie du\textsf{JA} , afin de trouver celle du \textsf{JB} il suffit simplement de résoudre le problème dual soit :}
-\begin{align*}
-\textsf{minimiser} \hspace{0,2 cm} w \\ 
- s.c \hspace{0.4 cm} w \hspace{0,2 cm}  \geq  \hspace{0.2 cm}\sum_{i}\hspace{0.2 cm} \pi_{j}^{2}\hspace{0.2 cm} a _{ij} \hspace{0,2 cm} \forall i\\
-\sum_{j} \hspace{0.2 cm} \pi_{j}^{2} =1 \\ 
-\pi_{j}^{1} \hspace{0,2 cm} \geq \hspace{0,2 cm} 0 \hspace{0,2 cm} \forall j
-\end{align*}
-
-
-S\subsection{Jeux Stochastiques}
-\subsubsection{Jeux dynamqiue}
+\paragraph{Expression concrète du programme linéaire du Joueur B}{Puisqu'il s'agit d'un jeu à somme nulle, le programme linéaire cherché n'est autre que le problème dual du programme linéaire précédent.}
+\subsection{Jeux Stochastiques}
+\subsubsection{Jeux dynamiques}
 \begin{definition}
 Un jeu est dynamique lorsqu'il se déroule en plusieurs étapes non simultané, c'est a dire que les joueurs jouent plusieurs fois mais en ayant connaissance des actions des autres joueurs et donc peuvent établir des stratégies.
 \end{definition}

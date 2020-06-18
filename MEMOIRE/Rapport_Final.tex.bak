@@ -568,8 +568,17 @@ On cherche a savoir si il existe un support de la forme x=($x_{1},x_{2},0$) et y
    & \hspace{3 cm}
   x^{t}By=(\frac{14}{5}).
 \end{align*}
-\paragraph{Équilibre en stratégie pure}
-Voila
+\paragraph{Vérification de l'équilibre de Nash}
+Pour vérifier qu'il s'agit bien d'équilibre de Nash il faut veiller à ce qu'aucun joueur ne change de stratégie; regardons donc notre situation. 
+\subparagraph*{Stratégie x = {(1,0,0) ,(1,0)}} {Dans ce cas ci, A joue 3 et B joue 3 personne de domine personne cela pourrait être un équilibre.}
+
+\subparagraph*{Stratégie x = {(0,1,0) ,(1,0)}} {Dans ce cas ci, A joue 2 et B joue 3 alors B domine A puisque 2 < 3.}
+
+\subparagraph*{Stratégie x = {(0,0,1) ,(1,0)}} {Dans ce cas ci, A joue 0 et B joue 3 alors B domine A puisque 0 < 3.}
+
+\subparagraph*{Stratégie x = {(1,0,0) ,(0,1)}} {Dans ce cas ci, A joue 0 et B joue 2 alors A domine B puisque 2 < 3.}
+
+\paragraph*{}{Ainsi on remarque bien que seule la première solution permet un équilibre de Nash en stratégie pure puisque c'est la situation parfaite pour que personne n'ai envie de change puisque si l'un des deux joueurs A ou B change d'action il donne l'avantage à son adversaire. }
 \subsection{Jeux à sommes nulles}
 Comme annoncé dans notre introduction, je vais résoudre des jeux à sommes nulles via des algorithmes que je vais implémenter par la suite. \newline
 
@@ -622,12 +631,33 @@ Matrice\hspace{0,1cm} B \hspace{1cm}
 1&-1\\
 \end{pmatrix} 
 \]
-\subsubsection{Un autre exemple de jeu à somme nulle : " "}
-L'exemple
+
+\subsubsection{Un autre exemple de jeu à somme nulle : "La bataille des réseaux"}
+
+Considérons deux société A et B se disputant des parts sur les réseaux sociaux sur deux thèmes différents : le \textsf{sport} et les \textsf{séries}. Lorsqu'un edes société gagne des part de marché l'autre en perd automatiquement la même somme; on peut donc assimiler notre situation à un jeu à somme nulle.
+\paragraph*{Matrice de gains des sociétés A et B}
+\[
+Matrice\hspace{0,1cm} A\hspace{1cm}
+\begin{pmatrix}10&4\\
+0&-10\\
+\end{pmatrix}\                      \hspace{2,5cm}  
+Matrice\hspace{0,1cm} B \hspace{1cm}  
+\begin{pmatrix}-10&-4\\
+0&10\\
+\end{pmatrix} 
+\]
+
+\begin{figure}[h]
+\centering
+\includegraphics[scale=0.4]{Matching2.pdf}
+\caption{Représentation matricielle de "Bataille de réseaux"}
+\end{figure}
+
+On peut remarquer que la situation la plus avantageuse pour A, augmentant ses gains est : 10 ou 4 quand à B il s'agit de -4 et 10.  on eu donc conclure que l'équilibre de Nash peut se trouver, dans cette situation via la stratégie pure :
+\textbf{x = (4 , -4)}.
+
+
 \subsection{Jeux bimatriciel à sommes nulles et résolution par PL}
-%Blablate sur le jeux
-
-
 
 Maintenant que j'ai abordé la notion de stratégie, je m'intéresse à la programmation linéaire. La "victoire" ou "réussite" d'un jeu se traduit mathématiquement par le \textsf{gain} le plus élevé. Ainsi le but est donc de d'utiliser la stratégie la plus optimale qui permettra de maximiser les \textsf{gains} du jeu.
 
@@ -708,7 +738,7 @@ Matrice\hspace{0,1cm} B \hspace{1cm}
 \subsection{Jeux Stochastiques}
 \subsubsection{Jeux dynamiques}
 \begin{definition}
-Un jeu est dynamique lorsqu'il se déroule en plusieurs étapes non simultané, c'est a dire que les joueurs jouent plusieurs fois mais en ayant connaissance des actions des autres joueurs et donc peuvent établir des stratégies.
+Un jeu est dit dynamique, lorsqu'il se déroule en plusieurs étapes non simultané, c'est a dire que les joueurs jouent plusieurs fois mais en ayant connaissance des actions des autres joueurs et donc peuvent établir des stratégies.
 \end{definition}
 
 Prenons pour hypothèse un jeu dynamique à deux joueurs  JA et JB, ils vont effectuer tour à tour des actions en différé en ayant accès aux informations de l'autre. \newline
@@ -726,7 +756,7 @@ Le critère d'évaluation d'une stratégie $\pi$ correspond à l'espérance math
 
 \subparagraph*{}{Rappelons le tout de même une stratégie $\pi_{i}(s)$ dépend de l'action choisi par le joueur \textsf{i} à l'état \textsf{s} en stratégie pure et $\pi_{i}(s,a)$ en stratégie mixte avec une probabilité \textsf{a} pour l'état \textsf{s}}.
 
-\subparagraph*{}{L'une des variantes les plus connues est de pondérer les gains par un facteur $\gamma \in $ [0;1[ afin de prendre en compte la valeur des gains futur. En notant r$_{t}$ la récompense reçue à l'instant \textsf{t} $ \in $ K et \textsf{s$^{0}$} l'état initial, on définit la \textsf{fonction de valeur} pour tout \textsf{s} $\in $ S pour une stratégie $ \pi$ :}
+\subparagraph*{}{L'une des variantes les plus connues est de pondérer les gains par un facteur $\gamma \in $ [0;1[ afin de prendre en compte de manière différenciée la valeur des gains futur. En notant r$_{t}$ la récompense reçue à l'instant \textsf{t} $ \in $ K et \textsf{s$^{0}$} l'état initial, on définit la \textsf{fonction de valeur} du Joueur B pour tout \textsf{s} $\in $ S pour une stratégie $ \pi$ :}
 \begin{align*}
 V^{\pi}(s) \hspace{0,1 cm} = \hspace{0,1 cm} E^{\pi}\hspace{0,1 cm} (\sum_{t=0}^{\infty} \hspace{0,1cm}\gamma ^{t} \hspace{0,1cm} r^{t}\hspace{0,1cm} |\hspace{0,1cm} s^{0} = s )
 \end{align*}
@@ -736,7 +766,7 @@ V^{\pi}(s) \hspace{0,1 cm} = \hspace{0,1 cm} E^{\pi}\hspace{0,1 cm} (\sum_{t=0}^
 Au début de chaque étape, le jeu est dans un certain état . Les joueurs sélectionnent des actions et chaque joueur reçoit un gain, cela dépend de l'état actuel et des actions choisies. Le jeu passe alors à un nouvel état aléatoire , dont la distribution dépend de l'état précédent et des actions choisies par les joueurs. La procédure est répétée au nouvel état et le jeu continue pour un nombre fini ou infini d'étapes. Le gain total pour un joueur est souvent considéré comme la somme actualisée des gains de l'étape ou la limite inférieure des moyennes des gains de l'étape.
 
 \paragraph{Modèles des jeux stochastiques}
-On définit $\Phi$ un jeu stochastique fini à somme nulle tel que :
+On définit $\Phi$ un jeu stochastique fini à deux joueurs tel que :
 \begin{itemize}
 \item Un ensemble $\Omega$ fini d'états
 \item I l'ensemble fini d'action du joueur A
